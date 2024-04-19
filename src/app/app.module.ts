@@ -12,10 +12,18 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatFormFieldModule} from "@angular/material/form-field";
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { ExampleDirective } from './shared/directives/example.directive';
+import { ExamplePipe } from './shared/pipes/example.pipe';
+import { LoginComponent } from './pages/auth/components/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent,
+    ExampleDirective,
+    ExamplePipe,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
