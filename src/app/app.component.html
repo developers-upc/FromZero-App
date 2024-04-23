@@ -1,12 +1,13 @@
 <body>
-<!--h1 class="text-3xl font-bold underline text-red-500">
-  Hello world!
-</h1>-->
 
-<app-sidenav/>
+<app-sidenav (onToggleSideNav)="onToggleSidenav($event)"/>
 
-<div>
-<h1>Contenido</h1>
+<div class="content" [ngClass]="getContentClass()">
+  <h1 class="text-3xl font-bold underline text-red-500">
+    Hello world!
+  </h1>
+
+  <router-outlet/>
 </div>
-<router-outlet />
+
 </body>

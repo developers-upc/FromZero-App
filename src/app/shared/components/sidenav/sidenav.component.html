@@ -1,16 +1,16 @@
 <div class="sidenav" [ngClass]="expand ? 'sidenav-expanded':''">
   <div class="logo-container">
     @if(expand){
-    <img src="https://images.vexels.com/media/users/3/142887/isolated/preview/fc58c5ffb8c2e33fc3e15a2453189825-logotipo-de-empresa-logistica-en-crecimiento.png" alt="logo empresa" class="logo">
+    <img [src]="user.urlToImage" [alt]="user.name" class="logo">
     }
-    <button (click)="expand=!expand" class="btn">
+    <button (click)="toggleExpand()" class="btn">
       <img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png" alt="toggle" class="toggle-image">
     </button>
   </div>
   <ul class="sidenav-nav">
     <li class="sidenav-nav-item">
       <a href="" class="sidenav-nav-link">
-        <img src="" alt="imagen" class="sidenav-link-img">
+        <img src="assets/sidenav-images/busqueda.png" alt="explorar" class="sidenav-link-img">
         @if(expand){
         <span class="sidenav-link-text">Explorar Proyectos</span>
         }
@@ -18,7 +18,7 @@
     </li>
     <li class="sidenav-nav-item">
       <a href="" class="sidenav-nav-link">
-        <img src="" alt="imagen" class="sidenav-link-img">
+        <img src="assets/sidenav-images/editar.png" alt="publicar" class="sidenav-link-img">
         @if(expand){
           <span class="sidenav-link-text">Publicar Proyecto</span>
         }
@@ -26,7 +26,7 @@
     </li>
     <li class="sidenav-nav-item">
       <a href="" class="sidenav-nav-link">
-        <img src="" alt="imagen" class="sidenav-link-img">
+        <img src="assets/sidenav-images/fromzero.png" alt="inicio" class="sidenav-link-img">
         @if(expand){
           <span class="sidenav-link-text">Inicio</span>
         }
@@ -34,7 +34,7 @@
     </li>
     <li class="sidenav-nav-item">
       <a href="" class="sidenav-nav-link">
-        <img src="" alt="imagen" class="sidenav-link-img">
+        <img src="assets/sidenav-images/estrella.png" alt="destacados" class="sidenav-link-img">
         @if(expand){
           <span class="sidenav-link-text">Proyectos Destacados</span>
         }
@@ -42,7 +42,7 @@
     </li>
     <li class="sidenav-nav-item">
       <a href="" class="sidenav-nav-link">
-        <img src="" alt="imagen" class="sidenav-link-img">
+        <img src="assets/sidenav-images/Logout.png" alt="salir" class="sidenav-link-img">
         @if(expand){
           <span class="sidenav-link-text">Salir</span>
         }
