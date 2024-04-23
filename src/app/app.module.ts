@@ -16,6 +16,12 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { FormCreateProjectComponent } from './pages/projects/components/form-create-project/form-create-project.component';
+import { MatSelectModule} from "@angular/material/select";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatOptionModule} from "@angular/material/core";
+import {MatInputModule} from "@angular/material/input";
+import {MatCheckbox} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -23,7 +29,8 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     FooterComponent,
     ExampleDirective,
     ExamplePipe,
-    LoginComponent
+    LoginComponent,
+    FormCreateProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,13 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     MatToolbarModule,
     MatCardModule,
     MatSidenavModule,
-    MatFormFieldModule
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatOptionModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatCheckbox,
   ],
   providers: [
     provideAnimationsAsync()

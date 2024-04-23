@@ -1,0 +1,82 @@
+<div class="flex items-center justify-center w-full h-full">
+  <div class="container w-5/6 h-5/6 bg-white border-2 border-gray-500 shadow-xl shadow-gray-600">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="p-3 flex justify-around">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA3o2AjctAbpo5wyonI6CJN10uejfkoCiXi5uGdxV9lA&s" alt="Avatar" class="w-10 h-10 rounded-full">
+        <mat-form-field class="w-5/6 h-16">
+          <input matInput placeholder="Titulo del proyecto" formControlName="title">
+        </mat-form-field>
+      </div>
+      <hr>
+      <div class="p-3 flex flex-col">
+        <label for="description">Descripcion</label>
+        <mat-form-field class="h-full">
+          <textarea id="description" matInput formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+      <hr>
+      <div class="mb-3 flex justify-around">
+        <div class="mb-3">
+          <div class="flex flex-col">
+            <label for="tipoPagina">Tipo de Proyecto</label>
+            <mat-form-field>
+              <mat-select id="tipoPagina" formControlName="projectType">
+                <mat-option value="1">Página web</mat-option>
+                <mat-option value="2">Aplicación web</mat-option>
+                <mat-option value="3">Aplicación de escritorio</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <hr>
+          <div>
+            <label for="tecnologias">Tecnologías</label>
+            <mat-checkbox id="tecnologias" [formControl]="hide">Tecnologías sin determinar</mat-checkbox>
+            <div>
+              <label>Lenguajes</label>
+              <mat-form-field>
+                <mat-select id="lenguajesProgramacion" formControlName="programmLenguageType">
+                  <mat-option value="1">HTML</mat-option>
+                  <mat-option value="2">CSS</mat-option>
+                  <mat-option value="3">JavaScript</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div>
+              <label>Frameworks</label>
+              <mat-form-field>
+                <mat-select id="frameworksProgramacion" formControlName="programFrameworksType">
+                  <mat-option value="1">React.js (Frontend)</mat-option>
+                  <mat-option value="2">Node.js (Backend)</mat-option>
+                  <mat-option value="3">Express.js (Backend)</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <hr>
+          <div>
+            <h3>Recursos y Documentación</h3>
+          </div>
+        </div>
+        <div class="mb-3">
+          <div>
+            <label for="presupuesto">Presupuesto</label>
+            <mat-form-field>
+              <textarea id="presupuesto" matInput formControlName="presupuesto"></textarea>
+            </mat-form-field>
+          </div>
+          <hr>
+          <div>
+            <label for="procesosYMetologias">Tecnologías</label>
+            <mat-checkbox id="procesosYMetologias" [formControl]="hide">Tecnologías sin determinar</mat-checkbox>
+            <mat-form-field>
+              <textarea matInput formControlName="procesos"></textarea>
+            </mat-form-field>
+          </div>
+          <div>
+            <button mat-flat-button color="primary">Publicar Proyecto</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
