@@ -16,6 +16,12 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import {MatInput} from "@angular/material/input";
+import { RegisterComponent } from './pages/auth/components/register/register.component';
+import {MatOption} from "@angular/material/autocomplete";
+import {MatSelect} from "@angular/material/select";
+import { RecoverPasswordComponent } from './pages/auth/components/recover-password/recover-password.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,7 +29,9 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     FooterComponent,
     ExampleDirective,
     ExamplePipe,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    RecoverPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,11 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     MatToolbarModule,
     MatCardModule,
     MatSidenavModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInput,
+    MatOption,
+    MatSelect,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
