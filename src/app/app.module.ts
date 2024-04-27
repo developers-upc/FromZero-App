@@ -16,6 +16,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { HomeProfileComponent } from './pages/home/home-enterprise/components/home-profile/home-profile.component';
+import { HomeProjectsComponent } from './pages/home/home-enterprise/components/home-projects/home-projects.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     FooterComponent,
     ExampleDirective,
     ExamplePipe,
-    LoginComponent
+    LoginComponent,
+    HomeProfileComponent,
+    HomeProjectsComponent
   ],
   imports: [
     BrowserModule,
