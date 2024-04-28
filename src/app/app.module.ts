@@ -16,6 +16,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { DeliverableComponent } from './pages/review-deliverable/components/deliverable/deliverable.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     FooterComponent,
     ExampleDirective,
     ExamplePipe,
-    LoginComponent
+    LoginComponent,
+    DeliverableComponent
   ],
   imports: [
     BrowserModule,
