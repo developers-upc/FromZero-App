@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-title>
+    <p class="text-blue-600">Lista de candidatos</p>
+  </mat-card-title>
+  <mat-card-content>
+    @for (candidate of data.candidates; track candidate.name){
+      <mat-card>
+        <mat-card-title>
+          <img src="{{candidate.photo}}" alt="foto de perfil del candidato">
+          <p>{{candidate.name}}</p>
+          <button class="rounded-full text-red-600">
+            <mat-icon>close</mat-icon>
+          </button>
+          <button class="rounded-full text-green-600">
+            <mat-icon>check</mat-icon>
+          </button>
+        </mat-card-title>
+        <mat-card-content>
+          <p>Descripción</p>
+          <p>{{candidate.description}}</p>
+        </mat-card-content>
+      </mat-card>
+    } @empty {
+      <p>No hay candidatos.</p>
+    }
+  </mat-card-content>
+</mat-card>

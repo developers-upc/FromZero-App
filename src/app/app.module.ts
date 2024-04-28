@@ -18,6 +18,18 @@ import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
 import { HomeProfileComponent } from './pages/home/home-enterprise/components/home-profile/home-profile.component';
 import { HomeProjectsComponent } from './pages/home/home-enterprise/components/home-projects/home-projects.component';
+import { EditProfileDialogComponent } from './pages/home/home-enterprise/components/edit-profile-dialog/edit-profile-dialog.component';
+import {
+  MatDialogActions,
+  MatDialogClose,
+  MatDialogContent,
+  MatDialogModule,
+  MatDialogTitle
+} from "@angular/material/dialog";
+import {MatInput} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
+import {MatProgressBar} from "@angular/material/progress-bar";
+import { CandidatesProjectDialogComponent } from './pages/home/home-enterprise/components/candidates-project-dialog/candidates-project-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,20 +39,30 @@ import { HomeProjectsComponent } from './pages/home/home-enterprise/components/h
     ExamplePipe,
     LoginComponent,
     HomeProfileComponent,
-    HomeProjectsComponent
+    HomeProjectsComponent,
+    EditProfileDialogComponent,
+    CandidatesProjectDialogComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    MatButtonModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatCardModule,
-    MatSidenavModule,
-    MatFormFieldModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        MatButtonModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatCardModule,
+        MatSidenavModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        MatDialogTitle,
+        MatDialogContent,
+        MatInput,
+        MatDialogActions,
+        FormsModule,
+        MatDialogClose,
+        MatProgressBar
+    ],
   providers: [
     provideAnimationsAsync()
   ],
