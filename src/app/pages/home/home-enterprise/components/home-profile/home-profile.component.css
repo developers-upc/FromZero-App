@@ -1,0 +1,8 @@
+.mat-mdc-card-header{
+  justify-content: center;
+  gap: 5vh;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  flex-direction: row-reverse;
+}
