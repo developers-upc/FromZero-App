@@ -22,6 +22,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatOptionModule} from "@angular/material/core";
 import {MatInputModule} from "@angular/material/input";
 import {MatCheckbox} from "@angular/material/checkbox";
+import { ConfirmationDialogComponent } from './pages/projects/components/confirmation-dialog/confirmation-dialog.component';
+import {MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {MatCheckbox} from "@angular/material/checkbox";
     ExampleDirective,
     ExamplePipe,
     LoginComponent,
-    FormCreateProjectComponent
+    FormCreateProjectComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,10 @@ import {MatCheckbox} from "@angular/material/checkbox";
     MatSelectModule,
     ReactiveFormsModule,
     MatCheckbox,
+    MatDialogTitle,
+    MatDialogContent,
+    MatDialogActions,
+    MatDialogClose,
   ],
   providers: [
     provideAnimationsAsync()
