@@ -30,6 +30,7 @@ import {MatInput} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
 import {MatProgressBar} from "@angular/material/progress-bar";
 import { CandidatesProjectDialogComponent } from './pages/home/home-enterprise/components/candidates-project-dialog/candidates-project-dialog.component';
+import { HomePageComponent } from './pages/home/home-enterprise/components/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { CandidatesProjectDialogComponent } from './pages/home/home-enterprise/c
     HomeProfileComponent,
     HomeProjectsComponent,
     EditProfileDialogComponent,
-    CandidatesProjectDialogComponent
+    CandidatesProjectDialogComponent,
+    HomePageComponent
   ],
     imports: [
         BrowserModule,

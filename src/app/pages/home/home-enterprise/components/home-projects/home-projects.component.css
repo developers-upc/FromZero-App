@@ -9,7 +9,7 @@
   flex-direction: row;
 }
 .project-card {
-  max-height: 73vh;
+  max-height: 90vh;
   overflow-y: auto;
 }
 .mat-mdc-card.mdc-card.project-card{
