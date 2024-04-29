@@ -53,8 +53,35 @@ export class HomeProjectsComponent {
             image: 'https://lapi.com.mx/web/image/product.template/5138/image_1024?unique=f67111b',
             state: 'on-hold',
             link: 'https://github.com/Purak189',
+          },
+          {
+            name: "Juan Pérez",
+            description: "Soy un desarrollador web y móvil con experiencia en la creación de aplicaciones modernas y atractivas. Me especializo en el desarrollo frontend utilizando tecnologías como HTML, CSS, JavaScript, React y Angular. También tengo experiencia en el desarrollo backend con Node.js y MongoDB.",
+            image: "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/e40b6ea6361a1abe28f32e7910f63b66/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg",
+            state: "on-hold",
+            link: "https://github.com/juanperez"
+          },
+          {
+            name: "María López",
+            description: "Desarrolladora web con una pasión por crear experiencias digitales sorprendentes. Tengo experiencia en el desarrollo frontend con HTML, CSS, JavaScript y React, así como en el desarrollo backend con Node.js y Express. Me encanta trabajar en proyectos desafiantes que me permitan mejorar mis habilidades y aprender nuevas tecnologías.",
+            image: "https://vivolabs.es/wp-content/uploads/2022/03/perfil-mujer-vivo.png",
+            state: "on-hold",
+            link: "https://github.com/marialopez"
+          },
+          {
+            name: "Juan Pérez",
+            description: "Soy un desarrollador web y móvil con experiencia en la creación de aplicaciones modernas y atractivas. Me especializo en el desarrollo frontend utilizando tecnologías como HTML, CSS, JavaScript, React y Angular. También tengo experiencia en el desarrollo backend con Node.js y MongoDB.",
+            image: "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/e40b6ea6361a1abe28f32e7910f63b66/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg",
+            state: "on-hold",
+            link: "https://github.com/juanperez"
+          },
+          {
+            name: "María López",
+            description: "Desarrolladora web con una pasión por crear experiencias digitales sorprendentes. Tengo experiencia en el desarrollo frontend con HTML, CSS, JavaScript y React, así como en el desarrollo backend con Node.js y Express. Me encanta trabajar en proyectos desafiantes que me permitan mejorar mis habilidades y aprender nuevas tecnologías.",
+            image: "https://vivolabs.es/wp-content/uploads/2022/03/perfil-mujer-vivo.png",
+            state: "on-hold",
+            link: "https://github.com/marialopez"
           }
-
         ],
       }
     ]
