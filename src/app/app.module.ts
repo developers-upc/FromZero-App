@@ -52,12 +52,11 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     HomeProjectsComponent,
     EditProfileDialogComponent,
     CandidatesProjectDialogComponent,
-    HomePageComponent
+    HomePageComponent,
     DeliverablesComponent,
     DialogAddDeliverableComponent,
-    SidenavComponent
+    SidenavComponent,
   ],
-  ]
     imports: [
         BrowserModule,
         AppRoutingModule,
