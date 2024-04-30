@@ -17,6 +17,8 @@ import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
 import { DeliverableComponent } from './pages/review-deliverable/components/deliverable/deliverable.component';
+import { DialogAcceptDeliverableComponent } from './pages/review-deliverable/components/dialog-accept-deliverable/dialog-accept-deliverable.component';
+import {MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { DeliverableComponent } from './pages/review-deliverable/components/deli
     ExampleDirective,
     ExamplePipe,
     LoginComponent,
-    DeliverableComponent
+    DeliverableComponent,
+    DialogAcceptDeliverableComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,9 @@ import { DeliverableComponent } from './pages/review-deliverable/components/deli
     MatToolbarModule,
     MatCardModule,
     MatSidenavModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatDialogContent,
+    MatDialogTitle
   ],
   providers: [
     provideAnimationsAsync()

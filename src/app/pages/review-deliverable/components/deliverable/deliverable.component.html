@@ -20,7 +20,10 @@
       <div class="divider"></div>
       <h2 class="files-title">Archivos</h2>
       <mat-card class="files-card"/>
-      <button mat-stroked-button class="delv-button">Aprobar Entrega</button>
+      <button mat-stroked-button class="delv-button"
+              (click)="openDialog()">
+        Aprobar Entrega
+      </button>
     </mat-card-content>
 
   </mat-card>
