@@ -1,14 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-.mat-mdc-dialog-content.mdc-dialog__content.custom-dialog-content {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-}
-.mat-mdc-card.mdc-card.gray-card {
-  background-color: #ccc;
-  width: 100%;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

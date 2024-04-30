@@ -27,3 +27,7 @@
   justify-content: center;
   gap: 10px;
 }
+.mat-mdc-card.mdc-card.gray-card {
+  background-color: #ccc;
+  width: 100%;
+}
