@@ -17,6 +17,8 @@ import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
 import { FormCreateProjectComponent } from './pages/projects/components/form-create-project/form-create-project.component';
+import { RegisterComponent } from './pages/auth/components/register/register.component';
+import { RecoverPasswordComponent } from './pages/auth/components/recover-password/recover-password.component';
 import { MatSelectModule } from "@angular/material/select";
 import { MatOptionModule } from "@angular/material/core";
 import { MatInputModule } from "@angular/material/input";
@@ -53,6 +55,8 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     ExampleDirective,
     ExamplePipe,
     LoginComponent,
+    RegisterComponent,
+    RecoverPasswordComponent,
     FormCreateProjectComponent,
     ConfirmationDialogComponent,
     HomeProfileComponent,
@@ -78,7 +82,6 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
         MatDialogModule,
         MatDialogTitle,
         MatDialogContent,
-        MatInput,
         MatInputModule,
         MatDialogActions,
         FormsModule,
