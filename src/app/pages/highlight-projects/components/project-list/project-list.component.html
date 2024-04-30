@@ -1,1 +1,40 @@
-<p>project-list works!</p>
+<div class="container">
+  <div class="title">
+    <h1>Proyectos Destacados</h1>
+    <h3>Explora mas de 100 proyectos realizados</h3>
+  </div>
+
+  <input placeholder="Busqueda de proyectos">
+
+  <div class="buttons">
+    <button mat-stroked-button class="b-web-app">Web Application</button>
+    <button mat-stroked-button class="b-mobile-app">Mobile Application</button>
+    <button mat-stroked-button class="b-design-system">Design System</button>
+    <button mat-stroked-button class="b-data-analytics">Data Analytics</button>
+  </div>
+
+  <ul>
+    @for (project of projects; track project.id) {
+      <li>
+        <mat-card class="delv-card">
+
+          <mat-card-header class="delv-title">
+            <mat-card-title>
+              {{ project.type }}: {{ project.title }}
+            </mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content class="delv-description">
+            <mat-card-subtitle class="description-title">
+              Descripcion
+            </mat-card-subtitle>
+            <p>{{ project.description }}</p>
+          </mat-card-content>
+
+        </mat-card>
+      </li>
+    }
+  </ul>
+
+
+</div>
