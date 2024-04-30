@@ -8,36 +8,54 @@
 
 
   <div class="buttons">
-    <button mat-stroked-button class="b-web-app">Web Application</button>
-    <button mat-stroked-button class="b-mobile-app">Mobile Application</button>
-    <button mat-stroked-button class="b-design-system">Design System</button>
-    <button mat-stroked-button class="b-data-analytics">Data Analytics</button>
+    <button mat-stroked-button class="b-web-app"
+            (click)="filterProjects('Aplicacion Web')">
+      Aplicacion Web
+    </button>
+
+    <button mat-stroked-button class="b-mobile-app"
+            (click)="filterProjects('Aplicacion Movil')">
+      Aplicacion Movil
+    </button>
+
+    <button mat-stroked-button class="b-design-system"
+            (click)="filterProjects('Aplicacion de Escritorio')">
+      Aplicacion de Escritorio
+    </button>
+
+    <button mat-stroked-button class="b-data-analytics"
+            (click)="filterProjects('Analisis de Datos')">
+      Analisis de Datos
+    </button>
+
+    <button mat-stroked-button class="b-borrar-filtros"
+            (click)="filterProjects('Borrar Filtros')">
+      Borrar Filtros
+    </button>
   </div>
 
   <ul class="project-list">
-    @for (project of projects; track project.id) {
-      <mat-card class="project-card">
-        <mat-card-header class="card-title">
-          <mat-card-title>
-            {{ project.type }}: {{ project.title }}
-          </mat-card-title>
-        </mat-card-header>
+    <mat-card class="project-card" *ngFor="let project of filteredProjects">
+      <mat-card-header class="card-title">
+        <mat-card-title>
+          {{ project.type }}: {{ project.title }}
+        </mat-card-title>
+      </mat-card-header>
 
-        <mat-card-content class="project-content">
-          <div class="left-content">
-            <mat-card-subtitle class="description-title">
-              Descripcion
-            </mat-card-subtitle>
-            <p>{{ project.description }}</p>
+      <mat-card-content class="project-content">
+        <div class="left-content">
+          <mat-card-subtitle class="description-title">
+            Descripcion
+          </mat-card-subtitle>
+          <p>{{ project.description }}</p>
 
-            <div class="stars">
-              <mat-icon *ngFor="let star of project.stars">star</mat-icon>
-            </div>
+          <div class="stars">
+            <mat-icon *ngFor="let star of project.stars">star</mat-icon>
           </div>
-          <img mat-card-image [src]="project.image_url"/>
-        </mat-card-content>
-      </mat-card>
-    }
+        </div>
+        <img mat-card-image [src]="project.image_url"/>
+      </mat-card-content>
+    </mat-card>
   </ul>
 
 
