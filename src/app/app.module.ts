@@ -16,6 +16,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { MessageComponent } from './pages/message/components/message/message.component';
+import {MatInput} from "@angular/material/input";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     FooterComponent,
     ExampleDirective,
     ExamplePipe,
-    LoginComponent
+    LoginComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     MatToolbarModule,
     MatCardModule,
     MatSidenavModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInput,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()
