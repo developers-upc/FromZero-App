@@ -1,5 +1,5 @@
 <div class="flex items-center justify-center w-full h-full">
-  <div class="container w-4/6 h-5/6 bg-white border-2 border-gray-500 shadow-xl shadow-gray-600">
+  <div class="container w-4/6 h-5/6 bg-white border-2 border-gray-500 shadow-xl shadow-gray-600 md:w-3/4">
     <mat-card>
       <form [formGroup]="form" (ngSubmit)="onSubmit()" class="m-5">
         <div class="p-3 flex justify-around">
@@ -16,7 +16,7 @@
           </mat-form-field>
         </div>
         <hr>
-        <div class="mb-3 flex justify-around">
+        <div class="mb-3 flex justify-around md:flex-wrap sm:flex-wrap">
           <div class="mb-3">
             <div class="flex flex-col">
               <label for="tipoPagina">Tipo de Proyecto</label>
