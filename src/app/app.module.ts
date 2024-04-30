@@ -16,6 +16,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { LookingfordevelopComponent } from './pages/lookingfordevelop/components/lookingfordevelop/lookingfordevelop.component';
+import {MatPaginator} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     FooterComponent,
     ExampleDirective,
     ExamplePipe,
-    LoginComponent
+    LoginComponent,
+    LookingfordevelopComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     MatToolbarModule,
     MatCardModule,
     MatSidenavModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatPaginator
   ],
   providers: [
     provideAnimationsAsync()
