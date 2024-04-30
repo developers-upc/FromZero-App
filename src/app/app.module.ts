@@ -16,11 +16,16 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { FormCreateProjectComponent } from './pages/projects/components/form-create-project/form-create-project.component';
+import { MatSelectModule } from "@angular/material/select";
+import { MatOptionModule } from "@angular/material/core";
+import { MatInputModule } from "@angular/material/input";
+import { MatCheckbox } from "@angular/material/checkbox";
+import { ConfirmationDialogComponent } from './pages/projects/components/confirmation-dialog/confirmation-dialog.component';
 import { HomeProfileComponent } from './pages/home/home-enterprise/components/home-profile/home-profile.component';
 import { HomeProjectsComponent } from './pages/home/home-enterprise/components/home-projects/home-projects.component';
 import { EditProfileDialogComponent } from './pages/home/home-enterprise/components/edit-profile-dialog/edit-profile-dialog.component';
-import {FormsModule} from "@angular/forms";
-import {MatProgressBar} from "@angular/material/progress-bar";
+import { MatProgressBar } from "@angular/material/progress-bar";
 import { CandidatesProjectDialogComponent } from './pages/home/home-enterprise/components/candidates-project-dialog/candidates-project-dialog.component';
 import { HomePageComponent } from './pages/home/home-enterprise/components/home-page/home-page.component';
 import { DeliverablesComponent } from './pages/deliverables/components/deliverables/deliverables.component';
@@ -36,7 +41,7 @@ import {
   MatDialogClose,
 } from '@angular/material/dialog';
 import {MatInput} from "@angular/material/input";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {provideNativeDateAdapter} from "@angular/material/core";
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
@@ -48,14 +53,8 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     ExampleDirective,
     ExamplePipe,
     LoginComponent,
-    HomeProfileComponent,
-    HomeProjectsComponent,
-    EditProfileDialogComponent,
-    CandidatesProjectDialogComponent,
-    HomePageComponent,
-    DeliverablesComponent,
-    DialogAddDeliverableComponent,
-    SidenavComponent,
+    FormCreateProjectComponent,
+    ConfirmationDialogComponent
   ],
     imports: [
         BrowserModule,
@@ -72,12 +71,24 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
         MatDialogTitle,
         MatDialogContent,
         MatInput,
+        MatInputModule,
         MatDialogActions,
         FormsModule,
+        MatOptionModule,
+        MatSelectModule,
+        MatCheckbox,
         MatDialogClose,
         MatProgressBar,
         MatDatepickerModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HomeProfileComponent,
+        HomeProjectsComponent,
+        EditProfileDialogComponent,
+        CandidatesProjectDialogComponent,
+        HomePageComponent,
+        DeliverablesComponent,
+        DialogAddDeliverableComponent,
+        SidenavComponent,
     ],
   providers: [
     provideAnimationsAsync(),
