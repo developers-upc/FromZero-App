@@ -31,6 +31,7 @@ import {MatInput} from "@angular/material/input";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {provideNativeDateAdapter} from "@angular/material/core";
+import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import {provideNativeDateAdapter} from "@angular/material/core";
     LoginComponent,
     DeliverablesComponent,
     DialogAddDeliverableComponent
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
