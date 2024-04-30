@@ -36,7 +36,7 @@ export class ProjectListComponent {
       title:"Copia de Prueba",
       description: "Este entregable consistirá en el código fuente del frontend y backend de la Plataforma de Comercio Electrónico Geekit. Se proporcionará una estructura de directorios organizada, con comentarios claros y limpios en el código para facilitar la comprensión y el mantenimiento futuro.",
       type: "Aplicacion Web",
-      stars: [1,2,3,4],
+      stars: [1,2,3],
       image_url:"/assets/highlight-projects-images/ajedrez.png"
     },
   ]
