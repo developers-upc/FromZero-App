@@ -47,6 +47,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {provideNativeDateAdapter} from "@angular/material/core";
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
+import { ProjectListComponent } from './pages/highlight-projects/components/project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     DeliverablesComponent,
     DialogAddDeliverableComponent,
     SidenavComponent,
+    ProjectListComponent,
   ],
     imports: [
         BrowserModule,
