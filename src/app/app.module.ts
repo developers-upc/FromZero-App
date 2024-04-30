@@ -41,7 +41,7 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     ExamplePipe,
     LoginComponent,
     DeliverablesComponent,
-    DialogAddDeliverableComponent
+    DialogAddDeliverableComponent,
     SidenavComponent
   ],
   imports: [
