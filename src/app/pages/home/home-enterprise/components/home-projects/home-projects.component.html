@@ -1,0 +1,69 @@
+<div class="container w-2/3 h-full">
+  <mat-card class="project-card">
+    <mat-card-header>
+      <mat-card-title>
+        <p class="text-blue-600 ">Tus proyectos</p>
+      </mat-card-title>
+    </mat-card-header>
+    <div class="flex justify-center">
+      <hr class="w-5/6 text-gray-500">
+    </div>
+    <mat-card-content>
+      <div class="container w-full h-full overflow-auto flex flex-col gap-5">
+        <mat-card *ngIf="perfilUsuario.projects.length; else noProjects">
+          <mat-card-content>
+            <ng-container *ngFor="let project of perfilUsuario.projects">
+              <mat-card *ngIf="project.state === 'En busqueda'; else inProgress">
+                <mat-card-header>
+                  <mat-card-title>
+                    <p class="text-black text-xs font-bold">{{ project.name }}</p>
+                  </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                  <div class="flex gap-5 justify-center" (click)="openDialog(project)">
+                    <p class="text-blue-600">A espera de desarrollador</p>
+                    <p class="bg-red-600 rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">{{project.numCandidates}}</p>
+                  </div>
+                </mat-card-content>
+              </mat-card>
+              <ng-template #inProgress>
+                <mat-card *ngIf="project.state === 'En proceso'; else completed">
+                  <mat-card-header>
+                    <mat-card-title>
+                      <p class="text-black text-xs font-bold">{{ project.name }}</p>
+                    </mat-card-title>
+                  </mat-card-header>
+                  <mat-card-content>
+                    <div class="flex flex-col justify-between vertical-center">
+                      <div class="flex justify-between w-2/3">
+                        <p class="text-blue-600">Progreso</p>
+                        <p class="text-purple-500">{{ project.progress }}%</p>
+                      </div>
+                      <mat-progress-bar mode="determinate" value="{{ project.progress }}"></mat-progress-bar>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+                <ng-template #completed>
+                  <mat-card>
+                    <!-- Configuración de la tarjeta para proyectos completados -->
+                  </mat-card>
+                </ng-template>
+              </ng-template>
+            </ng-container>
+          </mat-card-content>
+        </mat-card>
+        <ng-template #noProjects>
+          <div *ngFor="let empty of emptyProjects">
+            <mat-card class="gray-card">
+              <mat-card-header>
+                <mat-card-title>
+                  <p class="text-gray-500">Proyecto vacio</p>
+                </mat-card-title>
+              </mat-card-header>
+            </mat-card>
+          </div>
+        </ng-template>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
