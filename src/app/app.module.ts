@@ -16,6 +16,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { SupportComponent } from './pages/support/components/support/support.component';
+import {MatInput} from "@angular/material/input";
+import {MatOption, MatSelect} from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     FooterComponent,
     ExampleDirective,
     ExamplePipe,
-    LoginComponent
+    LoginComponent,
+    SupportComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,10 @@ import { LoginComponent } from './pages/auth/components/login/login.component';
     MatToolbarModule,
     MatCardModule,
     MatSidenavModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInput,
+    MatSelect,
+    MatOption
   ],
   providers: [
     provideAnimationsAsync()
