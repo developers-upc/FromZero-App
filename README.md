@@ -1,4 +1,4 @@
-# GoCareer202302
+# FromZero202401
 
 Aplicación para publicacion y seguimiento de un proyecto (publicado por una empresa) por parte de un desarrollador freelance.
 
