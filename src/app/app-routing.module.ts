@@ -5,6 +5,7 @@ import {RegisterComponent} from "./pages/auth/components/register/register.compo
 import {RecoverPasswordComponent} from "./pages/auth/components/recover-password/recover-password.component";
 import {DeliverablesComponent} from "./pages/deliverables/components/deliverables/deliverables.component";
 import {MessageComponent} from "./pages/message/components/message/message.component";
+import {SupportComponent} from "./pages/support/components/support/support.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,9 @@ const routes: Routes = [
   },
     {
     path: ':developerId/message', component: MessageComponent
+  },
+  {
+    path: 'support', component: SupportComponent
   },
  ];
 

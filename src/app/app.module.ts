@@ -16,6 +16,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { SupportComponent } from './pages/support/components/support/support.component';
 import { MessageComponent } from './pages/message/components/message/message.component';
 import { FormCreateProjectComponent } from './pages/projects/components/form-create-project/form-create-project.component';
 import { RegisterComponent } from './pages/auth/components/register/register.component';
@@ -71,6 +72,7 @@ import { ProjectListComponent } from './pages/highlight-projects/components/proj
     SidenavComponent,
     ProjectListComponent,
     MessageComponent,
+    SupportComponent,
   ],
     imports: [
         BrowserModule,
