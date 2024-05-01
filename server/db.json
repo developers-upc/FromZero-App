@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "empresa1",
+      "password": "empresa1",
+      "email": "empresa1@upc",
+      "accountType": 0
+    },
+    {
+      "id": 2,
+      "username": "empresa2",
+      "password": "empresa2",
+      "email": "empresa2@upc",
+      "accountType": 0
+    }
+  ],
+  "profiles": [
+    {
+      "id": 1,
+      "username": "empresa1",
+      "email": "empresa1@upc",
+      "imageProfile": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png",
+      "accountType": 0,
+      "summary": "descripcion 1",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "socialRazon": "12412412412414",
+      "website": "empresa1.com",
+      "sector": "sector1",
+      "projects": []
+    }
+  ]
+}

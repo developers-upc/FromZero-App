@@ -20,14 +20,16 @@ export class HomeProjectsComponent {
   }
   emptyProjects = new Array(5);
   perfilUsuario: IEnterpriseProfile = {
-    name: 'Geekit',
-    description: 'Geekit es tu destino para la moda geek. Nos especializamos en ofrecer una selección única de ropa y accesorios para jóvenes apasionados por la cultura pop, los videojuegos, el cine y los cómics. En Geekit, encontrarás prendas que te permiten expresar tu estilo auténtico y tu amor por tus intereses favoritos.',
+    id: 1,
+    accountType: 1,
+    username: 'Geekit',
+    summary: 'Geekit es tu destino para la moda geek. Nos especializamos en ofrecer una selección única de ropa y accesorios para jóvenes apasionados por la cultura pop, los videojuegos, el cine y los cómics. En Geekit, encontrarás prendas que te permiten expresar tu estilo auténtico y tu amor por tus intereses favoritos.',
     country: 'Peru',
     socialRazon: '20405979381',
     cellphone: '+55 11 99999-9999',
     email: 'kukuku@upc.pe',
     website: 'https://fromzero.com',
-    image: 'https://geekitpe.com/wp-content/uploads/2022/11/152x152.jpg',
+    imageProfile: 'https://geekitpe.com/wp-content/uploads/2022/11/152x152.jpg',
     sector: 'Technology',
     projects: [
       {
