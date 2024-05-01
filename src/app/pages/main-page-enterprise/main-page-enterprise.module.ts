@@ -48,6 +48,7 @@ import {
 import {ProjectListComponent} from "./components/highlight-projects/components/project-list/project-list.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { SidenavEnterpriseComponent } from './components/sidenav-enterprise/sidenav-enterprise.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -93,7 +94,7 @@ import { SidenavEnterpriseComponent } from './components/sidenav-enterprise/side
     MatDatepickerToggle,
     MatDatepicker,
     MatPaginatorModule,
-
+    HttpClientModule
   ]
 })
 export class MainPageEnterpriseModule { }

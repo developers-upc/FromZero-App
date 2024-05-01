@@ -10,7 +10,7 @@ export interface IEnterpriseProfile {
   socialRazon: string;
   website: string;
   sector: string;
-  projects: any[];
+  projects: IProject[];
 }
 
 export interface IProject {

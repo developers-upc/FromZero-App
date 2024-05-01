@@ -10,6 +10,12 @@ enum accountType {
   Enterprise,
   Developer
 }
+export interface IUserLogin{
+  username: string;
+  password: string;
+  id:number;
+}
+
 
 //Interface perfil de usuario una vez ingresado a la aplicacion
 export interface IProfile{
@@ -28,6 +34,21 @@ export interface IProfile{
   projects?: IProject[]
 }
 
+export interface IEnterpriseProfile {
+  id: number;
+  username: string;
+  email: string;
+  imageProfile: string;
+  accountType: number;
+  summary: string;
+  country: string;
+  cellphone: string;
+  socialRazon: string;
+  website: string;
+  sector: string;
+  projects: any[];
+}
+
 //Interface de proyectos
 export interface IProject {
   id: number,
@@ -43,7 +64,6 @@ export interface IProject {
   enterprise?: IProfile,
   developer?: IProfile,
 }
-
 enum statusProject {
   InProgress,
   Finished,

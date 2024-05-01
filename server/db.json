@@ -18,6 +18,31 @@
   "profiles": [
     {
       "id": 1,
+      "username": "asdasdadsada",
+      "email": "geekit.pe@gmail.com",
+      "imageProfile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRA3o2AjctAbpo5wyonI6CJN10uejfkoCiXi5uGdxV9lA&s",
+      "accountType": 0,
+      "summary": "asdasdadsada es tu destino para la moda geek. Nos especializamos en ofrecer una selección única de ropa y accesorios para jóvenes apasionados por la cultura pop, los videojuegos, el cine y los cómics. En Geekit, encontrarás prendas que te permiten expresar tu estilo auténtico y tu amor por tus intereses favoritos.",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "socialRazon": "12412412412414",
+      "website": "https://geekitpe.com",
+      "sector": "Ropa",
+      "projects": [
+        {
+          "name": "Landing Page Geekit",
+          "state": 0,
+          "progress": 50
+        },
+        {
+          "name": "Aplicacion Web Geekit",
+          "state": 2,
+          "progress": 100
+        }
+      ]
+    },
+    {
+      "id": 2,
       "username": "empresa1",
       "email": "empresa1@upc",
       "imageProfile": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png",

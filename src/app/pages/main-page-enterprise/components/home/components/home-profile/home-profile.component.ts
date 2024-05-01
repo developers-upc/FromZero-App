@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {IEnterpriseProfile} from "../../models/enterprise-profile.model";
 import { MatDialog } from "@angular/material/dialog";
 import { EditProfileDialogComponent } from '../edit-profile-dialog/edit-profile-dialog.component';
@@ -9,19 +9,10 @@ import {AuthApiService} from "../../../../../auth/services/auth-api.service";
   templateUrl: './home-profile.component.html',
   styleUrl: './home-profile.component.css'
 })
-export class HomeProfileComponent implements OnInit {
-  perfilUsuario!: IEnterpriseProfile;
+export class HomeProfileComponent {
+  @Input() perfilUsuario!: IEnterpriseProfile;
 
-  ngOnInit(): void {
-    const userId = localStorage.getItem('userId');
-    if (userId) {
-      this._authService.getProfileById(+userId).subscribe(profile => {
-        this.perfilUsuario = profile;
-      });
-    }
-  }
-
-  constructor(public dialog: MatDialog, private _authService: AuthApiService) {}
+  constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditProfileDialogComponent, {
