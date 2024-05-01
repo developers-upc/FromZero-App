@@ -16,6 +16,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { ExampleDirective } from './shared/directives/example.directive';
 import { ExamplePipe } from './shared/pipes/example.pipe';
 import { LoginComponent } from './pages/auth/components/login/login.component';
+import { DeliverableComponent } from './pages/review-deliverable/components/deliverable/deliverable.component';
+import { DialogAcceptDeliverableComponent } from './pages/review-deliverable/components/dialog-accept-deliverable/dialog-accept-deliverable.component';
 import { SupportComponent } from './pages/support/components/support/support.component';
 import { MessageComponent } from './pages/message/components/message/message.component';
 import { FormCreateProjectComponent } from './pages/projects/components/form-create-project/form-create-project.component';
@@ -73,6 +75,8 @@ import { ProjectListComponent } from './pages/highlight-projects/components/proj
     ProjectListComponent,
     MessageComponent,
     SupportComponent,
+    DeliverableComponent,
+    DialogAcceptDeliverableComponent,
   ],
     imports: [
         BrowserModule,
