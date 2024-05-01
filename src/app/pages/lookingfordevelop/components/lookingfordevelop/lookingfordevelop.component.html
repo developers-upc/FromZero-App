@@ -1,0 +1,27 @@
+
+
+
+<div class="bloque-superior">
+<mat-card class="card-class look">
+  <div>
+    <img mat-card-sm-image src="./assets/lookingfordevelop-images/perfil1.png"
+         alt="Perfil"/>
+
+    <div>
+      <mat-card-header>Eva Rodriguez Perez</mat-card-header>
+      <mat-card-content>Descripcion</mat-card-content>
+      <mat-card-content>Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web</mat-card-content>
+    </div>
+
+  </div>
+
+</mat-card>
+</div>
+
+<div class="card-class pages">
+  <mat-paginator [length]="100"
+                 [pageSize]="10"
+                 [pageSizeOptions]="[5, 10, 25, 100]"
+                 aria-label="Select page">
+  </mat-paginator>
+</div>

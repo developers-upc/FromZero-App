@@ -52,6 +52,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import {provideNativeDateAdapter} from "@angular/material/core";
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
 import { ProjectListComponent } from './pages/highlight-projects/components/project-list/project-list.component';
+import { LookingfordevelopComponent } from './pages/lookingfordevelop/components/lookingfordevelop/lookingfordevelop.component';
+import {MatPaginator} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -77,6 +79,7 @@ import { ProjectListComponent } from './pages/highlight-projects/components/proj
     SupportComponent,
     DeliverableComponent,
     DialogAcceptDeliverableComponent,
+    LookingfordevelopComponent,
   ],
     imports: [
         BrowserModule,
@@ -102,6 +105,7 @@ import { ProjectListComponent } from './pages/highlight-projects/components/proj
         MatProgressBar,
         MatDatepickerModule,
         ReactiveFormsModule,
+        MatPaginator
     ],
   providers: [
     provideAnimationsAsync(),

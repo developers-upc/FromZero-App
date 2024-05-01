@@ -6,6 +6,7 @@ import {RecoverPasswordComponent} from "./pages/auth/components/recover-password
 import {DeliverablesComponent} from "./pages/deliverables/components/deliverables/deliverables.component";
 import {MessageComponent} from "./pages/message/components/message/message.component";
 import {SupportComponent} from "./pages/support/components/support/support.component";
+import { LookingfordevelopComponent } from "./pages/lookingfordevelop/components/lookingfordevelop/lookingfordevelop.component";
 
 const routes: Routes = [
   {
@@ -27,6 +28,9 @@ const routes: Routes = [
   },
   {
     path: 'support', component: SupportComponent
+  },
+    {
+    path: 'lookingdevop', component: LookingfordevelopComponent
   },
  ];
 
