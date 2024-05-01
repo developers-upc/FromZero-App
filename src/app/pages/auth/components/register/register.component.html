@@ -1,0 +1,59 @@
+<div style="display: flex; align-items: center; background-color: white">
+  <div class="auth-image" style="position: relative;">
+    <img src="./assets/auth-images/fondo.png" alt="Fondo" class="login-BG">
+    <div class="login-logo" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <img src="./assets/auth-images/logo.png" alt="Logo">
+    </div>
+  </div>
+
+  <div style="margin: auto">
+    <form style="display: block; text-align: center">
+
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Correo Electrónico</mat-label>
+          <input matInput placeholder="Ingresar Correo">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre Usuario</mat-label>
+          <input matInput placeholder="Ingresar Usuario">
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" placeholder="Ingresar Contraseña">
+        </mat-form-field>
+      </div>
+
+
+      <div>
+        <mat-form-field>
+          <mat-label>Usuario</mat-label>
+          <mat-select>
+            @for (user of users; track user) {
+              <mat-option [value]="user">{{user}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <a mat-flat-button color="primary">Crear Cuenta</a>
+      </div>
+
+
+      <div>
+        <a mat-button routerLink="/login" >Iniciar Sesión</a>
+      </div>
+
+
+    </form>
+  </div>
+
+</div>
+

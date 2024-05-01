@@ -1,8 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,4 +8,3 @@ body {
   background: rgb(104,125,180);
   background: linear-gradient(180deg, rgba(104,125,180,1) 26%, rgba(89,143,171,1) 45%, rgba(70,164,158,1) 96%);
 }
-
