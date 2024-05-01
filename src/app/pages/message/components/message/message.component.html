@@ -1,0 +1,53 @@
+
+<div class="flex items-center justify-center w-full h-full">
+  <div class="container w-4/6 h-5/6 bg-white border-2 border-gray-500 shadow-xl shadow-gray-600 md:w-3/4">
+    <mat-card>
+      <form  class="m-5">
+
+        <div class="p-3 flex justify-around">
+          <mat-form-field class="w-5/6 h-16">
+            <input matInput placeholder="Destinatario" formControlName="title">
+          </mat-form-field>
+        </div>
+
+        <div class="p-3 flex justify-around">
+          <mat-form-field class="w-5/6 h-16">
+            <input matInput placeholder="Titulo del mensaje" formControlName="title">
+          </mat-form-field>
+        </div>
+
+        <div class="p-3 flex justify-around">
+          <mat-form-field class="w-5/6 h-16">
+            <input matInput placeholder="Asunto" formControlName="title">
+          </mat-form-field>
+        </div>
+
+
+        <hr>
+        <div class="p-3 flex justify-around">
+          <mat-form-field class="w-5/6">
+            <textarea matInput placeholder="Mensaje" formControlName="mensaje" style="height: 180px;"></textarea>
+          </mat-form-field>
+        </div>
+        <hr>
+
+        <div class="p-3 flex justify-around">
+          <div>
+            <input class="ng-hide" id="input-file-id" multiple type="file" />
+            <label for="input-file-id" class="md-button md-raised md primary"></label>
+          </div>
+
+        </div>
+
+        <div class="p-3 flex justify-around">
+          <div>
+            <a mat-flat-button (click)="message=email.valid" color="primary">Enviar</a>
+          </div>
+        </div>
+
+
+      </form>
+    </mat-card>
+  </div>
+</div>
+
