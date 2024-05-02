@@ -49,6 +49,7 @@ import {ProjectListComponent} from "./components/highlight-projects/components/p
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { SidenavEnterpriseComponent } from './components/sidenav-enterprise/sidenav-enterprise.component';
 import {HttpClientModule} from "@angular/common/http";
+import { DeveloperProfileComponent } from './components/developer-profile/components/developer-profile/developer-profile.component';
 
 
 
@@ -73,6 +74,7 @@ import {HttpClientModule} from "@angular/common/http";
     LookingfordevelopComponent,
     ProjectListComponent,
     SidenavEnterpriseComponent,
+    DeveloperProfileComponent,
 
   ],
   imports: [
