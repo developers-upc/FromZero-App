@@ -96,79 +96,157 @@
       "name": "Luisa Montes de Oca",
       "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 4,
-      "profileImage": "https://www.seoptimer.com/storage/images/2014/08/selfie.jpg"
+      "profileImage": "https://www.seoptimer.com/storage/images/2014/08/selfie.jpg",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 2,
+      "skills": "HTML5,CSS, JavaScript, Node.js, Express, MongoDB, MySQL",
+      "repository": [
+        {
+          "title": "Big Cheese Pizza",
+          "urlPage": "https://www.bigcheesepizza.com.pe"
+        },
+        {
+          "title": "Cravings Journal",
+          "urlPage": "https://es.cravingsjournal.com"
+        }
+      ]
     },
-
     {
       "id": 2,
       "name": "Daniel Soto García",
-      "description": "Ingeniero de Software Full Stack con experiencia en el desarrollo de aplicaciones escalables y robustas. Especializado en tecnologías como Python, Django, React y Vue.js, Daniel disfruta resolviendo problemas complejos y optimizando el rendimiento del software. Con una mentalidad orientada al cliente, se asegura de que las soluciones entregadas cumplan con los requisitos y expectativas del usuario final.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 3,
-      "profileImage": "https://www.blogdelfotografo.com/wp-content/uploads/2022/01/retrato-anillo-luz.webp"
+      "profileImage": "https://www.blogdelfotografo.com/wp-content/uploads/2022/01/retrato-anillo-luz.webp",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 1,
+      "skills": "HTML5,CSS, JavaScript, Vue.js, C#, NET CORE, SQL Server",
+      "repository": [
+        {
+          "title": "Flyordie Chess",
+          "urlPage": "http://m.flyordie.com/ajedrez/"
+        }
+      ]
     },
-
     {
       "id": 3,
       "name": "Carolina Martínez López",
-      "description": "Científica de Datos apasionada por descubrir patrones y tendencias en conjuntos de datos complejos. Con experiencia en Python, R y herramientas de aprendizaje automático, como TensorFlow y scikit-learn, Carolina disfruta explorando y analizando datos para extraer información valiosa. Su habilidad para comunicar insights de manera clara y efectiva la convierte en un miembro valioso en cualquier equipo de análisis de datos.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 1,
-      "profileImage": "https://media.istockphoto.com/id/487964213/es/foto/confianza-en-su-belleza.jpg?s=612x612&w=0&k=20&c=3yz5Tstmdt4VXbnY6C891sLrtTqy0_NmD_Clmtmvp6I="
+      "profileImage": "https://media.istockphoto.com/id/487964213/es/foto/confianza-en-su-belleza.jpg?s=612x612&w=0&k=20&c=3yz5Tstmdt4VXbnY6C891sLrtTqy0_NmD_Clmtmvp6I=",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 0,
+      "skills": "MongoDB, Express.js, React.js, Node.js, Agile, Scrum",
+      "repository": []
     },
-
     {
       "id": 4,
       "name": "Alejandro Torres Navarro",
-      "description": "Ingeniero de Software especializado en desarrollo de aplicaciones móviles nativas para iOS. Con experiencia en Swift y Objective-C, Alejandro tiene un historial comprobado de crear aplicaciones intuitivas y de alto rendimiento que ofrecen una excelente experiencia de usuario. Apasionado por la innovación, siempre está buscando nuevas tecnologías y técnicas para mejorar sus habilidades y mantenerse al tanto de las últimas tendencias en desarrollo de aplicaciones móviles.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 5,
-      "profileImage": "https://st3.depositphotos.com/9881890/15494/i/450/depositphotos_154945740-stock-photo-happy-caucasian-man.jpg"
+      "profileImage": "https://st3.depositphotos.com/9881890/15494/i/450/depositphotos_154945740-stock-photo-happy-caucasian-man.jpg",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 3,
+      "skills": "MongoDB, Express.js, AngularJS, Node.js, SCRUM",
+      "repository": [
+        {
+          "title": "Peridot",
+          "urlPage": "https://play.google.com/store/apps/details?id=com.nianticlabs.peridot&hl=es&gl=US"
+        },
+        {
+          "title": "G Poker",
+          "urlPage": "https://es.ggpoker.com"
+        },
+        {
+          "title": "Spint the Wheel",
+          "urlPage": "https://spinthewheel.io/es"
+        }
+      ]
     },
-
     {
       "id": 5,
       "name": "María Rodríguez Sánchez",
-      "description": "Ingeniera de Seguridad Informática con experiencia en proteger sistemas contra ciberataques. Especializada en auditoría de sistemas y análisis forense, María está comprometida a garantizar la integridad y la seguridad de la información. Conocedora de las últimas amenazas y vulnerabilidades, trabaja diligentemente para implementar medidas de seguridad proactivas y mantenerse un paso adelante de los posibles atacantes.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 3,
-      "profileImage": "https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg"
+      "profileImage": "https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 0,
+      "skills": "Linux, Apache, MySQL, PHP, Waterfall",
+      "repository": []
     },
-
     {
       "id": 6,
       "name": "Javier López Martínez",
-      "description": "Ingeniero DevOps con experiencia en automatización de procesos de desarrollo, integración y despliegue continuo. Especializado en herramientas como Docker, Kubernetes y Jenkins, Javier se enfoca en mejorar la eficiencia y la calidad de los flujos de trabajo de desarrollo. Con una mentalidad orientada a la automatización, busca constantemente formas de optimizar los procesos y reducir el tiempo de comercialización.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 4,
-      "profileImage": "https://assets-global.website-files.com/6232253a9b37533306905c0a/639bb9fcb0b7738c645c153c_IMG_126D698EF95A-1.jpg"
+      "profileImage": "https://assets-global.website-files.com/6232253a9b37533306905c0a/639bb9fcb0b7738c645c153c_IMG_126D698EF95A-1.jpg",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 0,
+      "skills": "Python, Django, Kanban",
+      "repository": []
     },
-
     {
       "id": 7,
       "name": "Ana García Rodríguez",
-      "description": "Desarrolladora Back-end con experiencia en la construcción de sistemas escalables y seguros. Especializada en Java, Spring Boot y bases de datos relacionales y no relacionales, Ana se destaca en el diseño e implementación de servicios robustos y eficientes. Apasionada por resolver problemas técnicos desafiantes, trabaja diligentemente para garantizar la fiabilidad y el rendimiento de los sistemas que desarrolla.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 3,
-      "profileImage": "https://us.123rf.com/450wm/prometeus/prometeus2111/prometeus211100185/176873432-retrato-de-uma-menina-de-11-anos-em-um-su%C3%A9ter-quente-e-%C3%B3culos-sorrindo-alegremente-em-um-fundo-cinza.jpg"
+      "profileImage": "https://us.123rf.com/450wm/prometeus/prometeus2111/prometeus211100185/176873432-retrato-de-uma-menina-de-11-anos-em-um-su%C3%A9ter-quente-e-%C3%B3culos-sorrindo-alegremente-em-um-fundo-cinza.jpg",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 0,
+      "skills": "Ruby, Rails, Lean",
+      "repository": []
     },
-
     {
       "id": 8,
       "name": "Juan Pérez Martínez",
-      "description": "Ingeniero de Software especializado en desarrollo de videojuegos. Con experiencia en Unity y Unreal Engine, Juan tiene un historial comprobado de crear experiencias de juego inmersivas y emocionantes. Apasionado por la narrativa y el diseño de juegos, se esfuerza por crear mundos virtuales que cautiven a los jugadores y los sumerjan en nuevas aventuras. Siempre está explorando nuevas tecnologías y técnicas para mejorar sus habilidades y llevar sus juegos al siguiente nivel.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 1,
-      "profileImage": "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/e40b6ea6361a1abe28f32e7910f63b66/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg"
+      "profileImage": "https://images.ctfassets.net/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/e40b6ea6361a1abe28f32e7910f63b66/1-intro-photo-final.jpg?w=1200&h=992&fl=progressive&q=70&fm=jpg",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 0,
+      "skills": "MongoDB, Express.js, React.js, Node.js, DevOps",
+      "repository": []
     },
-
     {
       "id": 9,
       "name": "Laura Gómez Fernández",
-      "description": "Ingeniera Front-end con pasión por la creación de interfaces de usuario innovadoras y dinámicas. Especializada en tecnologías web como HTML, CSS y JavaScript, Laura se destaca en la implementación de diseños creativos y funcionales. Con una sólida comprensión de las mejores prácticas de diseño web y experiencia de usuario, trabaja diligentemente para garantizar que las aplicaciones que desarrolla sean intuitivas y fáciles de usar. Apasionada por la tecnología y el diseño, está constantemente explorando nuevas herramientas y técnicas para mejorar sus habilidades y mantenerse al tanto de las últimas tendencias en desarrollo web.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 5,
-      "profileImage": "https://plus.unsplash.com/premium_photo-1682096189627-2dfb5122b2ec?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "profileImage": "https://plus.unsplash.com/premium_photo-1682096189627-2dfb5122b2ec?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 0,
+      "skills": "MongoDB, Express.js, Vue.js, Node.js, Scrum",
+      "repository": []
     },
-
     {
       "id": 10,
       "name": "Pedro Silva Juarez",
-      "description": "Desarrollador Front-end apasionado por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Pedro siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
+      "description": "Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web.",
       "rating": 3,
-      "profileImage": "https://img.freepik.com/foto-gratis/retrato-interior-joven-barbudo-peinado-moda_273609-3953.jpg"
+      "profileImage": "https://img.freepik.com/foto-gratis/retrato-interior-joven-barbudo-peinado-moda_273609-3953.jpg",
+      "country": "Peru",
+      "cellphone": "9132851724",
+      "email": "luisa.montes@gmail.com",
+      "completedProjects": 0,
+      "skills": "HTML5,CSS, JavaScript, Node.js, Express, MongoDB, MySQL",
+      "repository": []
     }
   ],
   "highlights-projects": [

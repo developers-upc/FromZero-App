@@ -103,7 +103,13 @@ export interface IDeveloper {
   name: string,
   description: string,
   rating: number,
-  profileImage: string
+  profileImage: string,
+  country: string,
+  cellphone: string,
+  email: string,
+  completedProjects: number,
+  skills: string,
+  repositorio: IProject[],
 }
 
 export interface IHighlightProject {

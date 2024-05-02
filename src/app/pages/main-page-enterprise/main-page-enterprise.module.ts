@@ -50,6 +50,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
 import { SidenavEnterpriseComponent } from './components/sidenav-enterprise/sidenav-enterprise.component';
 import {HttpClientModule} from "@angular/common/http";
 import { DeveloperProfileComponent } from './components/developer-profile/components/developer-profile/developer-profile.component';
+import { DeveloperProfileCardComponent } from './components/developer-profile/components/developer-profile-card/developer-profile-card.component';
+import { DeveloperRepositoryCardComponent } from './components/developer-profile/components/developer-repository-card/developer-repository-card.component';
+import { DeveloperProfilePageComponent } from './components/developer-profile/components/developer-profile-page/developer-profile-page.component';
 
 
 
@@ -75,6 +78,9 @@ import { DeveloperProfileComponent } from './components/developer-profile/compon
     ProjectListComponent,
     SidenavEnterpriseComponent,
     DeveloperProfileComponent,
+    DeveloperProfileCardComponent,
+    DeveloperRepositoryCardComponent,
+    DeveloperProfilePageComponent,
 
   ],
   imports: [
