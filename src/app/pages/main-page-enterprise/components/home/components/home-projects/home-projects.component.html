@@ -16,7 +16,9 @@
               <mat-card *ngIf="project.state === 'En busqueda'; else inProgress">
                 <mat-card-header>
                   <mat-card-title>
-                    <p class="text-black text-xs font-bold">{{ project.name }}</p>
+                    <a [routerLink]="goToDeliverables(project.id)">
+                      <p class="text-black text-xs font-bold">{{ project.name }}</p>
+                    </a>
                   </mat-card-title>
                 </mat-card-header>
                 <mat-card-content>
@@ -30,7 +32,9 @@
                 <mat-card *ngIf="project.state === 'En proceso'; else completed">
                   <mat-card-header>
                     <mat-card-title>
-                      <p class="text-black text-xs font-bold">{{ project.name }}</p>
+                      <a [routerLink]="goToDeliverables(project.id)">
+                        <p class="text-black text-xs font-bold">{{ project.name }}</p>
+                      </a>
                     </mat-card-title>
                   </mat-card-header>
                   <mat-card-content>

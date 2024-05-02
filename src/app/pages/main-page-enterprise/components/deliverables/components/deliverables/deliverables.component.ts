@@ -5,6 +5,10 @@ import {Deliverable} from "../../model/deliverable.entity";
 import {MatDialog} from "@angular/material/dialog";
 import {DialogAddDeliverableComponent} from "../dialog/dialog-add-deliverable.component";
 import {FormControl} from "@angular/forms";
+import {IDeliverable} from "../../model/ideliverable";
+import {StatusDeliverable} from "../../model/status-deliverable";
+import {AuthApiService} from "../../../../../auth/services/auth-api.service";
+import {IEnterpriseProfile} from "../../../home/models/enterprise-profile.model";
 
 @Component({
   selector: 'app-deliverables',
@@ -12,59 +16,48 @@ import {FormControl} from "@angular/forms";
   styleUrl: './deliverables.component.css'
 })
 export class DeliverablesComponent implements OnInit {
+
+  enterprise!: IEnterpriseProfile;
+  projectname="";
+
+  deliverables!:IDeliverable[];
+
+  deliverableCreated?:IDeliverable;
   projectId?: number;
-  //Usar model de /core
-  enterprise: any = {
-    name: "Geekit.pe",
-    projects: {
-      id:1,
-      name: "Plataforma de Comercio Elctronico Geekit",
-    }
-  }
-
-  deliverables: Deliverable[] = [
-    {
-      d_number: 1,
-      title:"Documento de Especificacion de Requisitos del Software (SRS)",
-      description: "Este entregable consistirá en un documento detallado que describe los requisitos funcionales y no funcionales de la Plataforma de Comercio Electrónico Geekit. Incluirá casos de uso, diagramas de flujo, requisitos de usuario, requisitos de sistema y cualquier otra información relevante para guiar el desarrollo del software.",
-      expiration_date:new Date(2024,6,24),
-      state:"Finalizado"
-    },
-    {
-      d_number: 2,
-      title:"Prototipo Interactivo de la interfaz de usuario (UI)",
-      description: "Este entregable consistirá en un documento detallado que describe los requisitos funcionales y no funcionales de la Plataforma de Comercio Electrónico Geekit. Incluirá casos de uso, diagramas de flujo, requisitos de usuario, requisitos de sistema y cualquier otra información relevante para guiar el desarrollo del software.",
-      expiration_date:new Date(2024,7,24),
-      state:"En espera de revision"
-    },
-    {
-      d_number: 3,
-      title:"Codigo fuente delk frontend y backend",
-      description: "Este entregable consistirá en un documento detallado que describe los requisitos funcionales y no funcionales de la Plataforma de Comercio Electrónico Geekit. Incluirá casos de uso, diagramas de flujo, requisitos de usuario, requisitos de sistema y cualquier otra información relevante para guiar el desarrollo del software.",
-      expiration_date:new Date(2024,8,24),
-      state:"En espera de revision"
-    }
-  ];
-
-  deliverableCreated?:Deliverable;
   title=new FormControl('');
   description=new FormControl('');
   exp_date=new FormControl(new Date());
-  state:string="pendiente";
+  state:StatusDeliverable=0;
 
   constructor(private route: ActivatedRoute,
               private delvsApi: DeliverablesApiService,
-              public dialog:MatDialog) {
+              public dialog:MatDialog,
+              private authservice:AuthApiService) {
   }
 
   ngOnInit() {
 
     this.route.params.subscribe(params => {
+      //Leyendo el projectId que se envió por params
       this.projectId = params['projectId'];
       console.log(this.projectId);
-      this.delvsApi.getAllDeliverables(this.projectId).subscribe({
+
+      //llamado a la API para obtener todos los entregables
+      const userId = localStorage.getItem('userId');
+      const userIdNumber=userId?+userId:null;
+      this.delvsApi.getAllDeliverables(userIdNumber).subscribe({
         next: (result:any) => {
-          this.deliverables=result;
+          const numero:number=this.projectId??0;
+
+          //obteniendo datos de perfil de usuario
+          const newUserIdNumber:number=userIdNumber??0;
+          this.authservice.getProfileById(newUserIdNumber).subscribe(profile=>{
+            this.enterprise=profile;
+            console.log(this.enterprise)
+            this.projectname=this.enterprise.projects[numero-1].name
+          })
+
+          this.deliverables=result.projects[numero-1].deliverables;
         },
         error: (err:any) => {
           console.log(err);
@@ -85,8 +78,15 @@ export class DeliverablesComponent implements OnInit {
     })
     dialogRef.afterClosed().subscribe(result=>{
       console.log(result);
-      this.deliverableCreated=new Deliverable(count,result.delv_title.value,
-        result.delv_description.value, result.delv_exp_date.value,this.state)
+
+      this.deliverableCreated={
+        id:count,
+        title:result.delv_title.value,
+        description:result.delv_description.value,
+        deadLine:result.delv_exp_date.value,
+        status:this.state
+      }
+
       //Llamar al servicio para hacer POST
       this.delvsApi.postDeliverable(this.deliverableCreated,this.projectId);
 
@@ -95,4 +95,7 @@ export class DeliverablesComponent implements OnInit {
     })
   }
 
+  getEnumName(value:number){
+    return StatusDeliverable[value];
+  }
 }

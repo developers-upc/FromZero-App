@@ -23,4 +23,8 @@ export class HomeProjectsComponent {
       }
     });
   }
+
+  goToDeliverables(projectId:number){
+    return ['/app','main',projectId,'deliverables']
+  }
 }

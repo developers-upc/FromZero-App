@@ -1,18 +1,18 @@
 <div class="delvs-container">
   <div class="delvs-title">
     <h1>Cronograma de entregables</h1>
-    <h3>{{ enterprise.projects.name }}</h3>
-    <h5>{{ enterprise.name }}</h5>
+    <h3>{{ projectname }}</h3>
+    <h5>{{ enterprise?.username }}</h5>
   </div>
   <div class="delvs-content">
     <ul class="delvs-list">
-      @for (delv of deliverables; track delv.d_number) {
+      @for (delv of deliverables; track delv.id) {
         <li class="deliverable">
           <mat-card>
             <a [routerLink]="">
               <mat-card-header>
                 <mat-card-title>
-                  Entregable {{ delv.d_number }}: {{ delv.title }}
+                  Entregable {{ delv.id }}: {{ delv.title }}
                 </mat-card-title>
               </mat-card-header>
             </a>
@@ -26,12 +26,12 @@
                   <div>
                     <img src="../../../../../../../assets/deliverables-images/expiration-date.png" alt="expiration date">
                     <p>Fecha límite</p>
-                    <p>{{delv.expiration_date | date:'shortDate'}}</p>
+                    <p>{{delv.deadLine | date:'shortDate'}}</p>
                   </div>
                   <div>
                     <img src="../../../../../../../assets/deliverables-images/state.png" alt="state">
                     <p>Estado</p>
-                    <p>{{delv.state}}</p>
+                    <p>{{getEnumName(delv.status)}}</p>
                   </div>
                 </div>
               </div>

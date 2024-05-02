@@ -9,6 +9,7 @@ import {
   LookingfordevelopComponent
 } from "./components/looking-for-developer/components/lookingfordevelop/lookingfordevelop.component";
 import {ProjectListComponent} from "./components/highlight-projects/components/project-list/project-list.component";
+import {DeliverablesComponent} from "./components/deliverables/components/deliverables/deliverables.component";
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
       {
         path: 'highlight-projects',
         component: ProjectListComponent
+      },
+      {
+        path:':projectId/deliverables',
+        component:DeliverablesComponent
       }
     ]
   },
