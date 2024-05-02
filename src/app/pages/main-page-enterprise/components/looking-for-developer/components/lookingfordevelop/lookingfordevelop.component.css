@@ -12,3 +12,10 @@
 .bloque-superior {
   margin: 20px;
 }
+
+.developers-list {
+  height: 65vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-right: 30px;
+}

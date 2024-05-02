@@ -97,3 +97,20 @@ export interface ICandidate {
   project: IProject,
   isAccepted: boolean
 }
+
+export interface IDeveloper {
+  id: number,
+  name: string,
+  description: string,
+  rating: number,
+  profileImage: string
+}
+
+export interface IHighlightProject {
+  id: number,
+  title: string,
+  description: string,
+  type: string,
+  stars: number[],
+  image_url: string
+}

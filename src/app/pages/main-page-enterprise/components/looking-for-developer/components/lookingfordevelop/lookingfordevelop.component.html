@@ -1,27 +1,39 @@
+<div class="bloque-superior w-full h-full ">
+  <ul class="developers-list flex flex-col gap-3 mt-20">
+    @for (developer of developers; track developer.id){
+      <li>
+
+        <mat-card class="card-class look">
+
+          <div style="display: flex; justify-content: space-around">
+            <div>
+              <img mat-card-sm-image [src]="developer.profileImage"
+                   [alt]="developer.name"/>
+            </div>
+
+            <div>
+              <mat-card-header>
+                <mat-card-title>
+                  {{developer.name}}
+                </mat-card-title>
+              </mat-card-header>
+              <div style="text-align: center; display: flex">
+                Rating:{{developer.rating}}
+                <img src="./assets/lookingfordeveloper-images/star.png" style="width: 20px; height: auto" alt="estrella">
+              </div>
+            </div>
+          </div>
+
+          <mat-card-content>
+            {{developer.description}}
+          </mat-card-content>
+
+        </mat-card>
+
+      </li>
+    }
+  </ul>
 
 
 
-<div class="bloque-superior">
-<mat-card class="card-class look">
-  <div>
-    <img mat-card-sm-image src="./assets/lookingfordevelop-images/perfil1.png"
-         alt="Perfil"/>
-
-    <div>
-      <mat-card-header>Eva Rodriguez Perez</mat-card-header>
-      <mat-card-content>Descripcion</mat-card-content>
-      <mat-card-content>Desarrolladora Front-end apasionada por la creación de interfaces de usuario intuitivas y atractivas. Especializada en HTML, CSS y JavaScript, se destaca en la implementación de diseños creativos y responsivos. Luisa siempre busca mejorar la experiencia del usuario y está al tanto de las últimas tendencias en diseño web</mat-card-content>
-    </div>
-
-  </div>
-
-</mat-card>
-</div>
-
-<div class="card-class pages">
-  <mat-paginator [length]="100"
-                 [pageSize]="10"
-                 [pageSizeOptions]="[5, 10, 25, 100]"
-                 aria-label="Select page">
-  </mat-paginator>
 </div>

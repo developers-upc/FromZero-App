@@ -36,7 +36,7 @@ import {
 } from "./components/deliverables/components/dialog/dialog-add-deliverable.component";
 import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/material/datepicker";
 import {HomePageComponent} from "./components/home/components/home-page/home-page.component";
-import {SupportComponent} from "./components/support/components/support/support.component";
+import {SupportComponent} from "../../shared/components/support/support.component";
 import {DeliverableComponent} from "./components/review-deliverable/components/deliverable/deliverable.component";
 import {
   DialogAcceptDeliverableComponent

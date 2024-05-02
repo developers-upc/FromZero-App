@@ -34,6 +34,7 @@
 .footer-content {
   align-items: center;
   padding: 5px;
+  padding-bottom: 20px;
   display: flex;
 }
 
