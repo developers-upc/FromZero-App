@@ -14,6 +14,7 @@ import {
   DeveloperProfilePageComponent
 } from "./components/developer-profile/components/developer-profile-page/developer-profile-page.component";
 import {MessageComponent} from "./components/message/components/message/message.component";
+import {SupportComponent} from "../../shared/components/support/support.component";
 
 const routes: Routes = [
   {
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path: 'message',
         component: MessageComponent
+      },
+      {
+        path: 'support',
+        component: SupportComponent
       }
     ]
   },
