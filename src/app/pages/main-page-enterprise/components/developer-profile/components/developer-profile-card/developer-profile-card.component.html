@@ -3,7 +3,9 @@
     <mat-card-header class="flex justify-between mb-3 align-middle items-center">
       <mat-card-title>{{perfilDeveloper?.name}}</mat-card-title>
       <img mat-card-image :src="{{perfilDeveloper?.profileImage}}" alt="Perfil de usuario" class="w-12 h-12">
-      <mat-icon class="text-purple-500">message</mat-icon>
+      <a routerLink="/app/main/message">
+        <mat-icon class="text-purple-500">message</mat-icon>
+      </a>
     </mat-card-header>
     <div class="flex justify-center">
       <hr class="w-5/6 text-gray-500">
