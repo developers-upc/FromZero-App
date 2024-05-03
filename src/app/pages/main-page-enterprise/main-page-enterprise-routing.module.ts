@@ -10,6 +10,9 @@ import {
 } from "./components/looking-for-developer/components/lookingfordevelop/lookingfordevelop.component";
 import {ProjectListComponent} from "./components/highlight-projects/components/project-list/project-list.component";
 import {DeliverablesComponent} from "./components/deliverables/components/deliverables/deliverables.component";
+import {
+  DeveloperProfilePageComponent
+} from "./components/developer-profile/components/developer-profile-page/developer-profile-page.component";
 
 const routes: Routes = [
   {
@@ -35,6 +38,10 @@ const routes: Routes = [
       {
         path:':projectId/deliverables',
         component:DeliverablesComponent
+      },
+      {
+        path: 'developer-profile/:developerId',
+        component: DeveloperProfilePageComponent
       }
     ]
   },

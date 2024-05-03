@@ -109,7 +109,7 @@ export interface IDeveloper {
   email: string,
   completedProjects: number,
   skills: string,
-  repositorio: IProject[],
+  repository: IProject[],
 }
 
 export interface IHighlightProject {

@@ -7,7 +7,7 @@ import {IProject} from "../../../../../../core/models/example.interface";
   styleUrl: './developer-repository-card.component.css'
 })
 export class DeveloperRepositoryCardComponent {
-  emptyProjects = new Array();
-  @Input() repository!: IProject[];
+  emptyProjects = new Array(5);
+  @Input() perfilDeveloperRepository!: IProject[];
 
 }

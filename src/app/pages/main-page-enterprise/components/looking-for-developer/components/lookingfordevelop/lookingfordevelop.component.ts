@@ -3,6 +3,7 @@ import {FormsModule} from "@angular/forms";
 import {IDeveloper} from "../../../../../../core/models/example.interface";
 import {DevelopersService} from "../../../../service/developer-service/developers.service";
 import {Observable} from "rxjs";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -12,7 +13,7 @@ import {Observable} from "rxjs";
 })
 export class LookingfordevelopComponent implements OnInit{
 
-  constructor(private _developersService: DevelopersService) {
+  constructor(private router: Router,private _developersService: DevelopersService) {
   }
   developers!: IDeveloper[];
 
@@ -21,6 +22,9 @@ export class LookingfordevelopComponent implements OnInit{
       this.developers = developers;
     });
   }
-
+  redirectToProfile(developer: IDeveloper){
+    localStorage.setItem('developerId', developer.id.toString());
+    this.router.navigate(['/app/main/developer-profile', developer.id]);
+  }
 
 }
