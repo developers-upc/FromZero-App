@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {IUserSidenav} from "../../../../shared/model/iuser-sidenav";
+import {AuthApiService} from "../../../auth/services/auth-api.service";
 
 interface SidenavToggle{
   screenWidth: number;
@@ -13,15 +14,20 @@ interface SidenavToggle{
 })
 export class SidenavEnterpriseComponent {
   @Output() onToggleSideNav:EventEmitter<SidenavToggle> = new EventEmitter();
-  user:IUserSidenav={
-    name:'user',
-    urlToImage:'',
-  }
+
+  user:any;
   expand=false;
   screenWidth=0;
-
+  constructor(private authService:AuthApiService) {
+  }
   ngOnInit(){
     this.screenWidth=window.innerWidth;
+    const userId = localStorage.getItem('userId');
+    const userIdNumber=userId?+userId:null;
+    const newUserIdNumber:number=userIdNumber??0;
+    this.authService.getProfileById(newUserIdNumber).subscribe(profile => {
+      this.user=profile;
+    })
   }
 
   toggleExpand(){

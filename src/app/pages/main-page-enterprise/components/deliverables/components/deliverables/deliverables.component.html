@@ -9,7 +9,7 @@
       @for (delv of deliverables; track delv.id) {
         <li class="deliverable">
           <mat-card>
-            <a [routerLink]="">
+            <a [routerLink]="goToReviewDelv(delv.id)">
               <mat-card-header>
                 <mat-card-title>
                   Entregable {{ delv.id }}: {{ delv.title }}

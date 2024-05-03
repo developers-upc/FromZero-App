@@ -15,6 +15,7 @@ import {
 } from "./components/developer-profile/components/developer-profile-page/developer-profile-page.component";
 import {MessageComponent} from "./components/message/components/message/message.component";
 import {SupportComponent} from "../../shared/components/support/support.component";
+import {DeliverableComponent} from "./components/review-deliverable/components/deliverable/deliverable.component";
 
 const routes: Routes = [
   {
@@ -40,6 +41,10 @@ const routes: Routes = [
       {
         path:':projectId/deliverables',
         component:DeliverablesComponent
+      },
+      {
+        path:':projectId/deliverables/:deliverableId',
+        component:DeliverableComponent
       },
       {
         path: 'developer-profile/:developerId',

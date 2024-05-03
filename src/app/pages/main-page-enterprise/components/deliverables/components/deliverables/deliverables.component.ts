@@ -35,6 +35,10 @@ export class DeliverablesComponent implements OnInit {
               private authservice:AuthApiService) {
   }
 
+  getProjectId(){
+    return this.projectId??0;
+  }
+
   ngOnInit() {
 
     this.route.params.subscribe(params => {
@@ -47,17 +51,18 @@ export class DeliverablesComponent implements OnInit {
       const userIdNumber=userId?+userId:null;
       this.delvsApi.getAllDeliverables(userIdNumber).subscribe({
         next: (result:any) => {
-          const numero:number=this.projectId??0;
+          //const index:number=this.projectId??0;
+          const index:number=this.getProjectId();
 
           //obteniendo datos de perfil de usuario
           const newUserIdNumber:number=userIdNumber??0;
           this.authservice.getProfileById(newUserIdNumber).subscribe(profile=>{
             this.enterprise=profile;
             console.log(this.enterprise)
-            this.projectname=this.enterprise.projects[numero-1].name
+            this.projectname=this.enterprise.projects[index-1].name
           })
 
-          this.deliverables=result.projects[numero-1].deliverables;
+          this.deliverables=result.projects[index-1].deliverables;
         },
         error: (err:any) => {
           console.log(err);
@@ -97,5 +102,9 @@ export class DeliverablesComponent implements OnInit {
 
   getEnumName(value:number){
     return StatusDeliverable[value];
+  }
+
+  goToReviewDelv(deliverableId:number){
+    return ['/app','main',this.getProjectId(),'deliverables',deliverableId]
   }
 }
