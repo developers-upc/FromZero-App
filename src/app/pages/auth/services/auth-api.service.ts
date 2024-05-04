@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {map, Observable} from "rxjs";
-import {IEnterpriseProfile, IUserLogin} from "../../../core/models/example.interface";
+//import {IUserLogin} from "../../../core/models/example.interface";
+import {IEnterpriseProfile} from "../../main-page-enterprise/components/home/models/enterprise-profile.model";
+import {IUserLogin} from "../model/iuser-login";
+
 
 @Injectable({
   providedIn: 'root'

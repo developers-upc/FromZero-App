@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
-import {IEnterpriseProfile, IProject} from "../../models/enterprise-profile.model";
+import {IEnterpriseProfile} from "../../models/enterprise-profile.model";
+import {IProject} from "../../models/iproject";
 
 @Component({
   selector: 'app-home-page',

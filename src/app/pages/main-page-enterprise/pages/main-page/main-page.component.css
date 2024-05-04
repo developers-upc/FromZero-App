@@ -4,7 +4,7 @@ body {
 }
 
 .content {
-  width: calc(100% - 12rem);
+  width: calc(100% - 16rem);
   height: 92vh;
   margin-left: 15rem;
   z-index: 0;

@@ -1,7 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {IDeveloper, IProject} from "../../../../../../core/models/example.interface";
+//import {IDeveloper, IProject} from "../../../../../../core/models/example.interface";
 import {ActivatedRoute} from "@angular/router";
 import {DeveloperProfileApiService} from "../../service/developer-profile-api.service";
+import {IDeveloper} from "../../model/ideveloper";
+import {IDeveloperProject} from "../../model/ideveloper-project";
+//import {IProject} from "../../../home/models/iproject";
 
 @Component({
   selector: 'app-developer-profile-page',
@@ -10,7 +13,7 @@ import {DeveloperProfileApiService} from "../../service/developer-profile-api.se
 })
 export class DeveloperProfilePageComponent implements OnInit{
   developerProfile!: IDeveloper;
-  developerRepository!: IProject[];
+  developerRepository!: IDeveloperProject[];
 
   constructor(private route: ActivatedRoute, private _developerApi: DeveloperProfileApiService) {
   }

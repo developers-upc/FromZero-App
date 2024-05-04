@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
-import {IDeveloper} from "../../../../../../core/models/example.interface";
+import {IDeveloper} from "../../model/ideveloper";
+//import {IDeveloper} from "../../../../../../core/models/example.interface";
 
 @Component({
   selector: 'app-developer-profile-card',

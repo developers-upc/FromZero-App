@@ -1,4 +1,5 @@
 import {IDeliverable} from "../../deliverables/model/ideliverable";
+import {IProject} from "./iproject";
 
 export interface IEnterpriseProfile {
   id: number;
@@ -15,7 +16,7 @@ export interface IEnterpriseProfile {
   projects: IProject[];
 }
 
-export interface IProject {
+/*export interface IProject {
   id:number,
   name: string;
   state: string;
@@ -31,4 +32,4 @@ export interface ICandidate {
   image: string;
   state: string;
   link: string;
-}
+}*/

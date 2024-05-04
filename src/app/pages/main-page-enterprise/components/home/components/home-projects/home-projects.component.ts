@@ -1,7 +1,8 @@
 import {Component, Input} from '@angular/core';
-import {ICandidate, IEnterpriseProfile, IProject} from "../../models/enterprise-profile.model";
+import {IEnterpriseProfile} from "../../models/enterprise-profile.model";
 import {MatDialog} from "@angular/material/dialog";
 import {CandidatesProjectDialogComponent} from "../candidates-project-dialog/candidates-project-dialog.component";
+import {IProject} from "../../models/iproject";
 
 @Component({
   selector: 'app-home-projects',

@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {FormsModule} from "@angular/forms";
-import {IDeveloper} from "../../../../../../core/models/example.interface";
+//import {IDeveloper} from "../../../../../../core/models/example.interface";
 import {DevelopersService} from "../../../../service/developer-service/developers.service";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
+import {IDeveloper} from "../../../developer-profile/model/ideveloper";
 
 
 @Component({

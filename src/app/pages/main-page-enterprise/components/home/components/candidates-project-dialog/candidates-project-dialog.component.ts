@@ -1,6 +1,7 @@
 import {Component, Inject} from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {ICandidate} from "../../models/enterprise-profile.model";
+import {ICandidate} from "../../models/icandidate";
+//import {ICandidate} from "../../models/enterprise-profile.model";
 
 @Component({
   selector: 'app-candidates-project-dialog',

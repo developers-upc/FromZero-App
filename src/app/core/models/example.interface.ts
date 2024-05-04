@@ -1,5 +1,5 @@
 //Interface de autentificacion del usuario
-export interface IAccount {
+/*export interface IAccount {
   username: string,
   password: string,
   email: string,
@@ -9,16 +9,16 @@ export interface IAccount {
 enum accountType {
   Enterprise,
   Developer
-}
-export interface IUserLogin{
+}*/
+/*export interface IUserLogin{
   username: string;
   password: string;
   id:number;
-}
+}*/
 
 
 //Interface perfil de usuario una vez ingresado a la aplicacion
-export interface IProfile{
+/*export interface IProfile{
   username: string,
   email: string,
   imageProfile: string,
@@ -32,9 +32,9 @@ export interface IProfile{
   website?: string,
   sector?: string,
   projects?: IProject[]
-}
+}*/
 
-export interface IEnterpriseProfile {
+/*export interface IEnterpriseProfile {
   id: number;
   username: string;
   email: string;
@@ -47,10 +47,10 @@ export interface IEnterpriseProfile {
   website: string;
   sector: string;
   projects: any[];
-}
+}*/
 
 //Interface de proyectos
-export interface IProject {
+/*export interface IProject {
   id: number,
   title: string,
   description: string,
@@ -69,10 +69,10 @@ enum statusProject {
   Finished,
   PendingOfDeveloper,
   Canceled
-}
+}*/
 
 //Interface de entregables
-export interface IDeliverable {
+/*export interface IDeliverable {
   id: number,
   title: string,
   description: string,
@@ -85,10 +85,10 @@ enum statusDeliverable {
   Delivered,
   Reviewed,
   Canceled
-}
+}*/
 
 //Interface de candidatos
-export interface ICandidate {
+/*export interface ICandidate {
   id: number,
   candidateName: string,
   candidateDescription: string,
@@ -96,9 +96,9 @@ export interface ICandidate {
   candidateLinkProfile: string,
   project: IProject,
   isAccepted: boolean
-}
+}*/
 
-export interface IDeveloper {
+/*export interface IDeveloper {
   id: number,
   name: string,
   description: string,
@@ -110,13 +110,13 @@ export interface IDeveloper {
   completedProjects: number,
   skills: string,
   repository: IProject[],
-}
+}*/
 
-export interface IHighlightProject {
+/*export interface IHighlightProject {
   id: number,
   title: string,
   description: string,
   type: string,
   stars: number[],
   image_url: string
-}
+}*/
