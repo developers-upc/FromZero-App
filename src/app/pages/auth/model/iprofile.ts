@@ -15,4 +15,5 @@ export interface IProfile {
   website?: string,
   sector?: string,
   projects?: IProject[]
+  id?:number
 }
