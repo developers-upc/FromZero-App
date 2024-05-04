@@ -1,0 +1,56 @@
+<div class="delvs-container">
+  <div class="delvs-title">
+    <h1>Cronograma de entregables</h1>
+    <h3>{{ projectname }}</h3>
+    <h5>{{ enterprise?.username }}</h5>
+  </div>
+  @if(deliverables?.length){
+  <div class="delvs-content">
+    <ul class="delvs-list">
+      @for (delv of deliverables; track delv.id) {
+        <li class="deliverable">
+          <mat-card>
+            <a [routerLink]="goToReviewDelv(delv.id)">
+              <mat-card-header>
+                <mat-card-title>
+                  Entregable {{ delv.id }}: {{ delv.title }}
+                </mat-card-title>
+              </mat-card-header>
+            </a>
+            <mat-card-content>
+              <div class="delv-details">
+                <div class="delv-description">
+                  <h3>Descripción</h3>
+                  {{ delv.description }}
+                </div>
+                <div class="delv-deadline-state">
+                  <div>
+                    <img src="../../../../../../../assets/deliverables-images/expiration-date.png" alt="expiration date">
+                    <p>Fecha límite</p>
+                    <p>{{delv.deadLine | date:'shortDate'}}</p>
+                  </div>
+                  <div>
+                    <img src="../../../../../../../assets/deliverables-images/state.png" alt="state">
+                    <p>Estado</p>
+                    <p>{{getEnumName(delv.status)}}</p>
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </li>
+      }
+    </ul>
+  </div>
+  } @else {
+    <div>
+      <h1 style="text-align: center">Agregar entregable</h1>
+    </div>
+  }
+  <div class="delv-add">
+    <button mat-icon-button aria-label="add deliverable"
+            (click)="openDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

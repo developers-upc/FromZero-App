@@ -1,30 +1,30 @@
 <div style="display: flex; align-items: center; background-color: white">
-  <div class="auth-image" style="position: relative;">
+  <div class="auth-image" style="position: relative;" >
     <img src="./assets/auth-images/fondo.png" alt="Fondo" class="login-BG">
     <div class="login-logo" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
       <img src="./assets/auth-images/logo.png" alt="Logo">
     </div>
   </div>
 
-  <div style="margin: auto">
-    <form style="display: block; text-align: center">
+  <div style="margin: auto" class="">
+    <form [formGroup]="loginForm" style="display: block; text-align: center">
 
       <div>
         <mat-form-field class="example-full-width">
           <mat-label>Usuario</mat-label>
-          <input matInput placeholder="Ingresar Usuario">
+          <input matInput formControlName="username" placeholder="Ingresar Usuario">
         </mat-form-field>
       </div>
 
       <div>
         <mat-form-field class="example-full-width">
           <mat-label>Contraseña</mat-label>
-          <input matInput type="password" placeholder="Ingresar Contraseña">
+          <input matInput type="password" formControlName="password" placeholder="Ingresar Contraseña">
         </mat-form-field>
       </div>
 
       <div>
-        <a mat-flat-button color="primary">Iniciar sesión</a>
+        <a mat-flat-button color="primary" (click)="validateLogin()">Iniciar sesión</a>
       </div>
 
       <div>
@@ -34,7 +34,6 @@
       <div>
         <a mat-button routerLink="/register" >Crear Cuenta</a>
       </div>
-
 
     </form>
   </div>
