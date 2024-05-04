@@ -44,8 +44,8 @@
             },
             {
               "id":2,
-              "title":"Documento de Especificacion de Requisitos del Software (SRS)",
-              "description":"Este entregable consistirá en un documento detallado que describe los requisitos funcionales y no funcionales de la Plataforma de Comercio Electrónico Geekit. Incluirá casos de uso, diagramas de flujo, requisitos de usuario, requisitos de sistema y cualquier otra información relevante para guiar el desarrollo del software.",
+              "title":"Prototipo Interactivo de la Interfaz de Usuario (UI)",
+              "description":"Se entregará un prototipo interactivo de la interfaz de usuario de la Plataforma de Comercio Electrónico Geekit. Este prototipo permitirá a los stakeholders visualizar y navegar por las diferentes pantallas y funcionalidades de la aplicación, proporcionando una representación visual de cómo se verá y funcionará la plataforma final.",
               "deadLine": "2024-08-24T00:00:00Z",
               "status":1
             }
@@ -55,6 +55,7 @@
           "id": 2,
           "name": "Aplicacion Web Geekit",
           "state": "En busqueda",
+          "deliverables": [],
           "candidates": [
             {
               "name": "Tonito Guido",

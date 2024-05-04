@@ -13,13 +13,15 @@
 
             <div>
               <mat-card-header>
-                <mat-card-title (click)="redirectToProfile(developer)">
+                <mat-card-title (click)="redirectToProfile(developer)" class="cursor-pointer hover:bg-gray-200">
                   {{developer.name}}
                 </mat-card-title>
               </mat-card-header>
-              <div style="text-align: center; display: flex">
+              <div style="text-align: center; display: flex;justify-content: center">
+
                 Rating:{{developer.rating}}
                 <img src="./assets/lookingfordeveloper-images/star.png" style="width: 20px; height: auto" alt="estrella">
+
               </div>
             </div>
           </div>

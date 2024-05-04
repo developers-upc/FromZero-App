@@ -4,6 +4,7 @@
     <h3>{{ projectname }}</h3>
     <h5>{{ enterprise?.username }}</h5>
   </div>
+  @if(deliverables?.length){
   <div class="delvs-content">
     <ul class="delvs-list">
       @for (delv of deliverables; track delv.id) {
@@ -41,6 +42,11 @@
       }
     </ul>
   </div>
+  } @else {
+    <div>
+      <h1 style="text-align: center">Agregar entregable</h1>
+    </div>
+  }
   <div class="delv-add">
     <button mat-icon-button aria-label="add deliverable"
             (click)="openDialog()">

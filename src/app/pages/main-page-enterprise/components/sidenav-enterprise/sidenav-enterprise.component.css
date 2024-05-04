@@ -86,7 +86,9 @@
         font-size: 8px;
       }
     }
-
+    .sidenav-nav-link:hover{
+      background-color:lightgray;
+    }
   }
 
 }
