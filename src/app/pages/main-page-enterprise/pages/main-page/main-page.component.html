@@ -1,8 +1,9 @@
 <body>
 
-<app-sidenav-enterprise (onToggleSideNav)="onToggleSidenav($event)"/>
+<!--<app-sidenav-enterprise (onToggleSideNav)="onToggleSidenav($event)"/>-->
+<app-sidenav-enterprise />
 
-<div class="content pt-10 pl-10" [ngClass]="getContentClass()">
+<div class="content" [ngClass]="getContentClass()">
   <router-outlet/>
 </div>
 
