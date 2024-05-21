@@ -4,17 +4,10 @@
   background-color: white;
 }
 
-.login-image-container {
-  /*margin: auto;*/
-}
-
 .login-background-content {
   position: absolute;
-  /*position: relative;*/
   width: 50%;
   height: 100%;
-  /*top: 50%;*/
-
 }
 
 .login-background {
@@ -40,8 +33,6 @@
 
 .login-form-content {
   position: absolute;
-  /*top: 50%;
-  left: 80%;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,3 +40,20 @@
   height: 100%;
 }
 
+@media screen and (max-width:800px) {
+  .login-background-content{
+    width: 100%;
+  }
+  .login-fromzero-logo{
+    top: 20%;
+  }
+  .login-form-container{
+    margin: 0;
+  }
+  .login-form-content{
+    width: 100%;
+  }
+  .login-form-content a{
+    color: white;
+  }
+}
