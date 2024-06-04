@@ -28,7 +28,12 @@ export class LoginComponent {
         this._authService.validateUser(username, password).subscribe(user => {
         if (user) {
           localStorage.setItem('userId', user.id.toString());
-          this.router.navigate(['/app/main/home']);
+          if (user.accountType===0){
+            this.router.navigate(['/app/main/home']);
+          }else if(user.accountType===1){
+            this.router.navigate(['/app-developer/main/home']);
+          }
+
         } else {
           // Mostrar un mensaje de error
           console.error('Invalid username or password');

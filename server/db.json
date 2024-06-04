@@ -20,6 +20,13 @@
       "password": "empresa3",
       "username": "empresa3",
       "accountType": 0
+    },
+    {
+      "id": "4",
+      "username": "cliente1",
+      "password": "cliente1",
+      "email": "cliente1@upc",
+      "accountType": 1
     }
   ],
   "profiles": [

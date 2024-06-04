@@ -8,7 +8,7 @@ import {IDeveloper} from "../../../developer-profile/model/ideveloper";
 
 
 @Component({
-  selector: 'app-lookingfordevelop',
+  selector: 'app-main-page-developer',
   templateUrl: './lookingfordevelop.component.html',
   styleUrl: './lookingfordevelop.component.css'
 })
