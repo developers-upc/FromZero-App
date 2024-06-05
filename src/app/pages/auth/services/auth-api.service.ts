@@ -12,7 +12,7 @@ import {IProfile} from "../model/iprofile";
   providedIn: 'root'
 })
 export class AuthApiService {
-  baseUrl = 'http://localhost:3000/';
+  baseUrl = 'http://localhost:8080/v1/api/auth/';
 
   constructor(private _http: HttpClient) { }
 
@@ -56,12 +56,9 @@ export class AuthApiService {
 
   }
 
-  validateUser(username: string, password: string): Observable<IUserLogin | undefined> {
-    return this._http.get<IUserLogin[]>(this.baseUrl + 'users/').pipe(
-      map((users: IUserLogin[]) => {
-        return users.find((user:IUserLogin) => user.username === username && user.password === password);
-      })
-    );
+  validateUser(email: string, password: string): Observable<IUserLogin> {
+    const signInResource = { email, password };
+    return this._http.post<IUserLogin>(this.baseUrl + 'sign-in', signInResource);
   }
 
   getProfileById(id: number): Observable<IEnterpriseProfile> {

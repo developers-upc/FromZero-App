@@ -13,8 +13,8 @@
 
         <div>
           <mat-form-field class="example-full-width">
-            <mat-label>Usuario</mat-label>
-            <input matInput formControlName="username" placeholder="Ingresar Usuario">
+            <mat-label>Correo</mat-label>
+            <input matInput formControlName="email" placeholder="Ingresar Correo">
           </mat-form-field>
         </div>
 
@@ -25,9 +25,7 @@
           </mat-form-field>
         </div>
 
-        <div>
-          <a mat-flat-button color="primary" (click)="validateLogin()">Iniciar sesión</a>
-        </div>
+        <button mat-flat-button color="primary" type="submit" (click)="validateLogin()">Iniciar sesión</button>
 
         <div>
           <a mat-button routerLink="/recover-password" >¿Olvidaste tu contraseña?</a>
