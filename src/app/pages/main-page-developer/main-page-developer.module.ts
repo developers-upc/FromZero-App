@@ -23,6 +23,9 @@ import { HomeProfileDeveloperComponent } from './components/home/components/home
 import {MatIcon} from "@angular/material/icon";
 import { EditProfileDeveloperDialogComponent } from './components/home/components/edit-profile-developer-dialog/edit-profile-developer-dialog.component';
 import {MatDialogActions, MatDialogContent, MatDialogModule, MatDialogTitle} from "@angular/material/dialog";
+import { HomeProjectsDeveloperComponent } from './components/home/components/home-projects-developer/home-projects-developer.component';
+import {MatProgressBar} from "@angular/material/progress-bar";
+import { CandidatesProjectDialogDeveloperComponent } from './components/home/components/candidates-project-dialog-developer/candidates-project-dialog-developer.component';
 
 
 @NgModule({
@@ -34,6 +37,8 @@ import {MatDialogActions, MatDialogContent, MatDialogModule, MatDialogTitle} fro
     SearchProjectsComponent,
     HomeProfileDeveloperComponent,
     EditProfileDeveloperDialogComponent,
+    HomeProjectsDeveloperComponent,
+    CandidatesProjectDialogDeveloperComponent,
   ],
   imports: [
     CommonModule,
@@ -56,6 +61,7 @@ import {MatDialogActions, MatDialogContent, MatDialogModule, MatDialogTitle} fro
     //MatDialogTitle,
     MatLabel,
     MatDialogModule,
+    MatProgressBar,
   ]
 })
 export class MainPageDeveloperModule { }

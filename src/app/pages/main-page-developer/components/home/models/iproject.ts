@@ -9,5 +9,5 @@ export interface IProject {
   progress?: number;
   candidates?: ICandidateDeveloper[];
   numCandidates?: number;
-  //deliverables:IDeliverable[]
+  deliverables:IDeliverable[]
 }

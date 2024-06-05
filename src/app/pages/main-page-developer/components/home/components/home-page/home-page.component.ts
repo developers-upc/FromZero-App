@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {IEnterpriseProfile} from "../../../../../main-page-enterprise/components/home/models/enterprise-profile.model";
 import {IDeveloperProfile} from "../../models/developer-profile.model";
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
+import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
 
 @Component({
   selector: 'app-home-page',
@@ -11,7 +12,7 @@ import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 export class HomePageComponent implements OnInit {
 
   perfilUsuario!: IDeveloperProfile;
-
+  userProjects!: IProject[];
   constructor(private _authService: AuthApiService) {
 
   }
