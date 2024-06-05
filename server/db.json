@@ -117,6 +117,20 @@
       "socialRazon": "-",
       "website": "-",
       "sector": "-"
+    },
+    {
+      "id": 4,
+      "username": "cliente1",
+      "email": "cliente1@upc",
+      "imageProfile": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png",
+      "accountType": 1,
+      "summary": "descripcion de cliente1",
+      "country": "Peru",
+      "cellphone": "984756321",
+      "socialRazon": "3434343434344",
+      "website": "cliente1.com",
+      "sector": "sector1",
+      "projects": []
     }
   ],
   "developers": [

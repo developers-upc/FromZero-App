@@ -6,6 +6,7 @@ import {IEnterpriseProfile} from "../../main-page-enterprise/components/home/mod
 import {IUserLogin} from "../model/iuser-login";
 import {IUserRegister} from "../model/iuser-register";
 import {IProfile} from "../model/iprofile";
+import {IDeveloperProfile} from "../../main-page-developer/components/home/models/developer-profile.model";
 
 
 @Injectable({
@@ -66,5 +67,9 @@ export class AuthApiService {
 
   getProfileById(id: number): Observable<IEnterpriseProfile> {
     return this._http.get<IEnterpriseProfile>(this.baseUrl + 'profiles/' + id);
+  }
+
+  getDeveloperProfileById(id: number): Observable<IDeveloperProfile> {
+    return this._http.get<IDeveloperProfile>(this.baseUrl + 'profiles/' + id);
   }
 }
