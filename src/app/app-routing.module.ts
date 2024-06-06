@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path:'app-developer',
     loadChildren:()=>import("./pages/main-page-developer/main-page-developer.module").then(m=>m.MainPageDeveloperModule)
+  },
+  {
+    path:'support',
+    loadChildren:()=>import("./shared/shared.module").then(m=>m.SharedModule)
   }
 
  ];

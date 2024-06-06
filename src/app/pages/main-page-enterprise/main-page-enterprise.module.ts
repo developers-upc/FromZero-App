@@ -12,7 +12,6 @@ import {
   EditProfileDialogComponent
 } from "./components/home/components/edit-profile-dialog/edit-profile-dialog.component";
 import {SidenavComponent} from "../../shared/components/sidenav/sidenav.component";
-//import {FooterComponent} from "../../shared/components/footer/footer.component";
 import {AppContentRoutingModule} from "./main-page-enterprise-routing.module";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
@@ -52,7 +51,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { DeveloperProfileCardComponent } from './components/developer-profile/components/developer-profile-card/developer-profile-card.component';
 import { DeveloperRepositoryCardComponent } from './components/developer-profile/components/developer-repository-card/developer-repository-card.component';
 import { DeveloperProfilePageComponent } from './components/developer-profile/components/developer-profile-page/developer-profile-page.component';
-import {FooterComponent} from "../../shared/components/footer/footer.component";
+import {SharedModule} from "../../shared/shared.module";
 
 
 
@@ -79,7 +78,7 @@ import {FooterComponent} from "../../shared/components/footer/footer.component";
     DeveloperProfileCardComponent,
     DeveloperRepositoryCardComponent,
     DeveloperProfilePageComponent,
-    FooterComponent,
+    //FooterComponent,
 
   ],
   imports: [
@@ -101,7 +100,8 @@ import {FooterComponent} from "../../shared/components/footer/footer.component";
     MatDatepickerToggle,
     MatDatepicker,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ]
 })
 export class MainPageEnterpriseModule { }
