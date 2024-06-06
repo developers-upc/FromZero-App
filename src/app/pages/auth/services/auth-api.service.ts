@@ -6,6 +6,7 @@ import {IEnterpriseProfile} from "../../main-page-enterprise/components/home/mod
 import {IUserLogin} from "../model/iuser-login";
 import {IProfile} from "../model/iprofile";
 import {IEnterpriseRegister} from "../model/ienterprise-register";
+import {IDeveloperRegister} from "../model/ideveloper-register";
 
 
 @Injectable({
@@ -16,10 +17,9 @@ export class AuthApiService {
 
   constructor(private _http: HttpClient) { }
 
-  getAll() {
-    return this._http.get(`${this.baseUrl}users`);
-  }
-
+  // getAll() {
+  //   return this._http.get(`${this.baseUrl}users`);
+  // }
   // createUser(username:string,password:string,email:string,accountType:number){
   //   let id:number=0;
   //   this.getAll().subscribe((response:any)=>{
@@ -38,17 +38,28 @@ export class AuthApiService {
   //   })
   // }
 
-  createEnterpriseUser(email: string, password: string, enterpriseName: string) {
-    let id: number = 0;
-    this.getAll().subscribe((response: any) => {
-      const user: IEnterpriseRegister = {
-        email: email,
-        password: password,
-        enterpriseName: enterpriseName
+  createEnterpriseUser(mail: string, password: string, enterpriseName: string) {
+    const user: IEnterpriseRegister = {
+      mail: mail,
+      password: password,
+      enterpriseName: enterpriseName
+    }
+    this._http.post(this.baseUrl + 'register-enterprise', user).subscribe(
+      response => {
+        console.log(response);
       }
-      this._http.post(this.baseUrl + 'register-enterprise', user).subscribe(response => {
-        console.log(response)
-      })
+    );
+  }
+
+  createDeveloperUser(mail: string, password: string, developerName: string, developerLastName: string) {
+    const user: IDeveloperRegister = {
+      mail: mail,
+      password: password,
+      firstName: developerName,
+      lastName: developerLastName
+    }
+    this._http.post(this.baseUrl + 'register-developer', user).subscribe(response => {
+      console.log(response)
     })
   }
 

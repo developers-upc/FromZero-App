@@ -1,5 +1,5 @@
 export interface IEnterpriseRegister {
-  email: string;
+  mail: string;
   password: string;
   enterpriseName: string;
 }

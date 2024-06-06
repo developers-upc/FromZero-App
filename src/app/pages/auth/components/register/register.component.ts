@@ -1,6 +1,8 @@
 import {Component} from '@angular/core';
 import {AuthApiService} from "../../services/auth-api.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {LAST_MEDIA} from "@angular/cdk/keycodes";
 
 @Component({
   selector: 'app-register',
@@ -21,7 +23,7 @@ export class RegisterComponent {
     developerLastName: new FormControl(''),
   })
 
-  constructor(private authService: AuthApiService) {
+  constructor(private authService: AuthApiService, private router: Router) {
   }
 
   register() {
@@ -32,16 +34,27 @@ export class RegisterComponent {
     const passwordControl = this.registerForm.get('password');
     const accountTypeControl=this.registerForm.get('accountType')
 
-    if(usernameControl && passwordControl && emailControl) {
-      const username = usernameControl.value;
-      const password = passwordControl.value;
-      const email = emailControl.value;
-      //const accountType= accountTypeControl.value;
+    if(accountTypeControl) {
+      const accountType = accountTypeControl.value;
 
-      if(username !== null && password !== null && email !== null) {
-        this.authService.createUser(username,password,email,0)
+      if (accountType === "0" && emailControl && passwordControl && enterpriseNameControl) {
+        const email = emailControl.value;
+        const password = passwordControl.value;
+        const enterpriseName = enterpriseNameControl.value;
+
+        if (email !== null && password !== null && enterpriseName !== null) {
+          this.authService.createEnterpriseUser(email, password, enterpriseName)
+        }
       }
-
+      else if (accountType === "1" && emailControl && passwordControl && developerNameControl && developerLastNameControl) {
+        const email = emailControl.value;
+        const password = passwordControl.value;
+        const firstName = developerNameControl.value;
+        const lastName = developerLastNameControl.value;
+        if (email !== null && password !== null && firstName !== null && lastName !== null) {
+          this.authService.createDeveloperUser(email, password, firstName, lastName);
+        }
+      }
     }
   }
 
