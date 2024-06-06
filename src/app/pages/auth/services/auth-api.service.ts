@@ -44,11 +44,7 @@ export class AuthApiService {
       password: password,
       enterpriseName: enterpriseName
     }
-    this._http.post(this.baseUrl + 'register-enterprise', user).subscribe(
-      response => {
-        console.log(response);
-      }
-    );
+    return this._http.post(this.baseUrl + 'register-enterprise', user);
   }
 
   createDeveloperUser(mail: string, password: string, developerName: string, developerLastName: string) {
@@ -58,9 +54,8 @@ export class AuthApiService {
       firstName: developerName,
       lastName: developerLastName
     }
-    this._http.post(this.baseUrl + 'register-developer', user).subscribe(response => {
-      console.log(response)
-    })
+    return this._http.post(this.baseUrl + 'register-developer', user);
+
   }
 
   validateUser(email: string, password: string): Observable<IUserLogin> {

@@ -10,8 +10,7 @@ import {LAST_MEDIA} from "@angular/cdk/keycodes";
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-
-  users: any[] = ["desarrollador", "empresa"]
+  accountCreated = false;
 
   registerForm = new FormGroup({
     email: new FormControl(''),
@@ -43,16 +42,21 @@ export class RegisterComponent {
         const enterpriseName = enterpriseNameControl.value;
 
         if (email !== null && password !== null && enterpriseName !== null) {
-          this.authService.createEnterpriseUser(email, password, enterpriseName)
+          this.authService.createEnterpriseUser(email, password, enterpriseName).subscribe(() => {
+            this.accountCreated = true;
+          });
         }
       }
+
       else if (accountType === "1" && emailControl && passwordControl && developerNameControl && developerLastNameControl) {
         const email = emailControl.value;
         const password = passwordControl.value;
         const firstName = developerNameControl.value;
         const lastName = developerLastNameControl.value;
         if (email !== null && password !== null && firstName !== null && lastName !== null) {
-          this.authService.createDeveloperUser(email, password, firstName, lastName);
+          this.authService.createDeveloperUser(email, password, firstName, lastName).subscribe(() => {
+            this.accountCreated = true;
+          })
         }
       }
     }
