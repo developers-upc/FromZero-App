@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {AuthApiService} from "../../services/auth-api.service";
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-register',
@@ -15,16 +15,21 @@ export class RegisterComponent {
     email: new FormControl(''),
     username: new FormControl(''),
     password: new FormControl(''),
-    accountType:new FormControl(0)
+    accountType: new FormControl('', Validators.required),
+    companyName: new FormControl(''),
+    developerName: new FormControl(''),
+    developerLastName: new FormControl(''),
   })
 
   constructor(private authService: AuthApiService) {
   }
 
   register() {
-    const usernameControl = this.registerForm.get('username');
-    const passwordControl = this.registerForm.get('password');
     const emailControl = this.registerForm.get('email');
+    const enterpriseNameControl = this.registerForm.get('companyName');
+    const developerNameControl = this.registerForm.get('developerName');
+    const developerLastNameControl = this.registerForm.get('developerLastName');
+    const passwordControl = this.registerForm.get('password');
     const accountTypeControl=this.registerForm.get('accountType')
 
     if(usernameControl && passwordControl && emailControl) {
