@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AuthModule} from "./pages/auth/auth.module";
-import {MainPageEnterpriseModule} from "./pages/main-page-enterprise/main-page-enterprise.module";
-import {MainPageDeveloperModule} from "./pages/main-page-developer/main-page-developer.module";
 const routes: Routes = [
 
   {
@@ -19,7 +16,7 @@ const routes: Routes = [
     loadChildren:()=>import("./pages/main-page-developer/main-page-developer.module").then(m=>m.MainPageDeveloperModule)
   },
   {
-    path:'support',
+    path:'shared',
     loadChildren:()=>import("./shared/shared.module").then(m=>m.SharedModule)
   }
 

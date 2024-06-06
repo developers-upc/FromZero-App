@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainPageComponent } from "./pages/main-page/main-page.component";
-import {AppModule} from "../../app.module";
-import {RouterOutlet} from "@angular/router";
 import {HomeProfileComponent} from "./components/home/components/home-profile/home-profile.component";
 import {HomeProjectsComponent} from "./components/home/components/home-projects/home-projects.component";
 import {
@@ -35,7 +33,6 @@ import {
 } from "./components/deliverables/components/dialog/dialog-add-deliverable.component";
 import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/material/datepicker";
 import {HomePageComponent} from "./components/home/components/home-page/home-page.component";
-import {SupportComponent} from "../../shared/components/support/support.component";
 import {DeliverableComponent} from "./components/review-deliverable/components/deliverable/deliverable.component";
 import {
   DialogAcceptDeliverableComponent
@@ -44,7 +41,6 @@ import {MessageComponent} from "./components/message/components/message/message.
 import {
   LookingfordevelopComponent
 } from "./components/looking-for-developer/components/lookingfordevelop/lookingfordevelop.component";
-import {ProjectListComponent} from "./components/highlight-projects/components/project-list/project-list.component";
 import {MatPaginatorModule} from "@angular/material/paginator";
 import { SidenavEnterpriseComponent } from './components/sidenav-enterprise/sidenav-enterprise.component';
 import {HttpClientModule} from "@angular/common/http";
@@ -68,18 +64,14 @@ import {SharedModule} from "../../shared/shared.module";
     DeliverablesComponent,
     DialogAddDeliverableComponent,
     HomePageComponent,
-    SupportComponent,
     DeliverableComponent,
     DialogAcceptDeliverableComponent,
     MessageComponent,
     LookingfordevelopComponent,
-    ProjectListComponent,
     SidenavEnterpriseComponent,
     DeveloperProfileCardComponent,
     DeveloperRepositoryCardComponent,
     DeveloperProfilePageComponent,
-    //FooterComponent,
-
   ],
   imports: [
     CommonModule,

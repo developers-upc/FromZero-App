@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IHighlightProject} from "../../components/highlight-projects/model/ihighlight-project";
+import {IHighlightProject} from "../../model/ihighlight-project";
 //import {IHighlightProject} from "../../../../core/models/example.interface";
 
 @Injectable({
