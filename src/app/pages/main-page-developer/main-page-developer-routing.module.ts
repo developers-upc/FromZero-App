@@ -9,6 +9,7 @@ import {
 import {
   SearchProjectsComponent
 } from "./components/search-projects/components/search-projects/search-projects.component";
+import {ApplyToProjectComponent} from "./components/projects/apply-to-project/apply-to-project.component";
 
 const routes: Routes = [
 
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'search-projects',
         component: SearchProjectsComponent
+      },
+      {
+        path: 'apply-to-project',
+        component: ApplyToProjectComponent
       }
 
 

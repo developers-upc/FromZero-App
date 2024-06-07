@@ -26,6 +26,8 @@ import {MatDialogActions, MatDialogContent, MatDialogModule, MatDialogTitle} fro
 import { HomeProjectsDeveloperComponent } from './components/home/components/home-projects-developer/home-projects-developer.component';
 import {MatProgressBar} from "@angular/material/progress-bar";
 import { CandidatesProjectDialogDeveloperComponent } from './components/home/components/candidates-project-dialog-developer/candidates-project-dialog-developer.component';
+import { ApplyToProjectComponent } from './components/projects/apply-to-project/apply-to-project.component';
+import { ApplyConfirmationComponent } from './components/projects/apply-confirmation/apply-confirmation.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { CandidatesProjectDialogDeveloperComponent } from './components/home/com
     EditProfileDeveloperDialogComponent,
     HomeProjectsDeveloperComponent,
     CandidatesProjectDialogDeveloperComponent,
+    ApplyToProjectComponent,
+    ApplyConfirmationComponent,
   ],
   imports: [
     CommonModule,
