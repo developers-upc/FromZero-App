@@ -17,7 +17,10 @@ export class SearchProjectsComponent implements OnInit {
   projects!: Ishowproject[];
 
   ngOnInit(): void {
-    this._projectservice.getAll("En busqueda").subscribe((projects: Ishowproject[]) => {
+    /*this._projectservice.getAll("En busqueda").subscribe((projects: Ishowproject[]) => {
+      this.projects = projects;
+    })*/
+    this._projectservice.showProjects().subscribe((projects: Ishowproject[]) => {
       this.projects = projects;
     })
 

@@ -6,13 +6,18 @@ import {Ishowproject} from "../../components/project-profile/model/ishowproject"
   providedIn: 'root'
 })
 export class ShowProjectApiService {
-  baseUrl = 'http://localhost:8080/v1/api/projects/by-state';
+  restbaseUrl = 'http://localhost:8080/v1/api/projects/by-state';
+  baseUrl = 'http://localhost:3000/show-projects';
 
   constructor(private _http: HttpClient) { }
 
   getAll(state: string) {
     let params = new HttpParams().set('state', state);
-    return this._http.get<Ishowproject[]>(this.baseUrl,{params});
+    return this._http.get<Ishowproject[]>(this.restbaseUrl,{params});
+  }
+
+  showProjects(){
+    return this._http.get<Ishowproject[]>(this.baseUrl);
   }
 
 }

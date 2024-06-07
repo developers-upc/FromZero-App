@@ -119,16 +119,16 @@
       "sector": "-"
     },
     {
-      "id": 4,
-      "username": "cliente1",
-      "email": "cliente1@upc",
-      "imageProfile": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png",
+      "id": "4",
+      "username": "Jose Rivera",
+      "email": "joseRivera@gmail.com",
+      "imageProfile": "https://www.usbbog.edu.co/wp-content/uploads/2022/09/tecnologia-desarrollo-software-aspirante.png",
       "accountType": 1,
-      "summary": "descripcion de cliente1",
+      "summary": "Soy egresado de la carrera de Ingeniería de Software",
       "country": "Peru",
       "cellphone": "984756321",
       "socialRazon": "3434343434344",
-      "website": "cliente1.com",
+      "website": "jose-rivera.com",
       "sector": "sector1",
       "projects": []
     }
@@ -358,6 +358,30 @@
         4
       ],
       "image_url": "/assets/highlight-projects-images/mensajeria.jpg"
+    }
+  ],
+  "show-projects": [
+    {
+    "id": 1,
+    "name": "Landing Page Geekit",
+    "description": "Geekit es tu destino para la moda geek. Nos especializamos en ofrecer una selección única de ropa y accesorios para jóvenes apasionados por la cultura pop, los videojuegos, el cine y los cómics. En Geekit, encontrarás prendas que te permiten expresar tu estilo auténtico y tu amor por tus intereses favoritos.",
+    "state": "En progreso",
+    "progress": 0,
+    "ownerId": 1,
+    "type": "Landing Page",
+    "budget": "$50 000",
+    "methodologies": ""
+    },
+    {
+      "id": 2,
+      "name": "Aplicacion Web Geekit",
+      "description": "Geekit es tu destino para la moda geek. Nos especializamos en ofrecer una selección única de ropa y accesorios para jóvenes apasionados por la cultura pop, los videojuegos, el cine y los cómics. En Geekit, encontrarás prendas que te permiten expresar tu estilo auténtico y tu amor por tus intereses favoritos.",
+      "state": "En busqueda",
+      "progress": 0,
+      "ownerId": 1,
+      "type": "Aplicación Web",
+      "budget": "$70 000",
+      "methodologies": ""
     }
   ]
 }

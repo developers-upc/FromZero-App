@@ -9,12 +9,12 @@ import { MessageComponent } from './components/message/components/message/messag
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatAnchor, MatButton} from "@angular/material/button";
 import {
-  MatCard,
-  MatCardContent,
-  MatCardHeader,
-  MatCardImage,
-  MatCardSmImage,
-  MatCardTitle
+    MatCard,
+    MatCardContent,
+    MatCardHeader,
+    MatCardImage,
+    MatCardSmImage, MatCardSubtitle,
+    MatCardTitle
 } from "@angular/material/card";
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
@@ -47,26 +47,27 @@ import { ProjectRepositoryCardComponent } from './components/project-profile/com
     ProjectProfilePageComponent,
     ProjectRepositoryCardComponent,
   ],
-  imports: [
-    CommonModule,
-    MainPageDeveloperRoutingModule,
-    FormsModule,
-    MatAnchor,
-    MatCard,
-    MatFormField,
-    MatInput,
-    ReactiveFormsModule,
-    MatCardContent,
-    MatCardHeader,
-    MatCardSmImage,
-    MatCardTitle,
-    MatCardImage,
-    MatIcon,
-    MatButton,
-    MatLabel,
-    MatDialogModule,
-    MatProgressBar,
-    SharedModule,
-  ]
+    imports: [
+        CommonModule,
+        MainPageDeveloperRoutingModule,
+        FormsModule,
+        MatAnchor,
+        MatCard,
+        MatFormField,
+        MatInput,
+        ReactiveFormsModule,
+        MatCardContent,
+        MatCardHeader,
+        MatCardSmImage,
+        MatCardTitle,
+        MatCardImage,
+        MatIcon,
+        MatButton,
+        MatLabel,
+        MatDialogModule,
+        MatProgressBar,
+        SharedModule,
+        MatCardSubtitle,
+    ]
 })
 export class MainPageDeveloperModule { }

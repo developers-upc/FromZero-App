@@ -3,6 +3,8 @@ import {IEnterpriseProfile} from "../../../../../main-page-enterprise/components
 import {IDeveloperProfile} from "../../models/developer-profile.model";
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
+import {ICandidate} from "../../../../../main-page-enterprise/components/home/models/icandidate";
+import {IDeliverable} from "../../../../../main-page-enterprise/components/deliverables/model/ideliverable";
 
 @Component({
   selector: 'app-home-page',
@@ -12,7 +14,27 @@ import {IProject} from "../../../../../main-page-enterprise/components/home/mode
 export class HomePageComponent implements OnInit {
 
   perfilUsuario!: IDeveloperProfile;
-  userProjects!: IProject[];
+  userProjects2!: IProject[];
+
+  userProjects:IProject[]=[
+    {
+      id:1,
+      name:"Landing Page Geekit",
+      state:"En proceso",
+      progress:10,
+      candidates:[],
+      numCandidates:0,
+      deliverables:[]
+    }
+    ]
+  /*id:number,
+  name: string;
+  state: string;
+  progress?: number;
+  candidates?: ICandidate[];
+  numCandidates?: number;
+  deliverables:IDeliverable[]*/
+
   constructor(private _authService: AuthApiService) {
 
   }
