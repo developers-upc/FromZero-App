@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-//import {IHighlightProject} from "../../../../../../core/models/example.interface";
 import {
   HighlightsProjectServiceService
-} from "../../../../service/highlights-project-service/highlights-project-service.service";
+} from "../../services/highlights-project-service/highlights-project-service.service";
 import {IHighlightProject} from "../../model/ihighlight-project";
 
 @Component({

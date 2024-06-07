@@ -9,12 +9,12 @@ import { MessageComponent } from './components/message/components/message/messag
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatAnchor, MatButton} from "@angular/material/button";
 import {
-  MatCard,
-  MatCardContent,
-  MatCardHeader,
-  MatCardImage,
-  MatCardSmImage,
-  MatCardTitle
+    MatCard,
+    MatCardContent,
+    MatCardHeader,
+    MatCardImage,
+    MatCardSmImage, MatCardSubtitle,
+    MatCardTitle
 } from "@angular/material/card";
 import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {MatInput} from "@angular/material/input";
@@ -28,6 +28,11 @@ import {MatProgressBar} from "@angular/material/progress-bar";
 import { CandidatesProjectDialogDeveloperComponent } from './components/home/components/candidates-project-dialog-developer/candidates-project-dialog-developer.component';
 import { ApplyToProjectComponent } from './components/projects/apply-to-project/apply-to-project.component';
 import { ApplyConfirmationComponent } from './components/projects/apply-confirmation/apply-confirmation.component';
+import {SharedModule} from "../../shared/shared.module";
+import { ProjectProfileCardComponent } from './components/project-profile/components/project-profile-card/project-profile-card.component';
+import { ProjectProfilePageComponent } from './components/project-profile/components/project-profile-page/project-profile-page.component';
+import { ProjectRepositoryCardComponent } from './components/project-profile/components/project-repository-card/project-repository-card.component';
+
 
 
 @NgModule({
@@ -43,29 +48,31 @@ import { ApplyConfirmationComponent } from './components/projects/apply-confirma
     CandidatesProjectDialogDeveloperComponent,
     ApplyToProjectComponent,
     ApplyConfirmationComponent,
+    ProjectProfileCardComponent,
+    ProjectProfilePageComponent,
+    ProjectRepositoryCardComponent,
   ],
-  imports: [
-    CommonModule,
-    MainPageDeveloperRoutingModule,
-    FormsModule,
-    MatAnchor,
-    MatCard,
-    MatFormField,
-    MatInput,
-    ReactiveFormsModule,
-    MatCardContent,
-    MatCardHeader,
-    MatCardSmImage,
-    MatCardTitle,
-    MatCardImage,
-    MatIcon,
-    MatButton,
-    //MatDialogActions,
-    //MatDialogContent,
-    //MatDialogTitle,
-    MatLabel,
-    MatDialogModule,
-    MatProgressBar,
-  ]
+    imports: [
+        CommonModule,
+        MainPageDeveloperRoutingModule,
+        FormsModule,
+        MatAnchor,
+        MatCard,
+        MatFormField,
+        MatInput,
+        ReactiveFormsModule,
+        MatCardContent,
+        MatCardHeader,
+        MatCardSmImage,
+        MatCardTitle,
+        MatCardImage,
+        MatIcon,
+        MatButton,
+        MatLabel,
+        MatDialogModule,
+        MatProgressBar,
+        SharedModule,
+        MatCardSubtitle,
+    ]
 })
 export class MainPageDeveloperModule { }

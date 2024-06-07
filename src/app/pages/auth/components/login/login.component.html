@@ -26,7 +26,8 @@
         </div>
 
         <div>
-          <a mat-flat-button color="primary" (click)="validateLogin()">Iniciar sesión</a>
+          <a mat-flat-button color="primary" (click)="validateLogin()"
+             tabIndex="0" (keydown.enter)="validateLogin()" >Iniciar sesión</a>
         </div>
 
         <div>

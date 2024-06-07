@@ -4,12 +4,12 @@ import {MainPageComponent} from "./pages/main-page/main-page.component";
 import {HomePageComponent} from "./components/home/components/home-page/home-page.component";
 import {MessageComponent} from "./components/message/components/message/message.component";
 import {
-  LookingfordevelopComponent
-} from "../main-page-enterprise/components/looking-for-developer/components/lookingfordevelop/lookingfordevelop.component";
-import {
   SearchProjectsComponent
 } from "./components/search-projects/components/search-projects/search-projects.component";
 import {ApplyToProjectComponent} from "./components/projects/apply-to-project/apply-to-project.component";
+import {
+  ProjectProfilePageComponent
+} from "./components/project-profile/components/project-profile-page/project-profile-page.component";
 
 const routes: Routes = [
 
@@ -32,10 +32,15 @@ const routes: Routes = [
       {
         path: 'apply-to-project',
         component: ApplyToProjectComponent
+      },
+      {
+        path:'shared',
+        loadChildren:()=>import("../../shared/shared.module").then(m=>m.SharedModule)
+      },
+      {
+        path: 'enterprise-profile/:enterpriseId',
+        component: ProjectProfilePageComponent
       }
-
-
-
 
     ]
 
