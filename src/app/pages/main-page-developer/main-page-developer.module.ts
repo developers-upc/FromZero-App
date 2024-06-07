@@ -26,6 +26,9 @@ import {MatDialogActions, MatDialogContent, MatDialogModule, MatDialogTitle} fro
 import { HomeProjectsDeveloperComponent } from './components/home/components/home-projects-developer/home-projects-developer.component';
 import {MatProgressBar} from "@angular/material/progress-bar";
 import { CandidatesProjectDialogDeveloperComponent } from './components/home/components/candidates-project-dialog-developer/candidates-project-dialog-developer.component';
+import { ProjectProfileCardComponent } from './components/project-profile/components/project-profile-card/project-profile-card.component';
+import { ProjectProfilePageComponent } from './components/project-profile/components/project-profile-page/project-profile-page.component';
+import { ProjectRepositoryCardComponent } from './components/project-profile/components/project-repository-card/project-repository-card.component';
 
 
 @NgModule({
@@ -39,6 +42,9 @@ import { CandidatesProjectDialogDeveloperComponent } from './components/home/com
     EditProfileDeveloperDialogComponent,
     HomeProjectsDeveloperComponent,
     CandidatesProjectDialogDeveloperComponent,
+    ProjectProfileCardComponent,
+    ProjectProfilePageComponent,
+    ProjectRepositoryCardComponent,
   ],
   imports: [
     CommonModule,

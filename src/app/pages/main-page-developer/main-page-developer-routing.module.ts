@@ -9,6 +9,9 @@ import {
 import {
   SearchProjectsComponent
 } from "./components/search-projects/components/search-projects/search-projects.component";
+import {
+  ProjectProfilePageComponent
+} from "./components/project-profile/components/project-profile-page/project-profile-page.component";
 
 const routes: Routes = [
 
@@ -27,6 +30,10 @@ const routes: Routes = [
       {
         path: 'search-projects',
         component: SearchProjectsComponent
+      },
+      {
+        path: 'enterprise-profile/:enterpriseId',
+        component: ProjectProfilePageComponent
       }
 
 

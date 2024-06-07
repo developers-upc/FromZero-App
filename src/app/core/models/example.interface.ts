@@ -98,7 +98,7 @@ enum statusDeliverable {
   isAccepted: boolean
 }*/
 
-/*export interface IDeveloper {
+/*export interface Ishowproject {
   id: number,
   name: string,
   description: string,
