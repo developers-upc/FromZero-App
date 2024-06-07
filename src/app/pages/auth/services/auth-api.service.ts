@@ -5,9 +5,9 @@ import {map, Observable} from "rxjs";
 import {IEnterpriseProfile} from "../../main-page-enterprise/components/home/models/enterprise-profile.model";
 import {IUserLogin} from "../model/iuser-login";
 import {IProfile} from "../model/iprofile";
+import {IDeveloperProfile} from "../../main-page-developer/components/home/models/developer-profile.model";
 import {IEnterpriseRegister} from "../model/ienterprise-register";
 import {IDeveloperRegister} from "../model/ideveloper-register";
-
 
 @Injectable({
   providedIn: 'root'
@@ -65,5 +65,9 @@ export class AuthApiService {
 
   getProfileById(id: number): Observable<IEnterpriseProfile> {
     return this._http.get<IEnterpriseProfile>(this.baseUrl + 'profiles/' + id);
+  }
+
+  getDeveloperProfileById(id: number): Observable<IDeveloperProfile> {
+    return this._http.get<IDeveloperProfile>(this.baseUrl + 'profiles/' + id);
   }
 }

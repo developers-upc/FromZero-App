@@ -25,7 +25,11 @@
           </mat-form-field>
         </div>
 
-        <button mat-flat-button color="primary" type="submit" (click)="validateLogin()">Iniciar sesión</button>
+        <div>
+          <a mat-flat-button color="primary" (click)="validateLogin()"
+             tabIndex="0" (keydown.enter)="validateLogin()" >Iniciar sesión</a>
+        </div>
+
 
         <div>
           <a mat-button routerLink="/recover-password" >¿Olvidaste tu contraseña?</a>

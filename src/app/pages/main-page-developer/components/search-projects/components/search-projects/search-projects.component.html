@@ -1,0 +1,43 @@
+<div class="bloque-superior w-full h-full ">
+  <ul class="developers-list flex flex-col gap-3 mt-20">
+    @for (project of projects; track project.id){
+      <li>
+
+        <mat-card class="card-class look">
+
+          <div style="display: flex; justify-content: space-around">
+            <div>
+              <img mat-card-sm-image [src]="project.name"
+                   [alt]="project.name"/>
+            </div>
+
+            <div>
+              <mat-card-header>
+                <mat-card-title>
+                  {{project.name}}
+                </mat-card-title>
+                <mat-card-subtitle (click)="redirectToProfile(project.ownerId)" class="cursor-pointer hover:bg-gray-200">
+                  <h3 style="text-align: center">Geekit</h3>
+                </mat-card-subtitle>
+              </mat-card-header>
+
+            </div>
+          </div>
+
+          <mat-card-content>
+            {{project.description}}
+            <button mat-stroked-button class="mas-button" (click)="goToProject(project.id)">
+              Ver mas
+            </button>
+          </mat-card-content>
+
+        </mat-card>
+
+      </li>
+    }
+  </ul>
+
+
+
+</div>
+
