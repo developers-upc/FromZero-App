@@ -6,6 +6,7 @@ import {MessageComponent} from "./components/message/components/message/message.
 import {
   SearchProjectsComponent
 } from "./components/search-projects/components/search-projects/search-projects.component";
+import {ApplyToProjectComponent} from "./components/projects/apply-to-project/apply-to-project.component";
 import {
   ProjectProfilePageComponent
 } from "./components/project-profile/components/project-profile-page/project-profile-page.component";
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'search-projects',
         component: SearchProjectsComponent
+      },
+      {
+        path: 'apply-to-project',
+        component: ApplyToProjectComponent
       },
       {
         path:'shared',
