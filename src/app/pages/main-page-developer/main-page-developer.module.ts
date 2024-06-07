@@ -27,6 +27,9 @@ import { HomeProjectsDeveloperComponent } from './components/home/components/hom
 import {MatProgressBar} from "@angular/material/progress-bar";
 import { CandidatesProjectDialogDeveloperComponent } from './components/home/components/candidates-project-dialog-developer/candidates-project-dialog-developer.component';
 import {SharedModule} from "../../shared/shared.module";
+import { ProjectProfileCardComponent } from './components/project-profile/components/project-profile-card/project-profile-card.component';
+import { ProjectProfilePageComponent } from './components/project-profile/components/project-profile-page/project-profile-page.component';
+import { ProjectRepositoryCardComponent } from './components/project-profile/components/project-repository-card/project-repository-card.component';
 
 
 @NgModule({
@@ -40,6 +43,9 @@ import {SharedModule} from "../../shared/shared.module";
     EditProfileDeveloperDialogComponent,
     HomeProjectsDeveloperComponent,
     CandidatesProjectDialogDeveloperComponent,
+    ProjectProfileCardComponent,
+    ProjectProfilePageComponent,
+    ProjectRepositoryCardComponent,
   ],
   imports: [
     CommonModule,

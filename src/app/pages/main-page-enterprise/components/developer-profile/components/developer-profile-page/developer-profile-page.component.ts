@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-//import {IDeveloper, IProject} from "../../../../../../core/models/example.interface";
+//import {Ishowproject, IProject} from "../../../../../../core/models/example.interface";
 import {ActivatedRoute} from "@angular/router";
 import {DeveloperProfileApiService} from "../../service/developer-profile-api.service";
 import {IDeveloper} from "../../model/ideveloper";

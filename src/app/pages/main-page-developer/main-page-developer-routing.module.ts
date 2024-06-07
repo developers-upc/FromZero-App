@@ -6,6 +6,9 @@ import {MessageComponent} from "./components/message/components/message/message.
 import {
   SearchProjectsComponent
 } from "./components/search-projects/components/search-projects/search-projects.component";
+import {
+  ProjectProfilePageComponent
+} from "./components/project-profile/components/project-profile-page/project-profile-page.component";
 
 const routes: Routes = [
 
@@ -28,6 +31,10 @@ const routes: Routes = [
       {
         path:'shared',
         loadChildren:()=>import("../../shared/shared.module").then(m=>m.SharedModule)
+      },
+      {
+        path: 'enterprise-profile/:enterpriseId',
+        component: ProjectProfilePageComponent
       }
 
     ]
