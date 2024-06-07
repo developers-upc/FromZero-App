@@ -7,7 +7,7 @@ export interface Ishowproject {
   description: string,
   state: string,
   progress: number,
-  ownerid: number,
+  ownerId: number,
   type: string,
   budget: string,
   methodologies: string,
