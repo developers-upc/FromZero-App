@@ -26,6 +26,9 @@
 
           <mat-card-content>
             {{project.description}}
+            <button mat-stroked-button class="mas-button" (click)="goToProject(project.id)">
+              Ver mas
+            </button>
           </mat-card-content>
 
         </mat-card>

@@ -30,7 +30,7 @@ const routes: Routes = [
         component: SearchProjectsComponent
       },
       {
-        path: 'apply-to-project',
+        path: 'apply-to-project/:id',
         component: ApplyToProjectComponent
       },
       {

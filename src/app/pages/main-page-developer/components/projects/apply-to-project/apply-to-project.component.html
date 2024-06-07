@@ -1,16 +1,10 @@
 <mat-card class="card">
     <header>
-        <h1>Plataforma de Comercio Electrónico Geekit</h1>
+        <h1>{{project.name}}</h1>
     </header>
     <section class="description">
         <p>
-            La Plataforma de Comercio Electrónico Geekit es un proyecto destinado a
-            crear una experiencia de compra en línea excepcional para nuestra marca
-            de ropa y accesorios para jóvenes apasionados por la cultura geek. La
-            plataforma debe ofrecer una navegación intuitiva, una interfaz atractiva
-            y funcionalidades que mejoren la experiencia del usuario, desde la
-            búsqueda de productos hasta el proceso de compra y seguimiento de
-            pedidos.
+          {{project.description}}
         </p>
     </section>
     <section class="content">
@@ -34,9 +28,9 @@
             </div>
         </div>
         <div class="budget">
-            <h2>Presupuesto: $50,000</h2>
+            <h2>Presupuesto: {{project.budget}}</h2>
             <p>
-                El presupuesto asignado para este proyecto es de $50,000 USD,
+                El presupuesto asignado para este proyecto es de {{project.budget}} USD,
                 incluyendo el costo de desarrollo, pruebas, implementación y
                 mantenimiento inicial durante los primeros seis meses.
             </p>

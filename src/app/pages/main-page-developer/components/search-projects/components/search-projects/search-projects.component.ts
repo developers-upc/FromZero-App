@@ -36,4 +36,9 @@ export class SearchProjectsComponent implements OnInit {
     this.router.navigate(['/app-developer/main/enterprise-profile', ownerid]);
   }
 
+  goToProject(id: number): void {
+    localStorage.setItem('id', id.toString());
+    this.router.navigate(['/app-developer/main//apply-to-project', id]);
+  }
+
 }

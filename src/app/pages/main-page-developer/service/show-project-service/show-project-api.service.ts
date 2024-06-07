@@ -20,4 +20,9 @@ export class ShowProjectApiService {
     return this._http.get<Ishowproject[]>(this.baseUrl);
   }
 
+
+  getById(id: number|null) {
+    return this._http.get<Ishowproject>( `${this.baseUrl}/${id}`)
+  }
+
 }
