@@ -28,10 +28,10 @@ export class LoginComponent {
         this._authService.validateUser(email, password).subscribe(user => {
         if (user) {
           localStorage.setItem('userId', user.id.toString());
-
-          if (user.accountType===0){
+          console.log(user)
+          if (user.accountType==="E"){
             this.router.navigate(['/app/main/home']);
-          }else if(user.accountType===1){
+          }else if(user.accountType==="D"){
             this.router.navigate(['/app-developer/main/home']);
           }
 
