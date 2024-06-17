@@ -9,4 +9,18 @@ export interface IProject {
   candidates?: ICandidate[];
   numCandidates?: number;
   deliverables:IDeliverable[]
+
+  /*id:number,
+  name:string,
+  description:string,
+  state:string,
+  progress:number,
+  ownerId:number,
+  developerId?:number,
+  candidatesList:ICandidate[],
+  languages:IProgrammingLanguages[],
+  frameworks:IFrameworks[],
+  type:string,
+  budget:string,
+  methodologies:string*/
 }

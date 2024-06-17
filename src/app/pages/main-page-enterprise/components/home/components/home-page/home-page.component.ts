@@ -19,6 +19,8 @@ export class HomePageComponent  implements OnInit {
     if (userId) {
       this._authService.getProfileById(+userId).subscribe(profile => {
         this.perfilUsuario = profile;
+        let profileID = this.perfilUsuario.id;
+        //servicio de proyectos, get projects by
         this.userProjects = profile.projects;
       });
     }
