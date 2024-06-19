@@ -7,7 +7,7 @@ import { SidenavDeveloperComponent } from './components/sidenav-developer/sidena
 import { HomePageComponent } from './components/home/components/home-page/home-page.component';
 import { MessageComponent } from './components/message/components/message/message.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatAnchor, MatButton} from "@angular/material/button";
+import {MatAnchor, MatButton, MatIconButton} from "@angular/material/button";
 import {
     MatCard,
     MatCardContent,
@@ -32,6 +32,8 @@ import {SharedModule} from "../../shared/shared.module";
 import { ProjectProfileCardComponent } from './components/project-profile/components/project-profile-card/project-profile-card.component';
 import { ProjectProfilePageComponent } from './components/project-profile/components/project-profile-page/project-profile-page.component';
 import { ProjectRepositoryCardComponent } from './components/project-profile/components/project-repository-card/project-repository-card.component';
+import { DevDeliverablesComponent } from './components/dev-deliverables/dev-deliverables.component';
+import { SendDeliverableComponent } from './components/send-deliverable/send-deliverable.component';
 
 
 
@@ -51,28 +53,31 @@ import { ProjectRepositoryCardComponent } from './components/project-profile/com
     ProjectProfileCardComponent,
     ProjectProfilePageComponent,
     ProjectRepositoryCardComponent,
+    DevDeliverablesComponent,
+    SendDeliverableComponent,
   ],
-    imports: [
-        CommonModule,
-        MainPageDeveloperRoutingModule,
-        FormsModule,
-        MatAnchor,
-        MatCard,
-        MatFormField,
-        MatInput,
-        ReactiveFormsModule,
-        MatCardContent,
-        MatCardHeader,
-        MatCardSmImage,
-        MatCardTitle,
-        MatCardImage,
-        MatIcon,
-        MatButton,
-        MatLabel,
-        MatDialogModule,
-        MatProgressBar,
-        SharedModule,
-        MatCardSubtitle,
-    ]
+  imports: [
+    CommonModule,
+    MainPageDeveloperRoutingModule,
+    FormsModule,
+    MatAnchor,
+    MatCard,
+    MatFormField,
+    MatInput,
+    ReactiveFormsModule,
+    MatCardContent,
+    MatCardHeader,
+    MatCardSmImage,
+    MatCardTitle,
+    MatCardImage,
+    MatIcon,
+    MatButton,
+    MatLabel,
+    MatDialogModule,
+    MatProgressBar,
+    SharedModule,
+    MatCardSubtitle,
+    MatIconButton,
+  ]
 })
 export class MainPageDeveloperModule { }

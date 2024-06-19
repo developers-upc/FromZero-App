@@ -1,14 +1,14 @@
 <div class="container">
   <div class="title">
-    <h1>{{ enterprise.projects.name }}</h1>
-    <h3>{{ enterprise.name }}</h3>
+    <h1>{{ projectName }}</h1>
+    <h3>{{ enterpriseName }}</h3>
   </div>
 
   <mat-card class="delv-card">
 
     <mat-card-header class="delv-title">
       <mat-card-title>
-        Entregable {{ deliverable.d_number }}: {{ deliverable.title }}
+        Entregable: {{ deliverable?.name }}
       </mat-card-title>
     </mat-card-header>
 
@@ -16,7 +16,12 @@
       <mat-card-subtitle class="description-title">
         Descripcion de Entrega
       </mat-card-subtitle>
-      <p>{{ deliverable.description }}</p>
+      <p>{{ deliverable?.description }}</p>
+      <div class="divider"></div>
+      <div>
+        <p>Mensaje del desarrollador</p>
+        <p>{{deliverable.developerMessage}}</p>
+      </div>
       <div class="divider"></div>
       <h2 class="files-title">Archivos</h2>
       <mat-card class="files-card"/>

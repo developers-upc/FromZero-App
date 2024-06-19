@@ -27,7 +27,7 @@ export class HomeProjectsDeveloperComponent {
   }
 
   goToDeliverables(projectId:number){
-    return ['/app','main',projectId,'deliverables']
+    return ['/app-developer','main',projectId,'deliverables']
   }
 
 }

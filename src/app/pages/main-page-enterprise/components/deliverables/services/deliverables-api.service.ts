@@ -32,4 +32,8 @@ export class DeliverablesApiService {
     return this.http.post(`${this.delvUrl}`,deliverable);
   }
 
+  getDeliverableById(deliverableId:number){
+    return this.http.get<IDeliverable>(`${this.delvUrl}/${deliverableId}`);
+  }
+
 }

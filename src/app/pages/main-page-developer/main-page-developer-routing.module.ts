@@ -10,6 +10,8 @@ import {ApplyToProjectComponent} from "./components/projects/apply-to-project/ap
 import {
   ProjectProfilePageComponent
 } from "./components/project-profile/components/project-profile-page/project-profile-page.component";
+import {DevDeliverablesComponent} from "./components/dev-deliverables/dev-deliverables.component";
+import {SendDeliverableComponent} from "./components/send-deliverable/send-deliverable.component";
 
 const routes: Routes = [
 
@@ -40,6 +42,14 @@ const routes: Routes = [
       {
         path: 'enterprise-profile/:enterpriseId',
         component: ProjectProfilePageComponent
+      },
+      {
+        path:':projectId/deliverables',
+        component:DevDeliverablesComponent
+      },
+      {
+        path:':projectId/deliverables/:deliverableId',
+        component:SendDeliverableComponent
       }
 
     ]

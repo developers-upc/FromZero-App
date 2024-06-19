@@ -1,0 +1,23 @@
+<div>
+  <div class="title">
+    <h1>{{ projectName }}</h1>
+    <h3>{{ enterpriseName }}</h3>
+  </div>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>{{deliverable?.name}}</mat-card-title>
+      <mat-card-subtitle>{{deliverable?.description}}</mat-card-subtitle>
+      <mat-card-subtitle>Estado: {{deliverable?.state}}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <label>Agregar mensaje</label>
+      <mat-form-field>
+        <textarea matInput formControlName="developerMessage"></textarea>
+      </mat-form-field>
+      <div>
+        <button mat-flat-button color="primary" class="rounded-full">Enviar entregable a revisión</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

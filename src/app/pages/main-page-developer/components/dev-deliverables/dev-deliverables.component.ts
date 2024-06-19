@@ -1,33 +1,35 @@
 import {Component, OnInit} from '@angular/core';
+import {IDeliverable} from "../../../main-page-enterprise/components/deliverables/model/ideliverable";
+//import {FormControl} from "@angular/forms";
 import {ActivatedRoute} from "@angular/router";
-import {DeliverablesApiService} from "../../services/deliverables-api.service";
-import {MatDialog} from "@angular/material/dialog";
-import {DialogAddDeliverableComponent} from "../dialog/dialog-add-deliverable.component";
-import {FormControl} from "@angular/forms";
-import {IDeliverable} from "../../model/ideliverable";
+import {
+  DeliverablesApiService
+} from "../../../main-page-enterprise/components/deliverables/services/deliverables-api.service";
+//import {MatDialog} from "@angular/material/dialog";
+/*import {
+  DialogAddDeliverableComponent
+} from "../../../main-page-enterprise/components/deliverables/components/dialog/dialog-add-deliverable.component";*/
 
 @Component({
-  selector: 'app-deliverables',
-  templateUrl: './deliverables.component.html',
-  styleUrl: './deliverables.component.css'
+  selector: 'app-dev-deliverables',
+  templateUrl: './dev-deliverables.component.html',
+  styleUrl: './dev-deliverables.component.css'
 })
-export class DeliverablesComponent implements OnInit {
-
+export class DevDeliverablesComponent implements OnInit{
   enterprise?:any;
   projectname?:string;
 
   deliverables!:IDeliverable[];
 
-  deliverableCreated?:any;
+  /*deliverableCreated?:any;*/
   projectId?: number;
 
-  name=new FormControl('');
+  /*name=new FormControl('');
   description=new FormControl('');
-  exp_date=new FormControl(new Date());
+  exp_date=new FormControl(new Date());*/
 
   constructor(private route: ActivatedRoute,
-              private delvsApi: DeliverablesApiService,
-              public dialog:MatDialog) {
+              private delvsApi: DeliverablesApiService) {
   }
 
   ngOnInit() {
@@ -46,7 +48,7 @@ export class DeliverablesComponent implements OnInit {
     })
   }
 
-  openDialog(){
+  /*openDialog(){
     const count=this.deliverables.length+1;
     const dialogRef=this.dialog.open(DialogAddDeliverableComponent, {
       data:{
@@ -73,9 +75,9 @@ export class DeliverablesComponent implements OnInit {
       })
 
     })
-  }
+  }*/
 
   goToReviewDelv(deliverableId:number){
-    return ['/app','main',this.projectId,'deliverables',deliverableId]
+    return ['/app-developer','main',this.projectId,'deliverables',deliverableId]
   }
 }
