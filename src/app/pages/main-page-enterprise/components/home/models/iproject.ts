@@ -1,4 +1,4 @@
-import {IDeliverable} from "../../deliverables/model/ideliverable";
+import {IdeliverableTemp} from "../../deliverables/model/ideliverableTemp";
 import {ICandidate} from "./icandidate";
 
 export interface IProject {
@@ -8,7 +8,7 @@ export interface IProject {
   progress?: number;
   candidates?: ICandidate[];
   numCandidates?: number;
-  deliverables:IDeliverable[]*/
+  deliverables:IdeliverableTemp[]*/
 
   id:number,
   name:string,

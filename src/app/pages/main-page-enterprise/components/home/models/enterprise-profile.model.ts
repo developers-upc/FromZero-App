@@ -1,4 +1,4 @@
-import {IDeliverable} from "../../deliverables/model/ideliverable";
+import {IdeliverableTemp} from "../../deliverables/model/ideliverableTemp";
 import {IProject} from "./iproject";
 
 export interface IEnterpriseProfile {
@@ -34,7 +34,7 @@ export interface IEnterpriseProfile {
   progress?: number;
   candidates?: ICandidate[];
   numCandidates?: number;
-  deliverables:IDeliverable[]
+  deliverables:IdeliverableTemp[]
 }
 
 export interface ICandidate {

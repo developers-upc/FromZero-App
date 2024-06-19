@@ -1,8 +1,14 @@
-import {StatusDeliverable} from "./status-deliverable";
 export interface IDeliverable {
-  id: number,
-  title: string,
-  description: string,
-  deadLine: Date,
-  status: StatusDeliverable
+  id:number,
+  name:string,
+  description:string,
+  date:Date,
+  state?:string,
+  developerMessage?:string,
+  project?:{
+    name?:string,
+    enterprise?:{
+      enterpriseName?:string
+    }
+  }
 }
