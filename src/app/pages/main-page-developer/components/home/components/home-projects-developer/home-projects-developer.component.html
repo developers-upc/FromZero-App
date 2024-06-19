@@ -24,12 +24,12 @@
                 <mat-card-content>
                   <div class="flex gap-5 justify-center cursor-pointer" (click)="openDialog(project)">
                     <p class="text-blue-600">A espera de desarrollador</p>
-                    <p class="bg-red-600 rounded-full w-6 h-6 flex items-center justify-center text-white text-sm">{{project.numCandidates}}</p>
+                    <p class="bg-red-600 rounded-full w-6 h-6 flex items-center justify-center text-white text-sm">{{project.candidatesList.length}}</p>
                   </div>
                 </mat-card-content>
               </mat-card>
               <ng-template #inProgress>
-                <mat-card *ngIf="project.state === 'En proceso'; else completed">
+                <mat-card *ngIf="project.state === 'En progreso'; else completed">
                   <mat-card-header>
                     <mat-card-title>
                       <a [routerLink]="goToDeliverables(project.id)">
@@ -67,6 +67,7 @@
             </mat-card>
           </div>
         </ng-template>
+
       </div>
     </mat-card-content>
   </mat-card>

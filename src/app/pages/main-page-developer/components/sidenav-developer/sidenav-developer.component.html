@@ -1,7 +1,7 @@
 <div class="sidenav" [ngClass]="expand ? 'sidenav-expanded':''">
   <div class="logo-container">
     @if(expand){
-      <img [src]="user.imageProfile" [alt]="user.username" class="logo">
+      <img [src]="user.profileImgUrl" [alt]="user.firstName" class="logo">
     }
     <button (click)="toggleExpand()" class="btn">
       <img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png" alt="toggle" class="toggle-image">

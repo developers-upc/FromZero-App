@@ -8,7 +8,10 @@ import {IProject} from "../models/iproject";
 export class ProjectsApiService {
   baseUrl = "http://localhost:8080/v1/api/projects";
   constructor(private http:HttpClient) { }
-  getAllProjectsByEnterpriseId(id:number){
-    return this.http.get<IProject>(`${this.baseUrl}/enterprise/${id}`)
+  getAllProjectsByEnterpriseUserId(id:number){
+    return this.http.get<IProject[]>(`${this.baseUrl}/enterprise/${id}`)
+  }
+  getProjectsByDeveloperUserId(id:number){
+    return this.http.get<IProject[]>(`${this.baseUrl}/developer/${id}`);
   }
 }

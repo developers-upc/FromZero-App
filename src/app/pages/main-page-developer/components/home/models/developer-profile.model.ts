@@ -12,5 +12,5 @@ export interface IDeveloperProfile {
   socialRazon: string;
   website: string;
   sector: string;
-  projects: IProject[];
+  //projects: IProject[];
 }

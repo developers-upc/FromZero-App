@@ -1,8 +1,8 @@
 <div class="container w-2/3 h-full">
   <mat-card>
     <mat-card-header>
-      <mat-card-title>{{perfilUsuario?.username}}</mat-card-title>
-      <img mat-card-image :src="{{perfilUsuario?.imageProfile}}" alt="Perfil de usuario" class="w-12 h-12">
+      <mat-card-title>{{perfilUsuario?.firstName}} {{perfilUsuario?.lastName}}</mat-card-title>
+      <img mat-card-image :src="{{perfilUsuario?.profileImgUrl}}" alt="Perfil de usuario" class="w-12 h-12">
       <mat-icon (click)="openDialog()" class="text-purple-500 cursor-pointer hover:bg-gray-200">edit</mat-icon>
     </mat-card-header>
     <div class="flex justify-center">
@@ -12,7 +12,7 @@
       <div class="flex gap-2">
         <div>
           <p class="text-gray-500 font-bold">Resumen</p>
-          <p>{{perfilUsuario?.summary}}</p>
+          <p>{{perfilUsuario?.description}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -32,20 +32,9 @@
     </div>
     <mat-card-content>
       <div class="flex gap-2 justify-between w-full">
-        <div class="flex justify-between w-11/12 mt-3">
-          <p class="text-gray-500 font-bold">Razón Social</p>
-          <p>{{perfilUsuario?.socialRazon}}</p>
-        </div>
-      </div>
-    </mat-card-content>
-    <div class="flex justify-center">
-      <hr class="w-5/6 text-gray-500">
-    </div>
-    <mat-card-content>
-      <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Teléfono</p>
-          <p>{{perfilUsuario?.cellphone}}</p>
+          <p>{{perfilUsuario?.phone}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -56,7 +45,7 @@
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Correo</p>
-          <p>{{perfilUsuario?.email}}</p>
+          <p>{{perfilUsuario?.user?.email}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -66,22 +55,12 @@
     <mat-card-content>
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
-          <p class="text-gray-500 font-bold">Sitio Web</p>
-          <p>{{perfilUsuario?.website}}</p>
+          <p class="text-gray-500 font-bold">Specialties</p>
+          <p>{{perfilUsuario?.specialties}}</p>
         </div>
       </div>
     </mat-card-content>
-    <div class="flex justify-center">
-      <hr class="w-5/6 text-gray-500">
-    </div>
-    <mat-card-content>
-      <div class="flex gap-2 justify-between w-full">
-        <div class="flex justify-between gap-10 w-11/12 mt-3">
-          <p class="text-gray-500 font-bold">Sector</p>
-          <p>{{perfilUsuario?.sector}}</p>
-        </div>
-      </div>
-    </mat-card-content>
+
 
   </mat-card>
 </div>

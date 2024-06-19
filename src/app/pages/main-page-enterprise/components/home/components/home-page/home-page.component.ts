@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
-import {IEnterpriseProfile} from "../../models/enterprise-profile.model";
 import {IProject} from "../../models/iproject";
+import {ProjectsApiService} from "../../services/projects-api.service";
+import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
 
 @Component({
   selector: 'app-home-page',
@@ -9,20 +10,20 @@ import {IProject} from "../../models/iproject";
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent  implements OnInit {
-  perfilUsuario!: IEnterpriseProfile;
+  perfilUsuario!: IEnterpriseProfileTemp;
   userProjects!: IProject[];
-  constructor(private _authService: AuthApiService) {
+  constructor(private _authService: AuthApiService,private _projectsService:ProjectsApiService) {
   }
 
   ngOnInit(): void {
     const userId = localStorage.getItem('userId');
     if (userId) {
-      this._authService.getProfileById(+userId).subscribe(profile => {
+      this._authService.getEnterpriseProfileById(+userId).subscribe(profile => {
         this.perfilUsuario = profile;
-        let profileID = this.perfilUsuario.id;
-        //servicio de proyectos, get projects by
-        this.userProjects = profile.projects;
       });
+      this._projectsService.getAllProjectsByEnterpriseUserId(+userId).subscribe(projects=>{
+        this.userProjects=projects;
+      })
     }
   }
 }

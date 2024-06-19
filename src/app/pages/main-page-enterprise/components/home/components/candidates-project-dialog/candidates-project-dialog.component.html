@@ -6,12 +6,12 @@
     <hr class="w-5/6 text-gray-500">
   </div>
   <mat-card-content>
-    @for (candidate of data.candidates; track candidate.name){
+    @for (candidate of data.candidates; track candidate.firstName){
       <mat-card>
         <mat-card-title>
           <div class="flex justify-center gap-10">
-            <img src="{{candidate.image}}" alt="foto de perfil del candidato" class="w-20 h-20 rounded-full">
-            <p>{{candidate.name}}</p>
+            <img src="{{candidate.profileImgUrl}}" alt="foto de perfil del candidato" class="w-20 h-20 rounded-full">
+            <p>{{candidate.firstName}}</p>
             <button class="rounded-full text-red-600">
               <mat-icon>close</mat-icon>
             </button>
@@ -24,7 +24,7 @@
           <div class="flex flex-col">
             <p class="font-bold">Descripción</p>
             <p>{{candidate.description}}</p>
-            <a href="{{candidate.link}}" target="_blank" class="text-purple-700 cursor-pointer hover:bg-gray-200">Github</a>
+            <a href="#" target="_blank" class="text-purple-700 cursor-pointer hover:bg-gray-200">Github</a>
           </div>
         </mat-card-content>
       </mat-card>

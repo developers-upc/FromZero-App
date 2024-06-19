@@ -1,9 +1,9 @@
 import {Component, Input} from '@angular/core';
-import {IDeveloperProfile} from "../../models/developer-profile.model";
 import {MatDialog} from "@angular/material/dialog";
 import {
   EditProfileDialogComponent
 } from "../../../../../main-page-enterprise/components/home/components/edit-profile-dialog/edit-profile-dialog.component";
+import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
 
 @Component({
   selector: 'app-home-profile-developer',
@@ -11,7 +11,7 @@ import {
   styleUrl: './home-profile-developer.component.css'
 })
 export class HomeProfileDeveloperComponent {
-  @Input() perfilUsuario!: IDeveloperProfile;
+  @Input() perfilUsuario!: IDeveloperProfileTemp;
 
   constructor(public dialogRef: MatDialog) {}
 

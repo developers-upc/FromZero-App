@@ -1,8 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IEnterpriseProfile} from "../../models/enterprise-profile.model";
 import { MatDialog } from "@angular/material/dialog";
 import { EditProfileDialogComponent } from '../edit-profile-dialog/edit-profile-dialog.component';
-import {AuthApiService} from "../../../../../auth/services/auth-api.service";
+import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
 
 @Component({
   selector: 'app-home-profile',
@@ -10,7 +9,7 @@ import {AuthApiService} from "../../../../../auth/services/auth-api.service";
   styleUrl: './home-profile.component.css'
 })
 export class HomeProfileComponent {
-  @Input() perfilUsuario!: IEnterpriseProfile;
+  @Input() perfilUsuario!:IEnterpriseProfileTemp
 
   constructor(public dialog: MatDialog) {}
 

@@ -2,9 +2,6 @@ import {Component, Input} from '@angular/core';
 import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
 import {MatDialog} from "@angular/material/dialog";
 import {
-  CandidatesProjectDialogComponent
-} from "../../../../../main-page-enterprise/components/home/components/candidates-project-dialog/candidates-project-dialog.component";
-import {
   CandidatesProjectDialogDeveloperComponent
 } from "../candidates-project-dialog-developer/candidates-project-dialog-developer.component";
 
@@ -24,7 +21,7 @@ export class HomeProjectsDeveloperComponent {
   openDialog(project: IProject) {
     this.dialog.open(CandidatesProjectDialogDeveloperComponent, {
       data: {
-        candidates: project.candidates
+        candidates: project.candidatesList
       }
     });
   }

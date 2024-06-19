@@ -25,7 +25,7 @@ export class SidenavEnterpriseComponent {
     const userId = localStorage.getItem('userId');
     const userIdNumber=userId?+userId:null;
     const newUserIdNumber:number=userIdNumber??0;
-    this.authService.getProfileById(newUserIdNumber).subscribe(profile => {
+    this.authService.getEnterpriseProfileById(newUserIdNumber).subscribe(profile => {
       this.user=profile;
     })
   }

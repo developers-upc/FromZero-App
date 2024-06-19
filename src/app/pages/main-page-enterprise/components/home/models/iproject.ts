@@ -2,15 +2,15 @@ import {IDeliverable} from "../../deliverables/model/ideliverable";
 import {ICandidate} from "./icandidate";
 
 export interface IProject {
-  id:number,
+  /*id:number,
   name: string;
   state: string;
   progress?: number;
   candidates?: ICandidate[];
   numCandidates?: number;
-  deliverables:IDeliverable[]
+  deliverables:IDeliverable[]*/
 
-  /*id:number,
+  id:number,
   name:string,
   description:string,
   state:string,
@@ -18,9 +18,9 @@ export interface IProject {
   ownerId:number,
   developerId?:number,
   candidatesList:ICandidate[],
-  languages:IProgrammingLanguages[],
-  frameworks:IFrameworks[],
+  languages:[],
+  frameworks:[],
   type:string,
   budget:string,
-  methodologies:string*/
+  methodologies:string
 }
