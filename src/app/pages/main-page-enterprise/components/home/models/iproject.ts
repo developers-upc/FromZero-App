@@ -1,5 +1,7 @@
 import {IdeliverableTemp} from "../../deliverables/model/ideliverableTemp";
 import {ICandidate} from "./icandidate";
+import {IProgrammingLanguages} from "./iprogramming-languages";
+import {IFramework} from "./iframework";
 
 export interface IProject {
   /*id:number,
@@ -18,8 +20,8 @@ export interface IProject {
   ownerId:number,
   developerId?:number,
   candidatesList:ICandidate[],
-  languages:[],
-  frameworks:[],
+  languages:IProgrammingLanguages[],
+  frameworks:IFramework[],
   type:string,
   budget:string,
   methodologies:string

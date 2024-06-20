@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MainPageDeveloperRoutingModule } from './main-page-developer-routing.module';
-import { MainPageComponent } from './pages/main-page/main-page.component';
+//import { MainPageComponent } from './pages/main-page/main-page.component';
 import { SidenavDeveloperComponent } from './components/sidenav-developer/sidenav-developer.component';
 import { HomePageComponent } from './components/home/components/home-page/home-page.component';
 import { MessageComponent } from './components/message/components/message/message.component';
@@ -34,12 +34,13 @@ import { ProjectProfilePageComponent } from './components/project-profile/compon
 import { ProjectRepositoryCardComponent } from './components/project-profile/components/project-repository-card/project-repository-card.component';
 import { DevDeliverablesComponent } from './components/dev-deliverables/dev-deliverables.component';
 import { SendDeliverableComponent } from './components/send-deliverable/send-deliverable.component';
+import { MainPageDeveloperComponent } from './pages/main-page-developer/main-page-developer.component';
 
 
 
 @NgModule({
   declarations: [
-    MainPageComponent,
+    //MainPageComponent,
     SidenavDeveloperComponent,
     HomePageComponent,
     MessageComponent,
@@ -55,6 +56,7 @@ import { SendDeliverableComponent } from './components/send-deliverable/send-del
     ProjectRepositoryCardComponent,
     DevDeliverablesComponent,
     SendDeliverableComponent,
+    MainPageDeveloperComponent,
   ],
   imports: [
     CommonModule,

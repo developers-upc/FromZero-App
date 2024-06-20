@@ -1,8 +1,8 @@
 <div class="container w-full h-full">
   <mat-card>
     <mat-card-header class="flex justify-between mb-3 align-middle items-center">
-      <mat-card-title>{{perfilEnterprise?.username}}</mat-card-title>
-      <img mat-card-image :src="{{perfilEnterprise?.imageProfile}}" alt="Perfil de usuario" class="w-12 h-12">
+      <mat-card-title>{{perfilEnterprise?.enterpriseName}}</mat-card-title>
+      <img mat-card-image :src="{{perfilEnterprise?.profileImgUrl}}" alt="Perfil de usuario" class="w-12 h-12">
       <a routerLink="/app-developer/main/message">
         <mat-icon class="text-purple-500 hover:bg-gray-200">message</mat-icon>
       </a>
@@ -14,7 +14,7 @@
       <div class="flex gap-2">
         <div>
           <p class="text-gray-500 font-bold">Resumen</p>
-          <p>{{perfilEnterprise?.summary}}</p>
+          <p>{{perfilEnterprise?.description}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -36,7 +36,7 @@
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Telefono</p>
-          <p>{{perfilEnterprise?.cellphone}}</p>
+          <p>{{perfilEnterprise?.phone}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -47,7 +47,7 @@
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Correo</p>
-          <p>{{perfilEnterprise?.email}}</p>
+          <p>{{perfilEnterprise?.user?.email}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -57,8 +57,8 @@
     <mat-card-content>
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
-          <p class="text-gray-500 font-bold">Razon social</p>
-          <p>{{perfilEnterprise?.socialRazon}}</p>
+          <p class="text-gray-500 font-bold">RUC</p>
+          <p>{{perfilEnterprise?.ruc}}</p>
         </div>
       </div>
     </mat-card-content>

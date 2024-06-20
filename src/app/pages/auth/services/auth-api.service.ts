@@ -79,5 +79,7 @@ export class AuthApiService {
   getDeveloperProfileById(id: number): Observable<IDeveloperProfileTemp> {
     return this._http.get<IDeveloperProfileTemp>(this.profilesUrl + 'developers/' + id);
   }
-
+  getEnterpriseById(id:number){
+    return this._http.get<IEnterpriseProfileTemp>(this.profilesUrl+'enterprise/'+id);
+  }
 }

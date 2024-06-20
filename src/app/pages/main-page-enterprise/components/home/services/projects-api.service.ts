@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {IProject} from "../models/iproject";
 
 @Injectable({
@@ -19,5 +19,12 @@ export class ProjectsApiService {
   }
   assignDeveloperToProject(projectId:number,developerUserId:number){
     return this.http.patch(`${this.baseUrl}/${projectId}/assign-developer`,developerUserId)
+  }
+  getProjectsByState(state:string){
+    let params = new HttpParams().set('state', state);
+    return this.http.get<IProject[]>(`${this.baseUrl}/by-state`,{params})
+  }
+  getProjectById(id:number){
+    return this.http.get<IProject>(`${this.baseUrl}/${id}`);
   }
 }

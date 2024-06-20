@@ -4,6 +4,9 @@ import {DevelopersService} from "../../../../../main-page-enterprise/service/dev
 import {IDeveloper} from "../../../../../main-page-enterprise/components/developer-profile/model/ideveloper";
 import {Ishowproject} from "../../../project-profile/model/ishowproject";
 import {ShowProjectApiService} from "../../../../service/show-project-service/show-project-api.service";
+import {ProjectsApiService} from "../../../../../main-page-enterprise/components/home/services/projects-api.service";
+import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
+import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 
 @Component({
   selector: 'app-search-projects',
@@ -12,13 +15,19 @@ import {ShowProjectApiService} from "../../../../service/show-project-service/sh
 })
 export class SearchProjectsComponent implements OnInit {
 
-  constructor(private router: Router,private _projectservice: ShowProjectApiService) {
+  constructor(private router: Router,private projectsService:ProjectsApiService,
+              private _projectservice: ShowProjectApiService,private authService: AuthApiService) {
   }
-  projects!: Ishowproject[];
+  //projects!: Ishowproject[];
+  projects!:IProject[];
+  //enterpriseName!:string;
 
   ngOnInit(): void {
-    this._projectservice.getAll("En busqueda").subscribe((projects: Ishowproject[]) => {
+    /*this._projectservice.getAll("En busqueda").subscribe((projects: Ishowproject[]) => {
       this.projects = projects;
+    })*/
+    this.projectsService.getProjectsByState("En busqueda").subscribe(projects=>{
+      this.projects=projects
     })
     /*this._projectservice.showProjects().subscribe((projects: Ishowproject[]) => {
       this.projects = projects;
@@ -30,14 +39,14 @@ export class SearchProjectsComponent implements OnInit {
     this.router.navigate(['/app/main/developer-profile', developer.id]);
   }*/
 
-  redirectToProfile(ownerid: number): void {
+  redirectToProfile(ownerId: number): void {
     //localStorage.setItem('developerId', developer.id.toString());
-    localStorage.setItem('enterpriseId', ownerid.toString());
-    this.router.navigate(['/app-developer/main/enterprise-profile', ownerid]);
+    //localStorage.setItem('enterpriseId', ownerid.toString());
+    this.router.navigate(['/app-developer/main/enterprise-profile', ownerId]);
   }
 
   goToProject(id: number): void {
-    localStorage.setItem('id', id.toString());
+    //localStorage.setItem('id', id.toString());
     this.router.navigate(['/app-developer/main//apply-to-project', id]);
   }
 
