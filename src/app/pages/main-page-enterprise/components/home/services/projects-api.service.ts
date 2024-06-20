@@ -14,4 +14,7 @@ export class ProjectsApiService {
   getProjectsByDeveloperUserId(id:number){
     return this.http.get<IProject[]>(`${this.baseUrl}/developer/${id}`);
   }
+  postProject(project:any){
+    return this.http.post<IProject>(`${this.baseUrl}`,project)
+  }
 }

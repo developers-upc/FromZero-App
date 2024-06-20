@@ -22,43 +22,53 @@
               <label for="tipoPagina">Tipo de Proyecto</label>
               <mat-form-field>
                 <mat-select id="tipoPagina" formControlName="projectType">
-                  <mat-option value="1">Página web</mat-option>
-                  <mat-option value="2">Aplicación web</mat-option>
-                  <mat-option value="3">Aplicación de escritorio</mat-option>
+                  <mat-option value="Landing Page">Landing Page</mat-option>
+                  <mat-option value="Aplicacion web">Aplicacion web</mat-option>
+                  <mat-option value="Aplicacion de Escritorio">Aplicacion de Escritorio</mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
             <hr>
             <div class="flex flex-col">
               <label for="tecnologias">Tecnologías</label>
-              <mat-checkbox id="tecnologias" [formControl]="hide" #techCheckbox>Tecnologías sin determinar</mat-checkbox>
+              <mat-checkbox id="tecnologias" [formControl]="hideTechnologies" #techCheckbox>Tecnologías sin determinar</mat-checkbox>
               <div class="flex gap-3">
                 <div class="flex flex-col">
                   <label>Lenguajes</label>
                   <mat-form-field>
-                    <mat-select id="lenguajesProgramacion" formControlName="programmLenguageType" [disabled]="techCheckbox.checked" (selectionChange)="selectedLanguages.push($event.value)">
-                      <mat-option value="HTML">HTML</mat-option>
-                      <mat-option value="CSS">CSS</mat-option>
-                      <mat-option value="JavaScript">JavaScript</mat-option>
+                    <mat-select id="lenguajesProgramacion"
+                                [disabled]="techCheckbox.checked"
+                                (selectionChange)="selectedLanguages.push($event.value)">
+                      @for(language of programmingLanguagesList;track language.id){
+                        <mat-option (click)="addingLanguages(language.id)"
+                                    [value]="language.name">
+                          {{language.name}}
+                        </mat-option>
+                      }
                     </mat-select>
                   </mat-form-field>
                   <div *ngFor="let language of selectedLanguages; let i = index" class="flex justify-between">
                     <p>{{ language }}</p>
-                    <mat-icon class="text-red-600" (click)="removeSelection(i, selectedLanguages)">delete</mat-icon>
+                    <mat-icon class="text-red-600" (click)="removeSelectedLanguage(i, selectedLanguages)">delete</mat-icon>
                   </div>
                 </div>
                 <div class="flex flex-col">
                   <label>Frameworks</label>
                   <mat-form-field>
-                    <mat-select id="frameworksProgramacion" formControlName="programFrameworksType" [disabled]="techCheckbox.checked" (selectionChange)="selectedFrameworks.push($event.value)">
-                      <mat-option value="React.js">React.js (Frontend)</mat-option>
-                      <mat-option value="Node.js">Node.js (Backend)</mat-option>
-                      <mat-option value="Express.js">Express.js (Backend)</mat-option>
+                    <mat-select id="frameworksProgramacion"
+                                [disabled]="techCheckbox.checked"
+                                (selectionChange)="selectedFrameworksTemp.push($event.value)">
+                      @for (framework of frameworksList;track framework.id){
+                        <mat-option (click)="addingFrameworks(framework.id)"
+                                    [value]="framework.name">
+                          {{framework.name}}
+                        </mat-option>
+                      }
                     </mat-select>
                   </mat-form-field>
-                  <div *ngFor="let frameworks of selectedFrameworks; let i = index" class="flex justify-between">
+                  <div *ngFor="let frameworks of selectedFrameworksTemp; let i = index" class="flex justify-between">
                     <p>{{ frameworks }}</p>
-                    <mat-icon class="text-red-600" (click)="removeSelection(i, selectedFrameworks)">delete</mat-icon>
+                    <mat-icon class="text-red-600" (click)="removeSelectedFramework(i, selectedFrameworksTemp)">delete</mat-icon>
                   </div>
                 </div>
               </div>
@@ -79,7 +89,7 @@
             <hr>
             <div class="flex flex-col w-full">
               <label for="procesosYMetologias">Procesos y Metogologias de desarrollo</label>
-              <mat-checkbox id="procesosYMetologias" [formControl]="hide" #processCheckbox>Agregar procesos y metodologias por defecto</mat-checkbox>
+              <mat-checkbox id="procesosYMetologias" [formControl]="hideMethodologies" #processCheckbox>Agregar procesos y metodologias por defecto</mat-checkbox>
               <mat-form-field *ngIf="!processCheckbox.checked">
                 <textarea matInput formControlName="procesos"></textarea>
               </mat-form-field>
