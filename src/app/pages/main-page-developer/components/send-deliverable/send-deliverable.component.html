@@ -13,10 +13,12 @@
     <mat-card-content>
       <label>Agregar mensaje</label>
       <mat-form-field>
-        <textarea matInput formControlName="developerMessage"></textarea>
+        <textarea matInput [formControl]="developerMessage"></textarea>
       </mat-form-field>
       <div>
-        <button mat-flat-button color="primary" class="rounded-full">Enviar entregable a revisión</button>
+        <button mat-flat-button color="primary" class="rounded-full" (click)="submitDeliverable()">
+          Enviar entregable a revisión
+        </button>
       </div>
     </mat-card-content>
   </mat-card>

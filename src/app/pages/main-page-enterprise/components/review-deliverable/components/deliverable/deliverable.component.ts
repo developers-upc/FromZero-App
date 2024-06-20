@@ -44,6 +44,10 @@ export class DeliverableComponent implements OnInit{
   }
 
   openDialog() {
-    this.dialog.open(DialogAcceptDeliverableComponent);
+    this.dialog.open(DialogAcceptDeliverableComponent,{
+      data:{
+        deliverableId:Number(this.deliverableId)
+      }
+    });
   }
 }

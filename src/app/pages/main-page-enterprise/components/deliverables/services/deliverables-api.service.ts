@@ -36,4 +36,11 @@ export class DeliverablesApiService {
     return this.http.get<IDeliverable>(`${this.delvUrl}/${deliverableId}`);
   }
 
+  sendDeliverable(deliverableId:number,developerMessage:string){
+    return this.http.patch(`${this.delvUrl}/${deliverableId}/send`,developerMessage);
+  }
+
+  reviewDeliverable(deliverableId:number,accept:boolean){
+    return this.http.patch(`${this.delvUrl}/${deliverableId}/review`,accept)
+  }
 }
