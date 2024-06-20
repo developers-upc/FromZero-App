@@ -9,6 +9,10 @@ import {MatDialogRef} from "@angular/material/dialog";
 export class ApplyConfirmationComponent {
   constructor(public dialogRef: MatDialogRef<ApplyConfirmationComponent>) {}
 
+  apply(){
+
+  }
+
   closeDialog(){
     this.dialogRef.close();
   }

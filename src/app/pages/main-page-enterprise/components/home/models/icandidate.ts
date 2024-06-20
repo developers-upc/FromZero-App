@@ -10,6 +10,9 @@ export interface ICandidate {
   lastName:string,
   description:string,
   profileImgUrl:string
+  user:{
+    userId:number,
+  }
 
 
 }

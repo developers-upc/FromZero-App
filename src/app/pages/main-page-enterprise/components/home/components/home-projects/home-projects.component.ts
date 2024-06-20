@@ -17,8 +17,9 @@ export class HomeProjectsComponent {
   }
 
   openDialog(project: IProject) {
-    this.dialog.open(CandidatesProjectDialogComponent, {
+    const dialogRef = this.dialog.open(CandidatesProjectDialogComponent, {
       data: {
+        projectId:project.id,
         candidates: project.candidatesList
       }
     });

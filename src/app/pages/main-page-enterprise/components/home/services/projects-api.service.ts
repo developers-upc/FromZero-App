@@ -17,4 +17,7 @@ export class ProjectsApiService {
   postProject(project:any){
     return this.http.post<IProject>(`${this.baseUrl}`,project)
   }
+  assignDeveloperToProject(projectId:number,developerUserId:number){
+    return this.http.patch(`${this.baseUrl}/${projectId}/assign-developer`,developerUserId)
+  }
 }
