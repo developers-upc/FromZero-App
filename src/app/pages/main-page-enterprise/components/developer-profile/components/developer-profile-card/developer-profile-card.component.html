@@ -1,8 +1,8 @@
 <div class="container w-2/3 h-full">
   <mat-card>
     <mat-card-header class="flex justify-between mb-3 align-middle items-center">
-      <mat-card-title>{{perfilDeveloper?.name}}</mat-card-title>
-      <img mat-card-image :src="{{perfilDeveloper?.profileImage}}" alt="Perfil de usuario" class="w-12 h-12">
+      <mat-card-title>{{perfilDeveloper?.firstName}}</mat-card-title>
+      <img mat-card-image :src="{{perfilDeveloper?.profileImgUrl}}" alt="Perfil de usuario" class="w-12 h-12">
       <a routerLink="/app/main/message">
         <mat-icon class="text-purple-500 hover:bg-gray-200">message</mat-icon>
       </a>
@@ -36,7 +36,7 @@
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Telefono</p>
-          <p>{{perfilDeveloper?.cellphone}}</p>
+          <p>{{perfilDeveloper?.phone}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -47,7 +47,7 @@
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Correo</p>
-          <p>{{perfilDeveloper?.email}}</p>
+          <p>{{perfilDeveloper?.user?.email}}</p>
         </div>
       </div>
     </mat-card-content>
@@ -69,7 +69,7 @@
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Especialidades</p>
-          <p>{{perfilDeveloper?.skills}}</p>
+          <p>{{perfilDeveloper?.specialties}}</p>
         </div>
       </div>
     </mat-card-content>

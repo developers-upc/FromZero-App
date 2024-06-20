@@ -8,5 +8,8 @@ export interface IDeveloperProfileTemp {
   completedProjects:number,
   specialties:string,
   profileImgUrl:string,
-  user:{email:string},
+  user:{
+    userId:number,
+    email:string
+  },
 }

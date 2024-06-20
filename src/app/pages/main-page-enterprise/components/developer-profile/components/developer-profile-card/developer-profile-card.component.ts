@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {IDeveloper} from "../../model/ideveloper";
+import {IDeveloperProfileTemp} from "../../../../../main-page-developer/components/home/models/ideveloper-profile";
 //import {Ishowproject} from "../../../../../../core/models/example.interface";
 
 @Component({
@@ -8,7 +9,7 @@ import {IDeveloper} from "../../model/ideveloper";
   styleUrl: './developer-profile-card.component.css'
 })
 export class DeveloperProfileCardComponent {
-  @Input() perfilDeveloper!: IDeveloper ;
+  @Input() perfilDeveloper!: IDeveloperProfileTemp ;
 
   constructor() {}
 }
