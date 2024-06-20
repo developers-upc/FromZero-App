@@ -27,7 +27,15 @@ export class ApplyToProjectComponent implements OnInit{
               private delvsService:DeliverablesApiService) {}
 
   openDialog(){
-    this.dialog.open(ApplyConfirmationComponent, {})
+    let userId= Number(localStorage.getItem("userId"))
+    this.dialog.open(ApplyConfirmationComponent, {
+      data:{
+        developerUserId: userId,
+        projectId:this.project.id
+      }
+    })
+
+
   }
 
   ngOnInit(): void {

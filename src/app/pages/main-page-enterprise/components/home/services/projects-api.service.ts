@@ -27,4 +27,7 @@ export class ProjectsApiService {
   getProjectById(id:number){
     return this.http.get<IProject>(`${this.baseUrl}/${id}`);
   }
+  addCandidateToProject(projectId:number,developerUserId:number){
+    return this.http.patch(`${this.baseUrl}/${projectId}/add-candidate`,developerUserId)
+  }
 }
