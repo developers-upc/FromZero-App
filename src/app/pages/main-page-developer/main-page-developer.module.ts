@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MainPageDeveloperRoutingModule } from './main-page-developer-routing.module';
 //import { MainPageComponent } from './pages/main-page/main-page.component';
 import { SidenavDeveloperComponent } from './components/sidenav-developer/sidenav-developer.component';
-import { HomePageComponent } from './components/home/components/home-page/home-page.component';
+//import { HomePageComponent } from './components/home/components/home-page/home-page.component';
 import { MessageComponent } from './components/message/components/message/message.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatAnchor, MatButton, MatIconButton} from "@angular/material/button";
@@ -35,6 +35,7 @@ import { ProjectRepositoryCardComponent } from './components/project-profile/com
 import { DevDeliverablesComponent } from './components/dev-deliverables/dev-deliverables.component';
 import { SendDeliverableComponent } from './components/send-deliverable/send-deliverable.component';
 import { MainPageDeveloperComponent } from './pages/main-page-developer/main-page-developer.component';
+import { HomePageDeveloperComponent } from './components/home/components/home-page-developer/home-page-developer.component';
 
 
 
@@ -42,7 +43,7 @@ import { MainPageDeveloperComponent } from './pages/main-page-developer/main-pag
   declarations: [
     //MainPageComponent,
     SidenavDeveloperComponent,
-    HomePageComponent,
+    //HomePageComponent,
     MessageComponent,
     SearchProjectsComponent,
     HomeProfileDeveloperComponent,
@@ -57,6 +58,7 @@ import { MainPageDeveloperComponent } from './pages/main-page-developer/main-pag
     DevDeliverablesComponent,
     SendDeliverableComponent,
     MainPageDeveloperComponent,
+    HomePageDeveloperComponent,
   ],
   imports: [
     CommonModule,

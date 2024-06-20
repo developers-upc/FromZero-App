@@ -1,16 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {AuthApiService} from "../../../../../auth/services/auth-api.service";
-import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
+import { Component } from '@angular/core';
 import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
+import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
+import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {ProjectsApiService} from "../../../../../main-page-enterprise/components/home/services/projects-api.service";
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home-page.component.html',
-  styleUrl: './home-page.component.css'
+  selector: 'app-home-page-developer',
+  templateUrl: './home-page-developer.component.html',
+  styleUrl: './home-page-developer.component.css'
 })
-export class HomePageComponent implements OnInit {
-
+export class HomePageDeveloperComponent {
   perfilUsuario!: IDeveloperProfileTemp;
 
   userProjects!:IProject[];
@@ -29,5 +28,4 @@ export class HomePageComponent implements OnInit {
       })
     }
   }
-
 }

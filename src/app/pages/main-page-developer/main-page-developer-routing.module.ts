@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 //import {MainPageComponent} from "./pages/main-page/main-page.component";
-import {HomePageComponent} from "./components/home/components/home-page/home-page.component";
+//import {HomePageComponent} from "./components/home/components/home-page/home-page.component";
 import {MessageComponent} from "./components/message/components/message/message.component";
 import {
   SearchProjectsComponent
@@ -13,6 +13,9 @@ import {
 import {DevDeliverablesComponent} from "./components/dev-deliverables/dev-deliverables.component";
 import {SendDeliverableComponent} from "./components/send-deliverable/send-deliverable.component";
 import {MainPageDeveloperComponent} from "./pages/main-page-developer/main-page-developer.component";
+import {
+  HomePageDeveloperComponent
+} from "./components/home/components/home-page-developer/home-page-developer.component";
 
 const routes: Routes = [
 
@@ -22,7 +25,7 @@ const routes: Routes = [
     children:[
       {
         path:"home",
-        component:HomePageComponent,
+        component:HomePageDeveloperComponent,
       },
       {
         path: 'message',
