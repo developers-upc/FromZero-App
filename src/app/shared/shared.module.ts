@@ -14,12 +14,14 @@ import {
   ProjectListComponent
 } from "./pages/highlight-projects/components/project-list/project-list.component";
 import {MatIconModule} from "@angular/material/icon";
+import { SupportMessageListComponent } from './pages/main-page-support/components/support-message-list/support-message-list.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     SupportComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    SupportMessageListComponent
   ],
   imports: [
     CommonModule,

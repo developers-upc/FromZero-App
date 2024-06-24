@@ -1,0 +1,19 @@
+<div class="w-4/5 h-full mt-10">
+  <div class="h-3/4 overflow-x-hidden overflow-y-auto">
+    <div class="mt-5 mb-2 text-center">
+      <h1 class="mb-0">Mensajes de Soporte</h1>
+      <h3>Explora los mensajes de soporte</h3>
+    </div>
+  </div>
+  @for(supportMessage of supportMessages; track supportMessage.id){
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>{{ supportMessage.title }}</mat-card-title>
+        <mat-card-subtitle>{{ supportMessage.date }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ supportMessage.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  }
+</div>
