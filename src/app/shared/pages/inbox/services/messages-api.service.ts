@@ -11,4 +11,7 @@ export class MessagesApiService {
   postMessage(message:any){
     return this.http.post<IMessage>(`${this.baseUrl}`,message);
   }
+  getAllMessagesByRecipientId(id:number){
+    return this.http.get<IMessage[]>(`${this.baseUrl}/recipient/${id}`);
+  }
 }

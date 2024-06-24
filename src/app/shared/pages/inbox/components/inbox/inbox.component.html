@@ -1,37 +1,23 @@
 <div class="bloque-superior w-full h-full ">
   <ul class="developers-list flex flex-col gap-3 mt-20">
-    @for (message of ['a','b']; track $index) {
+    <h2 style="text-align: center">Mensajes recibidos: {{messagesList.length}}</h2>
+    @for (message of messagesList; track message.id) {
       <li>
-
         <mat-card class="card-class look">
-
           <div style="display: flex; justify-content: space-around">
             <div>
               <mat-card-header>
                 <mat-card-title>
-                  de: user
+                  De: {{message.sender.email}}
                 </mat-card-title>
-                <!--<mat-card-subtitle (click)="redirectToProfile(project.ownerId)"
-                                   class="cursor-pointer hover:bg-gray-200">
-                  <h3 style="text-align: center">Ver empresa</h3>
-                </mat-card-subtitle>-->
+                <mat-card-subtitle class="cursor-pointer hover:bg-gray-200">
+                  Enviado: {{message.sentTime}}
+                </mat-card-subtitle>
               </mat-card-header>
-
             </div>
           </div>
-
-          <mat-card-content>
-            <div style="display: flex;justify-content:center">
-              <div>
-                emailbody
-              </div>
-            </div>
-          </mat-card-content>
-
         </mat-card>
-
       </li>
     }
   </ul>
-
 </div>
