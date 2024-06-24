@@ -82,4 +82,8 @@ export class AuthApiService {
   getEnterpriseById(id:number){
     return this._http.get<IEnterpriseProfileTemp>(this.profilesUrl+'enterprise/'+id);
   }
+
+  getUserByEmail(email:string){
+    return this._http.get(this.baseUrl+'email/'+email);
+  }
 }
