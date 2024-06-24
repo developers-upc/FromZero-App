@@ -1,23 +1,24 @@
-<div class="bloque-superior w-full h-full ">
-  <ul class="developers-list flex flex-col gap-3 mt-20">
-    <h2 style="text-align: center">Mensajes recibidos: {{messagesList.length}}</h2>
-    @for (message of messagesList; track message.id) {
-      <li>
-        <mat-card class="card-class look">
-          <div style="display: flex; justify-content: space-around">
-            <div>
-              <mat-card-header>
-                <mat-card-title>
-                  De: {{message.sender.email}}
-                </mat-card-title>
-                <mat-card-subtitle class="cursor-pointer hover:bg-gray-200">
-                  Enviado: {{message.sentTime}}
-                </mat-card-subtitle>
-              </mat-card-header>
+<div class="bloque-superior w-full h-full">
+  <h1 style="text-align: center">Mensajes recibidos: {{ messagesList?.length }}</h1>
+    <ul class="developers-list flex flex-col gap-3 h-3/4 mr-10 overflow-x-hidden overflow-y-auto">
+      @for (message of messagesList; track message.id) {
+        <li>
+          <mat-card class="card-class look">
+            <div style="display: flex; justify-content: space-around">
+              <div>
+                <mat-card-header>
+                  <mat-card-title class="cursor-pointer hover:bg-gray-200"
+                                  (click)="showMessage(message)">
+                    De: {{ message?.sender?.email }}
+                  </mat-card-title>
+                  <mat-card-subtitle>
+                    Enviado: {{ message?.sentTime }}
+                  </mat-card-subtitle>
+                </mat-card-header>
+              </div>
             </div>
-          </div>
-        </mat-card>
-      </li>
-    }
-  </ul>
+          </mat-card>
+        </li>
+      }
+    </ul>
 </div>

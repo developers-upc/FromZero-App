@@ -16,6 +16,8 @@ import {
 import {MatIconModule} from "@angular/material/icon";
 import { MessageComponent } from './components/message/message.component';
 import { InboxComponent } from './pages/inbox/components/inbox/inbox.component';
+import { ShowMessageComponent } from './components/show-message/show-message.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { InboxComponent } from './pages/inbox/components/inbox/inbox.component';
     SupportComponent,
     ProjectListComponent,
     MessageComponent,
-    InboxComponent
+    InboxComponent,
+    ShowMessageComponent
   ],
     imports: [
         CommonModule,
@@ -35,7 +38,8 @@ import { InboxComponent } from './pages/inbox/components/inbox/inbox.component';
         MatButtonModule,
         ReactiveFormsModule,
         MatIconModule,
-        FormsModule
+        FormsModule,
+        MatDialogModule
     ],
   exports:[
     FooterComponent,
