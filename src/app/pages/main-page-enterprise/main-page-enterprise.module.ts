@@ -37,7 +37,7 @@ import {DeliverableComponent} from "./components/review-deliverable/components/d
 import {
   DialogAcceptDeliverableComponent
 } from "./components/review-deliverable/components/dialog-accept-deliverable/dialog-accept-deliverable.component";
-import {MessageComponent} from "./components/message/components/message/message.component";
+//import {MessageComponent} from "./components/message/components/message/message.component";
 import {
   LookingfordevelopComponent
 } from "./components/looking-for-developer/components/lookingfordevelop/lookingfordevelop.component";
@@ -66,7 +66,7 @@ import {SharedModule} from "../../shared/shared.module";
     HomePageComponent,
     DeliverableComponent,
     DialogAcceptDeliverableComponent,
-    MessageComponent,
+    //MessageComponent,
     LookingfordevelopComponent,
     SidenavEnterpriseComponent,
     DeveloperProfileCardComponent,

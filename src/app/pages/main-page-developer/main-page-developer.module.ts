@@ -5,7 +5,7 @@ import { MainPageDeveloperRoutingModule } from './main-page-developer-routing.mo
 //import { MainPageComponent } from './pages/main-page/main-page.component';
 import { SidenavDeveloperComponent } from './components/sidenav-developer/sidenav-developer.component';
 //import { HomePageComponent } from './components/home/components/home-page/home-page.component';
-import { MessageComponent } from './components/message/components/message/message.component';
+//import { MessageComponent } from './components/message/components/message/message.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatAnchor, MatButton, MatIconButton} from "@angular/material/button";
 import {
@@ -44,7 +44,7 @@ import { HomePageDeveloperComponent } from './components/home/components/home-pa
     //MainPageComponent,
     SidenavDeveloperComponent,
     //HomePageComponent,
-    MessageComponent,
+    //MessageComponent,
     SearchProjectsComponent,
     HomeProfileDeveloperComponent,
     EditProfileDeveloperDialogComponent,

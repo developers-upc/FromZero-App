@@ -9,29 +9,34 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {
   ProjectListComponent
 } from "./pages/highlight-projects/components/project-list/project-list.component";
 import {MatIconModule} from "@angular/material/icon";
+import { MessageComponent } from './components/message/message.component';
+import { InboxComponent } from './pages/inbox/components/inbox/inbox.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     SupportComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    MessageComponent,
+    InboxComponent
   ],
-  imports: [
-    CommonModule,
-    SharedRoutingModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatButtonModule,
-    ReactiveFormsModule,
-    MatIconModule
-  ],
+    imports: [
+        CommonModule,
+        SharedRoutingModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSelectModule,
+        MatButtonModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        FormsModule
+    ],
   exports:[
     FooterComponent,
     ProjectListComponent
