@@ -64,10 +64,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatHeaderRow,
     MatHeaderRowDef,
     MatRowDef,
-    MatRow
-    MessageComponent,
-    InboxComponent,
-    ShowMessageComponent,
+    MatRow,
     FormsModule,
     MatDialogModule
   ],
