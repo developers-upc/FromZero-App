@@ -6,6 +6,7 @@ import {
   IDeveloperProfileUpdate
 } from "../../../../../main-page-developer/components/home/models/developer-profile-update.model";
 import {IEnterpriseProfileUpdate} from "../../models/enterprise-profile-update.model";
+import {EntepriseProfileService} from "../../services/ObservableService/enteprise-profile-service.service";
 
 @Component({
   selector: 'app-edit-profile-dialog',
@@ -16,7 +17,8 @@ export class EditProfileDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<EditProfileDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IEnterpriseProfile,
-    private _authService: AuthApiService) {}
+    private _authService: AuthApiService,
+    private _profileService: EntepriseProfileService) {}
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -42,6 +44,7 @@ export class EditProfileDialogComponent {
     console.log(updateData);
     this._authService.updateEnterpriseProfile(idEnterprise, updateData).subscribe(response => {
       console.log(response);
+      this._profileService.setProfileData(this.data);
       this.dialogRef.close();
     }, error => {
       this.data = originalData;
