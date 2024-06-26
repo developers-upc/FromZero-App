@@ -19,9 +19,6 @@ export class SidenavSupportComponent {
     const userId = localStorage.getItem('userId');
     const userIdNumber=userId?+userId:null;
     const newUserIdNumber:number=userIdNumber??0;
-    this.authService.getDeveloperProfileById(newUserIdNumber).subscribe(profile => {
-      this.user=profile;
-    })
   }
 
   toggleExpand(){
