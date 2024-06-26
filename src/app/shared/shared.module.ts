@@ -15,13 +15,17 @@ import {
 } from "./pages/highlight-projects/components/project-list/project-list.component";
 import {MatIconModule} from "@angular/material/icon";
 import { SupportMessageListComponent } from './pages/main-page-support/components/support-message-list/support-message-list.component';
+import { SupportDashboardComponent } from './pages/main-page-support/pages/support-dashboard/support-dashboard.component';
+import { SidenavSupportComponent } from './pages/main-page-support/components/sidenav-support/sidenav-support/sidenav-support.component';
 
 @NgModule({
   declarations: [
     FooterComponent,
     SupportComponent,
     ProjectListComponent,
-    SupportMessageListComponent
+    SupportMessageListComponent,
+    SupportDashboardComponent,
+    SidenavSupportComponent
   ],
   imports: [
     CommonModule,

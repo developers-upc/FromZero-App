@@ -15,6 +15,7 @@ export class SupportMessageListComponent implements OnInit{
     ngOnInit(): void {
         this._supportMessageService.getAll().subscribe((supportMessages: IsupportMessage[]) => {
           this.supportMessages = supportMessages;
+          console.log(this.supportMessages);
       });
     }
 

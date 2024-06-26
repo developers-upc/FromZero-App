@@ -7,7 +7,7 @@ import {IsupportMessage} from "../../model/isupport-message";
   providedIn: 'root'
 })
 export class SupportMessageService {
-  baseUrl = 'http://localhost:8080/v1/api/support-messages';
+  baseUrl = 'http://localhost:8080/v1/api/support-tickets';
   constructor(private _http:HttpClient) { }
 
   getAll(): Observable<IsupportMessage[]>{
