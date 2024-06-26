@@ -22,6 +22,7 @@ export class HomePageDeveloperComponent {
     if (userId) {
       this._authService.getDeveloperProfileById(+userId).subscribe(profile => {
         this.perfilUsuario = profile;
+        localStorage.setItem('developerId', profile.id.toString());
       });
       this._projectsService.getProjectsByDeveloperUserId(+userId).subscribe(projects=>{
         this.userProjects=projects

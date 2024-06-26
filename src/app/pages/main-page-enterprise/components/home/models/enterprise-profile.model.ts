@@ -5,12 +5,12 @@ export interface IEnterpriseProfile {
   id: number;
   username: string;
   email: string;
-  imageProfile: string;
+  profileImgUrl: string;
   accountType: number;
-  summary: string;
+  description: string;
   country: string;
-  cellphone: string;
-  socialRazon: string;
+  phone: string;
+  ruc: string;
   website: string;
   sector: string;
   projects: IProject[];

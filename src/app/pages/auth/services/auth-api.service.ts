@@ -70,4 +70,9 @@ export class AuthApiService {
     const url = this.profilesUrl + 'developers/' + id;
     return this._http.put(url, updateDeveloper);
   }
+
+  updateEnterpriseProfile(id: number, updateEnterprise: any): Observable<any>{
+    const url = this.profilesUrl + 'enterprises/' + id;
+    return this._http.put(url, updateEnterprise);
+  }
 }

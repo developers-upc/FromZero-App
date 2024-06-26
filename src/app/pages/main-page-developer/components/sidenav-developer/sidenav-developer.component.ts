@@ -24,7 +24,10 @@ export class SidenavDeveloperComponent {
       this.user=profile;
     })
   }
-
+  logout(): void {
+    localStorage.removeItem('userId');
+    localStorage.removeItem('developerId');
+  }
   toggleExpand(){
     this.expand = !this.expand;
     /*this.onToggleSideNav.emit({

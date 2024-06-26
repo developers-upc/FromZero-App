@@ -20,6 +20,7 @@ export class HomePageComponent  implements OnInit {
     if (userId) {
       this._authService.getEnterpriseProfileById(+userId).subscribe(profile => {
         this.perfilUsuario = profile;
+        localStorage.setItem('enterpriseId', profile.id.toString());
       });
       this._projectsService.getAllProjectsByEnterpriseUserId(+userId).subscribe(projects=>{
         this.userProjects=projects;
