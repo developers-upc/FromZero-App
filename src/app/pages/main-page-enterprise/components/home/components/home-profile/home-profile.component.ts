@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import { EditProfileDialogComponent } from '../edit-profile-dialog/edit-profile-dialog.component';
 import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home-profile',
@@ -11,7 +12,7 @@ import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
 export class HomeProfileComponent {
   @Input() perfilUsuario!:IEnterpriseProfileTemp
 
-  constructor(public dialog: MatDialog) {}
+  constructor(private router:Router,public dialog: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditProfileDialogComponent, {
@@ -25,5 +26,9 @@ export class HomeProfileComponent {
         console.log('The dialog was closed', result);
       }
     });
+  }
+
+  goToInbox(){
+    this.router.navigate(["/app/main/shared/inbox"])
   }
 }

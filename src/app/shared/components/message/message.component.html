@@ -1,32 +1,24 @@
-
 <div class="flex items-center justify-center w-full h-full">
-  <div class="container w-4/6 h-5/6 bg-white border-2 border-gray-500 shadow-xl shadow-gray-600 md:w-3/4">
+  <div class="container w-4/6 bg-white border-2 border-gray-500 shadow-xl shadow-gray-600 md:w-3/4">
     <mat-card>
-      <form  class="m-5">
+      <form (submit)="onSubmit()" [formGroup]="messageForm" class="m-5">
 
         <div class="p-3 flex justify-around">
           <mat-form-field class="w-5/6 h-16">
-            <input matInput placeholder="Destinatario" formControlName="title">
+            <input matInput placeholder="Destinatario" formControlName="recipient">
           </mat-form-field>
         </div>
 
         <div class="p-3 flex justify-around">
           <mat-form-field class="w-5/6 h-16">
-            <input matInput placeholder="Titulo del mensaje" formControlName="title">
+            <input matInput placeholder="Asunto" formControlName="subject">
           </mat-form-field>
         </div>
-
-        <div class="p-3 flex justify-around">
-          <mat-form-field class="w-5/6 h-16">
-            <input matInput placeholder="Asunto" formControlName="title">
-          </mat-form-field>
-        </div>
-
 
         <hr>
         <div class="p-3 flex justify-around">
           <mat-form-field class="w-5/6">
-            <textarea matInput placeholder="Mensaje" formControlName="mensaje" style="height: 180px;"></textarea>
+            <textarea matInput placeholder="Mensaje" formControlName="content" style="height: 120px;"></textarea>
           </mat-form-field>
         </div>
         <hr>
@@ -36,22 +28,26 @@
             <label for="file-upload" class="custom-file-upload">
               <i class="material-icons">attach_file</i> Seleccionar Archivos
             </label>
-            <input id="file-upload" type="file" multiple style="display:none" />
+            <input id="file-upload" type="file" multiple style="display:none"/>
           </div>
           <div class="save-button-wrapper ml-3"> <!-- Añadimos margen a la derecha -->
             <button class="md-button md-raised md-primary">Guardar Archivos</button>
           </div>
         </div>
-
+        @if (messageSended) {
+          <div class="flex justify-center">
+            <p class="text-green-500 text-xl">Mensaje enviado.</p>
+            <mat-icon class="text-green-500">check_circle_outline</mat-icon>
+          </div>
+        }
         <div class="p-3 flex justify-around">
           <div>
-            <a mat-flat-button (click)="message=email.valid" color="primary">Enviar</a>
+            <button mat-flat-button color="primary">Enviar</button>
           </div>
         </div>
-
-
       </form>
     </mat-card>
   </div>
 </div>
+
 

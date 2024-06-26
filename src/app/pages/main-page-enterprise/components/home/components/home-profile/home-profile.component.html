@@ -4,6 +4,7 @@
         <mat-card-title>{{perfilUsuario?.enterpriseName}}</mat-card-title>
         <img mat-card-image :src="{{perfilUsuario?.profileImgUrl}}" alt="Perfil de usuario" class="w-12 h-12">
         <mat-icon (click)="openDialog()" class="text-purple-500 cursor-pointer hover:bg-gray-200">edit</mat-icon>
+        <mat-icon (click)="goToInbox()" class="text-purple-500 cursor-pointer hover:bg-gray-200">inbox</mat-icon>
     </mat-card-header>
     <div class="flex justify-center">
       <hr class="w-5/6 text-gray-500">

@@ -9,7 +9,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {
   ProjectListComponent
 } from "./pages/highlight-projects/components/project-list/project-list.component";
@@ -27,6 +27,10 @@ import {
   MatTable
 } from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
+import { MessageComponent } from './components/message/message.component';
+import { InboxComponent } from './pages/inbox/components/inbox/inbox.component';
+import { ShowMessageComponent } from './components/show-message/show-message.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -35,7 +39,10 @@ import {MatPaginator} from "@angular/material/paginator";
     ProjectListComponent,
     SupportMessageListComponent,
     SupportDashboardComponent,
-    SidenavSupportComponent
+    SidenavSupportComponent,
+    MessageComponent,
+    InboxComponent,
+    ShowMessageComponent
   ],
   imports: [
     CommonModule,
@@ -58,6 +65,11 @@ import {MatPaginator} from "@angular/material/paginator";
     MatHeaderRowDef,
     MatRowDef,
     MatRow
+    MessageComponent,
+    InboxComponent,
+    ShowMessageComponent,
+    FormsModule,
+    MatDialogModule
   ],
   exports:[
     FooterComponent,
