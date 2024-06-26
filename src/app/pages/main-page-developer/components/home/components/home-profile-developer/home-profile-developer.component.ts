@@ -1,10 +1,10 @@
 import {Component, Input} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {
-  EditProfileDialogComponent
-} from "../../../../../main-page-enterprise/components/home/components/edit-profile-dialog/edit-profile-dialog.component";
 import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
 import {Router} from "@angular/router";
+import {
+  EditProfileDeveloperDialogComponent
+} from "../edit-profile-developer-dialog/edit-profile-developer-dialog.component";
 
 @Component({
   selector: 'app-home-profile-developer',
@@ -17,11 +17,10 @@ export class HomeProfileDeveloperComponent {
   constructor(private router:Router,public dialogRef: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialogRef.open(EditProfileDialogComponent, {
+    const dialogRef = this.dialogRef.open(EditProfileDeveloperDialogComponent, {
       width: '600px',
-      data: { ...this.perfilUsuario }
+      data: this.perfilUsuario
     });
-
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.perfilUsuario = result;

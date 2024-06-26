@@ -20,27 +20,6 @@ export class AuthApiService {
 
   constructor(private _http: HttpClient) { }
 
-  // getAll() {
-  //   return this._http.get(`${this.baseUrl}users`);
-  // }
-  // createUser(username:string,password:string,email:string,accountType:number){
-  //   let id:number=0;
-  //   this.getAll().subscribe((response:any)=>{
-  //     id = response.length+1;
-  //     const user:IUserRegister={
-  //       email:email,
-  //       password:password,
-  //       username:username,
-  //       accountType:accountType,
-  //       id:id
-  //     }
-  //     //console.log(user)
-  //     this._http.post(`${this.baseUrl}users`,user).subscribe(response=>{
-  //       console.log(response)
-  //     })
-  //   })
-  // }
-
   createEnterpriseUser(mail: string, password: string, enterpriseName: string) {
     const user: IEnterpriseRegister = {
       mail: mail,
@@ -85,5 +64,10 @@ export class AuthApiService {
 
   getUserByEmail(email:string){
     return this._http.get(this.baseUrl+'email/'+email);
+  }
+
+  updateDeveloperProfile(id: number, updateDeveloper: any): Observable<any>{
+    const url = this.profilesUrl + 'developers/' + id;
+    return this._http.put(url, updateDeveloper);
   }
 }
