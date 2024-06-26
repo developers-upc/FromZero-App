@@ -33,6 +33,8 @@ export class LoginComponent {
             this.router.navigate(['/app/main/home']);
           }else if(user.accountType==="D"){
             this.router.navigate(['/app-developer/main/home']);
+          }else if(user.accountType ==="S"){
+            this.router.navigate(['/shared/support-home']);
           }
 
         } else {
