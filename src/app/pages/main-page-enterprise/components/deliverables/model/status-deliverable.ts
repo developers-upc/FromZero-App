@@ -1,6 +1,6 @@
 export enum StatusDeliverable {
   Pending,
-  Delivered,
-  Reviewed,
+  AwaitingReview,
+  Rejected,
   Canceled
 }

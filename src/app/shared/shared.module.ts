@@ -9,17 +9,40 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSelectModule} from "@angular/material/select";
 import {MatButtonModule} from "@angular/material/button";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {
   ProjectListComponent
 } from "./pages/highlight-projects/components/project-list/project-list.component";
 import {MatIconModule} from "@angular/material/icon";
+import { SupportMessageListComponent } from './pages/main-page-support/components/support-message-list/support-message-list.component';
+import { SupportDashboardComponent } from './pages/main-page-support/pages/support-dashboard/support-dashboard.component';
+import { SidenavSupportComponent } from './pages/main-page-support/components/sidenav-support/sidenav-support/sidenav-support.component';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
+  MatTable
+} from "@angular/material/table";
+import {MatPaginator} from "@angular/material/paginator";
+import { MessageComponent } from './components/message/message.component';
+import { InboxComponent } from './pages/inbox/components/inbox/inbox.component';
+import { ShowMessageComponent } from './components/show-message/show-message.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
     FooterComponent,
     SupportComponent,
-    ProjectListComponent
+    ProjectListComponent,
+    SupportMessageListComponent,
+    SupportDashboardComponent,
+    SidenavSupportComponent,
+    MessageComponent,
+    InboxComponent,
+    ShowMessageComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +53,20 @@ import {MatIconModule} from "@angular/material/icon";
     MatSelectModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatColumnDef,
+    MatHeaderCell,
+    MatHeaderCellDef,
+    MatTable,
+    MatPaginator,
+    MatCell,
+    MatCellDef,
+    MatHeaderRow,
+    MatHeaderRowDef,
+    MatRowDef,
+    MatRow,
+    FormsModule,
+    MatDialogModule
   ],
   exports:[
     FooterComponent,

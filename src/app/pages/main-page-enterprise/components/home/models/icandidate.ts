@@ -1,7 +1,18 @@
 export interface ICandidate {
-  name: string;
+  /*name: string;
   description: string;
   image: string;
   state: string;
-  link: string;
+  link: string;*/
+
+  id:number,
+  firstName:string,
+  lastName:string,
+  description:string,
+  profileImgUrl:string
+  user:{
+    userId:number,
+  }
+
+
 }

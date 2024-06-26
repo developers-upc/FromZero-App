@@ -3,6 +3,8 @@ export interface IHighlightProject {
   title: string,
   description: string,
   type: string,
-  stars: number[],
-  image_url: string
+  stars?: number[],
+  calification:number,
+  image_url: string,
+  website_url:string,
 }

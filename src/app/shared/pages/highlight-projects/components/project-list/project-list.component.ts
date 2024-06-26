@@ -12,7 +12,7 @@ import {IHighlightProject} from "../../model/ihighlight-project";
 export class ProjectListComponent implements OnInit{
   projects!: IHighlightProject[] ;
 
-  filteredProjects: any[] = [];
+  filteredProjects: IHighlightProject[] = [];
 
   constructor(private _highlightProjectService: HighlightsProjectServiceService) {
   }

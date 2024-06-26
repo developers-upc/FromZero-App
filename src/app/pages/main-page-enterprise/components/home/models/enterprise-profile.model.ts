@@ -1,19 +1,30 @@
-import {IDeliverable} from "../../deliverables/model/ideliverable";
+import {IdeliverableTemp} from "../../deliverables/model/ideliverableTemp";
 import {IProject} from "./iproject";
 
 export interface IEnterpriseProfile {
   id: number;
   username: string;
   email: string;
-  imageProfile: string;
+  profileImgUrl: string;
   accountType: number;
-  summary: string;
+  description: string;
   country: string;
-  cellphone: string;
-  socialRazon: string;
+  phone: string;
+  ruc: string;
   website: string;
   sector: string;
   projects: IProject[];
+
+  /*id:number,
+  enterpriseName:string,
+  description:string,
+  country:string,
+  ruc:string,
+  phone:string,
+  website:string,
+  user:{email:string},
+  profileImgUrl:string,
+  sector:string*/
 }
 
 /*export interface IProject {
@@ -23,7 +34,7 @@ export interface IEnterpriseProfile {
   progress?: number;
   candidates?: ICandidate[];
   numCandidates?: number;
-  deliverables:IDeliverable[]
+  deliverables:IdeliverableTemp[]
 }
 
 export interface ICandidate {

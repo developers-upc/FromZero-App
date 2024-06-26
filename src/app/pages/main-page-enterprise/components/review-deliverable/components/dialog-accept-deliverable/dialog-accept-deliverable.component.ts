@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import {MatDialogRef} from "@angular/material/dialog";
+import {Component, Inject} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {DeliverablesApiService} from "../../../deliverables/services/deliverables-api.service";
 
 @Component({
   selector: 'app-dialog-accept-deliverable',
@@ -7,10 +8,23 @@ import {MatDialogRef} from "@angular/material/dialog";
   styleUrl: './dialog-accept-deliverable.component.css'
 })
 export class DialogAcceptDeliverableComponent {
-  constructor(public dialogRef:MatDialogRef<DialogAcceptDeliverableComponent>) {
+  constructor(public dialogRef:MatDialogRef<DialogAcceptDeliverableComponent>,
+              private delvsApi:DeliverablesApiService,
+              @Inject(MAT_DIALOG_DATA)public data:{deliverableId:number}) {
   }
 
-  closeDialog(){
-    this.dialogRef.close();
+  acceptDeliverable(){
+    this.delvsApi.reviewDeliverable(this.data.deliverableId,true).subscribe(response=>{
+      console.log(response)
+      this.dialogRef.close();
+    })
+  }
+
+  rejectDeliverable(){
+    this.delvsApi.reviewDeliverable(this.data.deliverableId,false).subscribe(response=>{
+      console.log(response)
+      this.dialogRef.close();
+    })
+
   }
 }

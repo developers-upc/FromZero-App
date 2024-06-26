@@ -20,11 +20,14 @@ export class SidenavDeveloperComponent {
     const userId = localStorage.getItem('userId');
     const userIdNumber=userId?+userId:null;
     const newUserIdNumber:number=userIdNumber??0;
-    this.authService.getProfileById(newUserIdNumber).subscribe(profile => {
+    this.authService.getDeveloperProfileById(newUserIdNumber).subscribe(profile => {
       this.user=profile;
     })
   }
-
+  logout(): void {
+    localStorage.removeItem('userId');
+    localStorage.removeItem('developerId');
+  }
   toggleExpand(){
     this.expand = !this.expand;
     /*this.onToggleSideNav.emit({

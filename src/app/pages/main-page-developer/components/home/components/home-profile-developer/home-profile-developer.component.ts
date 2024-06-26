@@ -1,9 +1,10 @@
 import {Component, Input} from '@angular/core';
-import {IDeveloperProfile} from "../../models/developer-profile.model";
 import {MatDialog} from "@angular/material/dialog";
+import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
+import {Router} from "@angular/router";
 import {
-  EditProfileDialogComponent
-} from "../../../../../main-page-enterprise/components/home/components/edit-profile-dialog/edit-profile-dialog.component";
+  EditProfileDeveloperDialogComponent
+} from "../edit-profile-developer-dialog/edit-profile-developer-dialog.component";
 
 @Component({
   selector: 'app-home-profile-developer',
@@ -11,22 +12,25 @@ import {
   styleUrl: './home-profile-developer.component.css'
 })
 export class HomeProfileDeveloperComponent {
-  @Input() perfilUsuario!: IDeveloperProfile;
+  @Input() perfilUsuario!: IDeveloperProfileTemp;
 
-  constructor(public dialogRef: MatDialog) {}
+  constructor(private router:Router,public dialogRef: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialogRef.open(EditProfileDialogComponent, {
+    const dialogRef = this.dialogRef.open(EditProfileDeveloperDialogComponent, {
       width: '600px',
-      data: { ...this.perfilUsuario }
+      data: this.perfilUsuario
     });
-
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         this.perfilUsuario = result;
         console.log('The dialog was closed', result);
       }
     });
+  }
+
+  goToInbox(){
+    this.router.navigate(["/app-developer/main/shared/inbox"])
   }
 
 }

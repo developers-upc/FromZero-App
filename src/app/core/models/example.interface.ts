@@ -56,7 +56,7 @@ enum accountType {
   description: string,
   urlImage?: string,
   urlPage?: string,
-  deliverables?: IDeliverable[],
+  deliverables?: IdeliverableTemp[],
   candidates?: ICandidate[],
   status?: statusProject,
   dateCreated?: Date,
@@ -72,7 +72,7 @@ enum statusProject {
 }*/
 
 //Interface de entregables
-/*export interface IDeliverable {
+/*export interface IdeliverableTemp {
   id: number,
   title: string,
   description: string,
