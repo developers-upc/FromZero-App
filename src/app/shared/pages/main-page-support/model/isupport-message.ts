@@ -1,9 +1,15 @@
-export interface IsupportMessage {
+export interface ISender {
+  userId: number;
+  email: string;
+  password: string;
+  userType: string;
+}
+
+export interface ISupportMessage {
   id: number;
   title: string;
-  typeOfProblem: string;
+  type: string;
   description: string;
-  date: string;
-  senderId: number;
-  senderMail: string;
+  sender: ISender;
+  creationDate: string;
 }

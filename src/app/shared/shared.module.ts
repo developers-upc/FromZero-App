@@ -17,6 +17,16 @@ import {MatIconModule} from "@angular/material/icon";
 import { SupportMessageListComponent } from './pages/main-page-support/components/support-message-list/support-message-list.component';
 import { SupportDashboardComponent } from './pages/main-page-support/pages/support-dashboard/support-dashboard.component';
 import { SidenavSupportComponent } from './pages/main-page-support/components/sidenav-support/sidenav-support/sidenav-support.component';
+import {
+  MatCell,
+  MatCellDef,
+  MatColumnDef,
+  MatHeaderCell,
+  MatHeaderCellDef,
+  MatHeaderRow, MatHeaderRowDef, MatRow, MatRowDef,
+  MatTable
+} from "@angular/material/table";
+import {MatPaginator} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -36,7 +46,18 @@ import { SidenavSupportComponent } from './pages/main-page-support/components/si
     MatSelectModule,
     MatButtonModule,
     ReactiveFormsModule,
-    MatIconModule
+    MatIconModule,
+    MatColumnDef,
+    MatHeaderCell,
+    MatHeaderCellDef,
+    MatTable,
+    MatPaginator,
+    MatCell,
+    MatCellDef,
+    MatHeaderRow,
+    MatHeaderRowDef,
+    MatRowDef,
+    MatRow
   ],
   exports:[
     FooterComponent,
