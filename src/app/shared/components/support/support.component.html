@@ -2,20 +2,17 @@
   <div class="container w-4/6 h-4/6 bg-white border-2 border-gray-500 shadow-xl shadow-gray-600 md:w-3/4">
     <mat-card class="h-full">
       <form  class="m-5">
-
         <div class="p-3 flex justify-around">
           <mat-form-field class="w-5/6 h-16">
             <input matInput placeholder="Titulo del problema" formControlName="title">
           </mat-form-field>
         </div>
-
         <div class="mb-3 flex justify-around md:flex-wrap sm:flex-wrap">
           <div class="mb-3">
-
             <div class="flex flex-col">
-              <label for="tipoPagina">Tipo de Problema</label>
+              <label for="tipoProblema">Tipo de Problema</label>
               <mat-form-field class="w-5/6">
-                <mat-select id="tipoPagina" formControlName="projectType" class="w-5/6">
+                <mat-select id="tipoProblema" formControlName="problemType" class="w-5/6">
                   <mat-option value="1">Problemas de accesibilidad</mat-option>
                   <mat-option value="2">Problemas de compatibilidad</mat-option>
                   <mat-option value="3">Problemas de rendimiento del sistema</mat-option>
@@ -24,13 +21,8 @@
                 </mat-select>
               </mat-form-field>
             </div>
-
-
           </div>
         </div>
-
-
-
         <hr>
         <div class="p-3 flex justify-around">
           <mat-form-field class="w-5/6">
@@ -44,9 +36,7 @@
             <input class="ng-hide" id="input-file-id" multiple type="file" />
             <label for="input-file-id" class="md-button md-raised md primary"></label>
           </div>
-
         </div>
-
         <div class="p-3 flex justify-around">
           <div>
             <a mat-flat-button color="primary">Enviar</a>
@@ -55,8 +45,6 @@
             <a mat-flat-button color="warn" (click)="history.back()" >Cancelar</a>
           </div>
         </div>
-
-
       </form>
     </mat-card>
   </div>
