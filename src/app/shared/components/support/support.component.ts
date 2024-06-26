@@ -1,44 +1,39 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
+import {
+  SupportMessageService
+} from "../../pages/main-page-support/services/support-message-service/support-message.service";
 
 @Component({
   selector: 'app-support',
   templateUrl: './support.component.html',
   styleUrl: './support.component.css'
 })
-export class SupportComponent implements OnInit {
-  problems: any[] = ["Falta de Información", "Error de carga"]
+export class SupportComponent{
+  supportTicketSended=false;
   supportForm: FormGroup;
-  protected readonly history = history;
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private supportService: SupportMessageService) {
   this.supportForm = this.formBuilder.group({
     title: ['', Validators.required],
     problemType: ['', Validators.required],
-    mensaje: ['', Validators.required]
+    description: ['', Validators.required]
   });
 }
-  ngOnInit(): void {
-    this.supportForm = this.formBuilder.group({
-      title: ['', Validators.required],
-      problemType: ['', Validators.required],
-      mensaje: ['', Validators.required]
-    });
-  }
 
   onSubmit(): void {
-    if (this.supportForm.valid) {
-      this.http.post('your-endpoint-url', this.supportForm.value).subscribe(
-        response => {
-          console.log(response);
-          // handle your response here
-        },
-        error => {
-          console.error(error);
-          // handle your error here
-        }
-      );
+    this.supportTicketSended = false;
+    let senderId = Number(localStorage.getItem('userId'));
+    let supportTicket = {
+      title: this.supportForm.get('title')?.value,
+      type: this.supportForm.get('problemType')?.value,
+      description: this.supportForm.get('description')?.value,
+      senderId: senderId
     }
+    this.supportService.postSupportTicket(supportTicket).subscribe(response => {
+      console.log(response);
+      this.supportTicketSended = true;
+    })
   }
 }
