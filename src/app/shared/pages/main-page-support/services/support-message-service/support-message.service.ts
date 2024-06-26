@@ -13,4 +13,8 @@ export class SupportMessageService {
   getAll(): Observable<ISupportMessage[]>{
     return this._http.get<ISupportMessage[]>(this.baseUrl);
   }
+
+  postSupportTicket(supportTicket: any){
+    return this._http.post<ISupportMessage>(this.baseUrl, supportTicket);
+  }
 }
