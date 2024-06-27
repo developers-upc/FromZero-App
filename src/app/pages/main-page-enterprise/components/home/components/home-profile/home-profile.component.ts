@@ -11,10 +11,11 @@ import {IEnterpriseProfileUpdate} from "../../models/enterprise-profile-update.m
   templateUrl: './home-profile.component.html',
   styleUrl: './home-profile.component.css'
 })
-export class HomeProfileComponent implements OnInit{
-  @Input() perfilUsuario!:IEnterpriseProfileUpdate
+export class HomeProfileComponent {
+  //@Input() perfilUsuario!:IEnterpriseProfileUpdate
+  @Input() perfilUsuario!:IEnterpriseProfileTemp
 
-  constructor(private router:Router,public dialog: MatDialog, private profileService: EntepriseProfileService) {}
+  constructor(private router:Router,public dialog: MatDialog/*, private profileService: EntepriseProfileService*/) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditProfileDialogComponent, {
@@ -34,9 +35,9 @@ export class HomeProfileComponent implements OnInit{
     this.router.navigate(["/app/main/shared/inbox"])
   }
 
-  ngOnInit() {
+  /*ngOnInit() {
     this.profileService.getProfileDataObservable().subscribe(data => {
       this.perfilUsuario = data;
     });
-  }
+  }*/
 }
