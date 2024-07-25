@@ -2,7 +2,6 @@ import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {ICandidate} from "../../models/icandidate";
 import {ProjectsApiService} from "../../services/projects-api.service";
-//import {ICandidate} from "../../models/enterprise-profile.model";
 
 @Component({
   selector: 'app-candidates-project-dialog',
@@ -18,10 +17,6 @@ export class CandidatesProjectDialogComponent {
       candidates: ICandidate[] },
     private projectsService:ProjectsApiService) {
     this.candidatesList=this.data.candidates;
-
-    /*this.candidatesList.forEach(candidate=>{
-      candidate.rejected=false;
-    })*/
   }
 
   acceptCandidate(developerId:number){
@@ -32,7 +27,6 @@ export class CandidatesProjectDialogComponent {
   }
 
   rejectCandidate(candidate:ICandidate){
-    //candidate.rejected=true
     this.candidatesList.splice(this.candidatesList.indexOf(candidate),1);
   }
 

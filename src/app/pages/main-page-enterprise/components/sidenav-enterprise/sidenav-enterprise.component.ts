@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {IUserSidenav} from "../../../../shared/model/iuser-sidenav";
 import {AuthApiService} from "../../../auth/services/auth-api.service";
 
 interface SidenavToggle{

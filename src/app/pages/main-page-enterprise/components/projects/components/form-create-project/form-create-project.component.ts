@@ -57,8 +57,6 @@ export class FormCreateProjectComponent implements OnInit{
       title: ['', Validators.required],
       description: ['', Validators.required],
       projectType: ['', Validators.required],
-      //programmLenguageType: ['', this.languageFrameworkValidator.bind(this)],
-      //programFrameworksType: ['', this.languageFrameworkValidator.bind(this)],
       languages:this.fb.array([]),
       frameworks:this.fb.array([]),
       presupuesto: ['', Validators.required],
@@ -66,17 +64,6 @@ export class FormCreateProjectComponent implements OnInit{
     });
 
     this.hideMethodologies.valueChanges.subscribe((checked: boolean | null) => {
-      /*const programmLenguageTypeControl = this.form.get('programmLenguageType');
-      const programFrameworksTypeControl = this.form.get('programFrameworksType');
-
-      if (programmLenguageTypeControl) {
-        programmLenguageTypeControl.updateValueAndValidity();
-      }
-
-      if (programFrameworksTypeControl) {
-        programFrameworksTypeControl.updateValueAndValidity();
-      }*/
-
       if (!checked) {
         this.form.get('procesos')?.setValidators([Validators.required]);
       }else{
@@ -90,20 +77,6 @@ export class FormCreateProjectComponent implements OnInit{
   }
   ngOnInit() {
 
-  }
-  languageFrameworkValidator(control: FormControl): { [s: string]: boolean} | null  {
-    if (!this.hideTechnologies.value && (this.selectedLanguages.length === 0 || this.selectedFrameworksTemp.length === 0)) {
-      return {'languageFrameworkRequired': true};
-    }
-    return null;
-  }
-
-  processValidator(control: FormControl): { [s: string]: boolean } | null {
-    if (!this.hideTechnologies.value && control.value === '') {
-      console.log("PROCESOS NO VALIDOS")
-      return {'processRequired': true};
-    }
-    return null;
   }
 
 

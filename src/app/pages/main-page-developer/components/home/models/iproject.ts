@@ -1,4 +1,3 @@
-import {ICandidate} from "../../../../main-page-enterprise/components/home/models/icandidate";
 import {IdeliverableTemp} from "../../../../main-page-enterprise/components/deliverables/model/ideliverableTemp";
 import {ICandidateDeveloper} from "./ICandidateDeveloper";
 

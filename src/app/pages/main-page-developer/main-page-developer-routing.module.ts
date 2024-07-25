@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-//import {MainPageComponent} from "./pages/main-page/main-page.component";
-//import {HomePageComponent} from "./components/home/components/home-page/home-page.component";
-//import {MessageComponent} from "./components/message/components/message/message.component";
 import {
   SearchProjectsComponent
 } from "./components/search-projects/components/search-projects/search-projects.component";
@@ -18,7 +15,6 @@ import {
 } from "./components/home/components/home-page-developer/home-page-developer.component";
 
 const routes: Routes = [
-
   {
     path:"main",
     component: MainPageDeveloperComponent,
@@ -27,10 +23,6 @@ const routes: Routes = [
         path:"home",
         component:HomePageDeveloperComponent,
       },
-      /*{
-        path: 'message',
-        component: MessageComponent
-      },*/
       {
         path: 'search-projects',
         component: SearchProjectsComponent
@@ -55,11 +47,8 @@ const routes: Routes = [
         path:':projectId/deliverables/:deliverableId',
         component:SendDeliverableComponent
       }
-
     ]
-
   }
-
 ];
 
 @NgModule({

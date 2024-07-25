@@ -1,11 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {map, Observable} from "rxjs";
-//import {IUserLogin} from "../../../core/models/example.interface";
-import {IEnterpriseProfile} from "../../main-page-enterprise/components/home/models/enterprise-profile.model";
+import {Observable} from "rxjs";
 import {IUserLogin} from "../model/iuser-login";
-import {IProfile} from "../model/iprofile";
-import {IDeveloperProfile} from "../../main-page-developer/components/home/models/developer-profile.model";
 import {IEnterpriseRegister} from "../model/ienterprise-register";
 import {IDeveloperRegister} from "../model/ideveloper-register";
 import {IEnterpriseProfileTemp} from "../../main-page-enterprise/components/home/models/ienterprise-profile";
@@ -45,13 +41,7 @@ export class AuthApiService {
     return this._http.post<IUserLogin>(this.baseUrl + 'sign-in', signInResource);
   }
 
-  getProfileById(id: number): Observable<IEnterpriseProfile> {
-    //return this._http.get<IEnterpriseProfile>(this.baseUrl + 'profiles/' + id);
-    return this._http.get<IEnterpriseProfile>(this.profilesUrl+'enterprises/'+id);
-  }
-
   getEnterpriseProfileById(id: number): Observable<IEnterpriseProfileTemp> {
-    //return this._http.get<IEnterpriseProfile>(this.baseUrl + 'profiles/' + id);
     return this._http.get<IEnterpriseProfileTemp>(this.profilesUrl+'enterprises/'+id);
   }
 

@@ -15,11 +15,6 @@ export class DeliverablesApiService {
 
   constructor(private http: HttpClient) { }
 
-  getAllDeliverables(profileId:number|null) {
-    //return this.http.get(`${this.baseUrl}/profiles/${profileId}/projects/${projectId}${this.delivs}`)
-    return this.http.get(`${this.baseUrl}/profiles/${profileId}`)
-  }
-
   getAllDeliverablesByProjectId(projectId:number){
     return this.http.get<IDeliverable[]>(`${this.delvUrl}/project/${projectId}`);
   }

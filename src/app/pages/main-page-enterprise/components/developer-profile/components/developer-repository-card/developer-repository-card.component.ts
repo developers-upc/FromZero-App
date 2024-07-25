@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {IDeveloperProject} from "../../model/ideveloper-project";
-//import {IProject} from "../../../../../../core/models/example.interface";
 
 @Component({
   selector: 'app-developer-repository-card',

@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {AuthApiService} from "../../services/auth-api.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {LAST_MEDIA} from "@angular/cdk/keycodes";
 
 @Component({
   selector: 'app-register',

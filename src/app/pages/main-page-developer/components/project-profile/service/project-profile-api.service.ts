@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Ishowproject} from "../model/ishowproject";
-import {IdeliverableTemp} from "../../../../main-page-enterprise/components/deliverables/model/ideliverableTemp";
 
 @Injectable({
   providedIn: 'root'

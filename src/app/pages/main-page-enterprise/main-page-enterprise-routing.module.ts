@@ -12,7 +12,6 @@ import {DeliverablesComponent} from "./components/deliverables/components/delive
 import {
   DeveloperProfilePageComponent
 } from "./components/developer-profile/components/developer-profile-page/developer-profile-page.component";
-//import {MessageComponent} from "./components/message/components/message/message.component";
 import {DeliverableComponent} from "./components/review-deliverable/components/deliverable/deliverable.component";
 
 const routes: Routes = [
@@ -44,13 +43,10 @@ const routes: Routes = [
         path: 'developer-profile/:developerId',
         component: DeveloperProfilePageComponent
       },
-      /*{
-        path: 'message',
-        component: MessageComponent
-      },*/
       {
         path:'shared',
-        loadChildren:()=>import("../../shared/shared.module").then(m=>m.SharedModule)
+        loadChildren:()=>import("../../shared/shared.module")
+          .then(m=>m.SharedModule)
       }
     ]
   },

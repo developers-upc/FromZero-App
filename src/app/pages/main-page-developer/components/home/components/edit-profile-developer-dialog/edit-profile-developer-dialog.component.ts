@@ -1,7 +1,6 @@
 import {Component, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {IDeveloperProfile} from "../../models/developer-profile.model";
-import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {IDeveloperProfileUpdate} from "../../models/developer-profile-update.model";
 

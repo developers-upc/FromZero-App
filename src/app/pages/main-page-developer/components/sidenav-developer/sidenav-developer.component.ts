@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthApiService} from "../../../auth/services/auth-api.service";
 
 @Component({
@@ -7,9 +7,6 @@ import {AuthApiService} from "../../../auth/services/auth-api.service";
   styleUrl: './sidenav-developer.component.css'
 })
 export class SidenavDeveloperComponent {
-
-  //@Output() onToggleSideNav:EventEmitter<SidenavToggle> = new EventEmitter();
-
   user:any;
   expand=false;
   screenWidth=0;
@@ -30,10 +27,6 @@ export class SidenavDeveloperComponent {
   }
   toggleExpand(){
     this.expand = !this.expand;
-    /*this.onToggleSideNav.emit({
-      screenWidth: this.screenWidth,
-      expanded:this.expand
-    })*/
   }
 
 }

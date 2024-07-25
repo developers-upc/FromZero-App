@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
 import {Subject} from "rxjs";
 import {IEnterpriseProfileUpdate} from "../../models/enterprise-profile-update.model";
 

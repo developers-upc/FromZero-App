@@ -1,5 +1,3 @@
-//import {IProject} from "../../home/models/iproject";
-
 import {IDeveloperProject} from "./ideveloper-project";
 
 export interface IDeveloper {

@@ -1,9 +1,7 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {ApplyConfirmationComponent} from "../apply-confirmation/apply-confirmation.component";
-import {Ishowproject} from "../../project-profile/model/ishowproject";
 import {ShowProjectApiService} from "../../../service/show-project-service/show-project-api.service";
-import {IEnterpriseProfile} from "../../../../main-page-enterprise/components/home/models/enterprise-profile.model";
 import {ActivatedRoute} from "@angular/router";
 import {ProjectsApiService} from "../../../../main-page-enterprise/components/home/services/projects-api.service";
 import {IProject} from "../../../../main-page-enterprise/components/home/models/iproject";
@@ -18,7 +16,6 @@ import {
   styleUrl: './apply-to-project.component.css'
 })
 export class ApplyToProjectComponent implements OnInit{
-  //@Input() project!: Ishowproject;
   project!:IProject;
   methodologies!:IDeliverable[];
 
@@ -34,12 +31,9 @@ export class ApplyToProjectComponent implements OnInit{
         projectId:this.project.id
       }
     })
-
-
   }
 
   ngOnInit(): void {
-    //const id = this.route.snapshot.paramMap.get('id');
     let projectId:number;
     this.route.params.subscribe(params=>{
       projectId= +params['id'];
@@ -50,12 +44,6 @@ export class ApplyToProjectComponent implements OnInit{
         this.methodologies=deliverables;
       })
     })
-    /*if (id) {
-      this.showProjectApi.getById(+id).subscribe((project) => {
-
-        this.project = project;
-      });
-    }*/
   }
 
 }

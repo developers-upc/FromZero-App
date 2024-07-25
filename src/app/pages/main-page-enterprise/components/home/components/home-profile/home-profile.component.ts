@@ -3,8 +3,6 @@ import { MatDialog } from "@angular/material/dialog";
 import { EditProfileDialogComponent } from '../edit-profile-dialog/edit-profile-dialog.component';
 import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
 import {Router} from "@angular/router";
-import {EntepriseProfileService} from "../../services/ObservableService/enteprise-profile-service.service";
-import {IEnterpriseProfileUpdate} from "../../models/enterprise-profile-update.model";
 
 @Component({
   selector: 'app-home-profile',
@@ -12,7 +10,6 @@ import {IEnterpriseProfileUpdate} from "../../models/enterprise-profile-update.m
   styleUrl: './home-profile.component.css'
 })
 export class HomeProfileComponent {
-  //@Input() perfilUsuario!:IEnterpriseProfileUpdate
   @Input() perfilUsuario!:IEnterpriseProfileTemp
 
   constructor(private router:Router,public dialog: MatDialog/*, private profileService: EntepriseProfileService*/) {}
@@ -35,9 +32,4 @@ export class HomeProfileComponent {
     this.router.navigate(["/app/main/shared/inbox"])
   }
 
-  /*ngOnInit() {
-    this.profileService.getProfileDataObservable().subscribe(data => {
-      this.perfilUsuario = data;
-    });
-  }*/
 }

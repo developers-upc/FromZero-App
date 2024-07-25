@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {HttpClient} from "@angular/common/http";
 import {
   SupportMessageService
 } from "../../pages/main-page-support/services/support-message-service/support-message.service";

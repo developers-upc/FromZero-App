@@ -1,5 +1,3 @@
-import {IProject} from "./iproject";
-
 export interface IDeveloperProfile {
   id: number;
   firstName: string;
