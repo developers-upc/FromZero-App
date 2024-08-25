@@ -3,6 +3,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {IDeveloperProfile} from "../../models/developer-profile.model";
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {IDeveloperProfileUpdate} from "../../models/developer-profile-update.model";
+import {ProfileService} from "../../../../../../core/services/profiles/profile.service";
 
 @Component({
   selector: 'app-edit-profile-developer-dialog',
@@ -14,7 +15,8 @@ export class EditProfileDeveloperDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<EditProfileDeveloperDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IDeveloperProfile,
-    private _authService: AuthApiService) {
+    private _authService: AuthApiService,
+    private _profileService:ProfileService) {
   }
 
   onNoClick(): void {
@@ -37,7 +39,7 @@ export class EditProfileDeveloperDialogComponent {
     };
 
     console.log(updateData);
-    this._authService.updateDeveloperProfile(idDeveloper, updateData).subscribe(response => {
+    this._profileService.updateDeveloperProfile(idDeveloper, updateData).subscribe(response => {
       console.log(response);
       this.dialogRef.close();
     }, error => {

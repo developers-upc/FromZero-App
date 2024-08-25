@@ -7,14 +7,6 @@ import {BaseService} from "../../../../../core/services/shared/base.service";
   providedIn: 'root'
 })
 export class HighlightsProjectServiceService extends BaseService {
-  /*baseUrl = 'http://localhost:8080/v1/api/highlight-projects';
-
-  constructor(private _http:HttpClient) { }
-
-  getAll(): Observable<IHighlightProject[]>{
-    return this._http.get<IHighlightProject[]>(this.baseUrl);
-  }*/
-
   url: string = ``
 
   constructor(private http: HttpClient) {

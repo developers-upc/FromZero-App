@@ -3,6 +3,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { IEnterpriseProfile } from "../../models/enterprise-profile.model";
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {IEnterpriseProfileUpdate} from "../../models/enterprise-profile-update.model";
+import {ProfileService} from "../../../../../../core/services/profiles/profile.service";
 
 @Component({
   selector: 'app-edit-profile-dialog',
@@ -13,7 +14,8 @@ export class EditProfileDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<EditProfileDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: IEnterpriseProfile,
-    private _authService: AuthApiService) {}
+    private _authService: AuthApiService,
+    private _profileService:ProfileService) {}
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -37,7 +39,7 @@ export class EditProfileDialogComponent {
     };
 
     console.log(updateData);
-    this._authService.updateEnterpriseProfile(idEnterprise, updateData).subscribe(response => {
+    this._profileService.updateEnterpriseProfile(idEnterprise, updateData).subscribe(response => {
       console.log(response);
       this.dialogRef.close();
     }, error => {

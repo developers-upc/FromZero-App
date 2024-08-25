@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
 import {AuthApiService} from "../../../auth/services/auth-api.service";
+import {ProfileService} from "../../../../core/services/profiles/profile.service";
 
 interface SidenavToggle{
   screenWidth: number;
@@ -17,14 +18,16 @@ export class SidenavEnterpriseComponent {
   user:any;
   expand=false;
   screenWidth=0;
-  constructor(private authService:AuthApiService) {
+  constructor(
+    private authService:AuthApiService,
+    private _profileService:ProfileService) {
   }
   ngOnInit(){
     this.screenWidth=window.innerWidth;
     const userId = localStorage.getItem('userId');
     const userIdNumber=userId?+userId:null;
     const newUserIdNumber:number=userIdNumber??0;
-    this.authService.getEnterpriseProfileById(newUserIdNumber).subscribe(profile => {
+    this._profileService.getEnterpriseProfileById(newUserIdNumber).subscribe(profile => {
       this.user=profile;
     })
   }

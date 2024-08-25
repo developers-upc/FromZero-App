@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {AuthApiService} from "../../../auth/services/auth-api.service";
+import {ProfileService} from "../../../../core/services/profiles/profile.service";
 
 @Component({
   selector: 'app-sidenav-developer',
@@ -10,14 +11,16 @@ export class SidenavDeveloperComponent {
   user:any;
   expand=false;
   screenWidth=0;
-  constructor(private authService:AuthApiService) {
+  constructor(
+    private authService:AuthApiService,
+    private _profileService:ProfileService) {
   }
   ngOnInit(){
     this.screenWidth=window.innerWidth;
     const userId = localStorage.getItem('userId');
     const userIdNumber=userId?+userId:null;
     const newUserIdNumber:number=userIdNumber??0;
-    this.authService.getDeveloperProfileById(newUserIdNumber).subscribe(profile => {
+    this._profileService.getDeveloperProfileById(newUserIdNumber).subscribe(profile => {
       this.user=profile;
     })
   }

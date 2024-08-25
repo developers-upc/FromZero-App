@@ -1,33 +1,37 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 import {IProject} from "../models/iproject";
+import {BaseService} from "../../../../../core/services/shared/base.service";
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProjectsApiService {
-  baseUrl = "http://localhost:8080/v1/api/projects";
-  constructor(private http:HttpClient) { }
+export class ProjectsApiService extends BaseService{
+  url = "";
+  constructor(private http:HttpClient) {
+    super();
+    this.url =`${this.basePath}/projects`;
+  }
   getAllProjectsByEnterpriseUserId(id:number){
-    return this.http.get<IProject[]>(`${this.baseUrl}/enterprise/${id}`)
+    return this.http.get<IProject[]>(`${this.url}/enterprise/${id}`)
   }
   getProjectsByDeveloperUserId(id:number){
-    return this.http.get<IProject[]>(`${this.baseUrl}/developer/${id}`);
+    return this.http.get<IProject[]>(`${this.url}/developer/${id}`);
   }
   postProject(project:any){
-    return this.http.post<IProject>(`${this.baseUrl}`,project)
+    return this.http.post<IProject>(`${this.url}`,project)
   }
   assignDeveloperToProject(projectId:number,developerUserId:number){
-    return this.http.patch(`${this.baseUrl}/${projectId}/assign-developer`,developerUserId)
+    return this.http.patch(`${this.url}/${projectId}/assign-developer`,developerUserId)
   }
   getProjectsByState(state:string){
     let params = new HttpParams().set('state', state);
-    return this.http.get<IProject[]>(`${this.baseUrl}/by-state`,{params})
+    return this.http.get<IProject[]>(`${this.url}/by-state`,{params})
   }
   getProjectById(id:number){
-    return this.http.get<IProject>(`${this.baseUrl}/${id}`);
+    return this.http.get<IProject>(`${this.url}/${id}`);
   }
   addCandidateToProject(projectId:number,developerUserId:number){
-    return this.http.patch(`${this.baseUrl}/${projectId}/add-candidate`,developerUserId)
+    return this.http.patch(`${this.url}/${projectId}/add-candidate`,developerUserId)
   }
 }
