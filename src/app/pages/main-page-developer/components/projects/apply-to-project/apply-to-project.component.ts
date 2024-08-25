@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {ApplyConfirmationComponent} from "../apply-confirmation/apply-confirmation.component";
-import {ShowProjectApiService} from "../../../service/show-project-service/show-project-api.service";
 import {ActivatedRoute} from "@angular/router";
 import {ProjectsApiService} from "../../../../main-page-enterprise/components/home/services/projects-api.service";
 import {IProject} from "../../../../main-page-enterprise/components/home/models/iproject";
@@ -20,7 +19,7 @@ export class ApplyToProjectComponent implements OnInit{
   methodologies!:IDeliverable[];
 
   constructor(private route: ActivatedRoute, public dialog: MatDialog,
-              private projectsService:ProjectsApiService,private showProjectApi: ShowProjectApiService,
+              private projectsService:ProjectsApiService,
               private delvsService:DeliverablesApiService) {}
 
   openDialog(){
