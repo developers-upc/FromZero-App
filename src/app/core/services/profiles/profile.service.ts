@@ -18,23 +18,32 @@ export class ProfileService extends BaseService{
   }
 
   getEnterpriseProfileById(id: number): Observable<IEnterpriseProfileTemp> {
-    return this._http.get<IEnterpriseProfileTemp>(this.url+'enterprises/'+id,this.httpOptions);
+    return this._http.get<IEnterpriseProfileTemp>(this.url+'company/profile/'+id,this.httpOptions);
   }
 
   getDeveloperProfileById(id: number): Observable<IDeveloperProfileTemp> {
-    return this._http.get<IDeveloperProfileTemp>(this.url + 'developers/' + id,this.httpOptions);
+    return this._http.get<IDeveloperProfileTemp>(this.url + 'developer/profile/' + id,this.httpOptions);
   }
-  getEnterpriseById(id:number){
-    return this._http.get<IEnterpriseProfileTemp>(this.url+'enterprise/'+id,this.httpOptions);
-  }
+  /*getEnterpriseById(id:number){
+    return this._http.get<IEnterpriseProfileTemp>(this.url+'company/profile/'+id,this.httpOptions);
+  }*/
+
   updateDeveloperProfile(id: number, updateDeveloper: any): Observable<any>{
-    const url = this.url + 'developers/' + id;
+    const url = this.url + 'developer/profile/' + id;
     return this._http.put(url, updateDeveloper,this.httpOptions);
   }
 
   updateEnterpriseProfile(id: number, updateEnterprise: any): Observable<any>{
-    const url = this.url + 'enterprises/' + id;
+    const url = this.url + 'company/profile/' + id;
     return this._http.put(url, updateEnterprise,this.httpOptions);
+  }
+
+  getDeveloperProfileIdByEmail(email:string){
+    return this._http.get(`${this.url}developer/${email}`)
+  }
+
+  getCompanyProfileIdByEmail(email:string){
+    return this._http.get(`${this.url}company/${email}`)
   }
 
 }

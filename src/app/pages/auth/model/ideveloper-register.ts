@@ -1,5 +1,5 @@
 export interface IDeveloperRegister {
-  mail: string;
+  email: string;
   password: string;
   firstName: string;
   lastName: string;

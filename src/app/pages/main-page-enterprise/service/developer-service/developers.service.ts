@@ -19,7 +19,7 @@ export class DevelopersService extends BaseService{
   }
 
   getDeveloperById(developerId:number){
-    return this._http.get<IDeveloperProfileTemp>(`${this.url}/developers/${developerId}`)
+    return this._http.get<IDeveloperProfileTemp>(`${this.url}/developer/profile/${developerId}`)
   }
 
 }

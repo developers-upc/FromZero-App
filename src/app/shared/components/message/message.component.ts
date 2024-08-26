@@ -23,7 +23,7 @@ export class MessageComponent {
   onSubmit(){
     this.messageSended=false;
     let recipientEmail=this.messageForm.get('recipient')?.value;
-    let senderId = Number(localStorage.getItem('userId'));
+    let senderId = Number(localStorage.getItem('id'));
     this.authService.getUserByEmail(recipientEmail).subscribe((response:any)=>{
       let user = response;
       let message={

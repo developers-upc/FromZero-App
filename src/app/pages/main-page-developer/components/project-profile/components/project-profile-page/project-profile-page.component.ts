@@ -22,7 +22,7 @@ export class ProjectProfilePageComponent implements OnInit{
     let enterpriseId:number
     this.route.params.subscribe(params=>{
       enterpriseId= +params['enterpriseId'];
-      this._profileService.getEnterpriseById(enterpriseId).subscribe(enterprise=>{
+      this._profileService.getEnterpriseProfileById(enterpriseId).subscribe(enterprise=>{
         this.enterpriseProfile=enterprise;
       })
     })

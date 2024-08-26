@@ -21,11 +21,11 @@ export class HomePageComponent  implements OnInit {
   }
 
   ngOnInit(): void {
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('id');
     if (userId) {
       this._profilesService.getEnterpriseProfileById(+userId).subscribe(profile => {
         this.perfilUsuario = profile;
-        localStorage.setItem('enterpriseId', profile.id.toString());
+        //localStorage.setItem('enterpriseId', profile.id.toString());
       });
       this._projectsService.getAllProjectsByEnterpriseUserId(+userId).subscribe(projects=>{
         this.userProjects=projects;

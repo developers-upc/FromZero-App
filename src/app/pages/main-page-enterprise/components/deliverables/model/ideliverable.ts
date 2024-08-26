@@ -7,8 +7,11 @@ export interface IDeliverable {
   developerMessage?:string,
   project?:{
     name?:string,
-    enterprise?:{
+    /*enterprise?:{
       enterpriseName?:string
+    }*/
+    company?:{
+      companyName?:string,
     }
   }
 }

@@ -22,11 +22,12 @@ export class HomePageDeveloperComponent {
   }
 
   ngOnInit(): void {
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('id');
     if (userId) {
       this._profileService.getDeveloperProfileById(+userId).subscribe(profile => {
+        console.log(profile)
         this.perfilUsuario = profile;
-        localStorage.setItem('developerId', profile.id.toString());
+        //localStorage.setItem('id', profile.id.toString());
       });
       this._projectsService.getProjectsByDeveloperUserId(+userId).subscribe(projects=>{
         this.userProjects=projects

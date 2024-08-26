@@ -16,7 +16,7 @@ export class SidenavSupportComponent {
   }
   ngOnInit(){
     this.screenWidth=window.innerWidth;
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('id');
     const userIdNumber=userId?+userId:null;
     const newUserIdNumber:number=userIdNumber??0;
   }

@@ -22,7 +22,10 @@ export class EditProfileDialogComponent {
   }
 
   updateProfile(): void {
-    let idEnterprise: number = Number(localStorage.getItem('enterpriseId'));
+    /*let idEnterprise: number = Number(localStorage.getItem('enterpriseId'));
+    let originalData = {...this.data};
+    this.data.id = idEnterprise;*/
+    let idEnterprise: number = Number(localStorage.getItem('id'))
     let originalData = {...this.data};
     this.data.id = idEnterprise;
 

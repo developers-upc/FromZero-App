@@ -24,7 +24,7 @@ export class SidenavEnterpriseComponent {
   }
   ngOnInit(){
     this.screenWidth=window.innerWidth;
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('id');
     const userIdNumber=userId?+userId:null;
     const newUserIdNumber:number=userIdNumber??0;
     this._profileService.getEnterpriseProfileById(newUserIdNumber).subscribe(profile => {
@@ -39,4 +39,12 @@ export class SidenavEnterpriseComponent {
       expanded:this.expand
     })
   }
+
+  logout(): void {
+    //localStorage.removeItem('userId');
+    //localStorage.removeItem('developerId');
+    localStorage.removeItem('token')
+    localStorage.removeItem('id')
+  }
+
 }

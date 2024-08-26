@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {AuthApiService} from "../../services/auth-api.service";
+import {ProfileService} from "../../../../core/services/profiles/profile.service";
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,10 @@ import {AuthApiService} from "../../services/auth-api.service";
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private router: Router, private _authService: AuthApiService) {
+  constructor(
+    private router: Router,
+    private _authService: AuthApiService,
+    private _profileService: ProfileService) {
   }
   loginForm = new FormGroup( {
     email: new FormControl('', Validators.required),
@@ -27,8 +31,22 @@ export class LoginComponent {
       if (email !== null && password !== null) {
         this._authService.validateUser(email, password).subscribe(user => {
         if (user) {
-          localStorage.setItem('userId', user.id.toString());
-          console.log(user)
+          /*localStorage.setItem('userId', user.id.toString());
+          console.log(user)*/
+          localStorage.setItem('token',user.token.toString())
+          let userEmail = user.email
+
+          if (user.accountType==='E'){
+            this._profileService.getCompanyProfileIdByEmail(userEmail).subscribe(id=>{
+              localStorage.setItem('id',id.toString())
+            })
+          }else if (user.accountType==='D'){
+            this._profileService.getDeveloperProfileIdByEmail(userEmail).subscribe(id=>{
+              localStorage.setItem('id',id.toString())
+            })
+          }
+
+          //Activar luego
           if (user.accountType==="E"){
             this.router.navigate(['/app/main/home']);
           }else if(user.accountType==="D"){

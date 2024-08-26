@@ -24,7 +24,7 @@ export class EditProfileDeveloperDialogComponent {
   }
 
   updateProfile(): void {
-    let idDeveloper: number = Number(localStorage.getItem('developerId'));
+    let idDeveloper: number = Number(localStorage.getItem('id'));
     let originalData = {...this.data};
     this.data.id = idDeveloper;
 

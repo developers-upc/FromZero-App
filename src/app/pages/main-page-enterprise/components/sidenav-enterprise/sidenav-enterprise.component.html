@@ -41,7 +41,7 @@
       </a>
     </li>
     <li class="sidenav-nav-item">
-      <a routerLink="/login" class="sidenav-nav-link">
+      <a (click)="logout()" routerLink="/login" class="sidenav-nav-link">
         <img src="assets/sidenav-images/Logout.png" alt="salir" class="sidenav-link-img">
         @if(expand){
           <span class="sidenav-link-text">Salir</span>

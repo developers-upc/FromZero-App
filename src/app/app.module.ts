@@ -7,8 +7,10 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import {provideNativeDateAdapter} from "@angular/material/core";
-import {HttpClientModule} from "@angular/common/http";
+//import {HttpClientModule} from "@angular/common/http";
 import {SharedModule} from "./shared/shared.module";
+import {provideHttpClient, withInterceptors} from '@angular/common/http';
+import {authInterceptor} from "./core/interceptors/authInterceptor/auth.interceptor";
 
 
 @NgModule({
@@ -19,12 +21,15 @@ import {SharedModule} from "./shared/shared.module";
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
-        HttpClientModule,
+        //HttpClientModule,
       SharedModule
     ],
   providers: [
     provideAnimationsAsync(),
-    provideNativeDateAdapter()
+    provideNativeDateAdapter(),
+    provideHttpClient(
+      withInterceptors([authInterceptor])
+    )
   ],
   bootstrap: [AppComponent]
 })

@@ -32,7 +32,7 @@ export class DevDeliverablesComponent implements OnInit{
         this.deliverables=deliverables;
         if (deliverables.length > 0){
           this.projectname=deliverables[0]?.project?.name;
-          this.enterprise=deliverables[0]?.project?.enterprise?.enterpriseName;
+          this.enterprise=deliverables[0]?.project?.company?.companyName;
         }
       })
     })

@@ -27,7 +27,7 @@ export class SendDeliverableComponent implements OnInit {
       this.delvsApi.getDeliverableById(this.deliverableId).subscribe(deliverable=>{
         this.deliverable=deliverable;
         this.projectName=deliverable?.project?.name;
-        this.enterpriseName=deliverable?.project?.enterprise?.enterpriseName;
+        this.enterpriseName=deliverable?.project?.company?.companyName;
       })
     })
   }
