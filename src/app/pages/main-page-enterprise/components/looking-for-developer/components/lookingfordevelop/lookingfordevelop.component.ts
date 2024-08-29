@@ -21,6 +21,7 @@ export class LookingfordevelopComponent implements OnInit{
     })
   }
   redirectToProfile(developerId:number){
+
     this.router.navigate(['/app/main/developer-profile', developerId]);
   }
 

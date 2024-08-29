@@ -39,10 +39,16 @@ export class LoginComponent {
           if (user.accountType==='E'){
             this._profileService.getCompanyProfileIdByEmail(userEmail).subscribe(id=>{
               localStorage.setItem('id',id.toString())
+              this._authService.getUserByEmail(userEmail).subscribe(userId => {
+                localStorage.setItem("userId",userId.toString())
+              })
             })
           }else if (user.accountType==='D'){
             this._profileService.getDeveloperProfileIdByEmail(userEmail).subscribe(id=>{
               localStorage.setItem('id',id.toString())
+              this._authService.getUserByEmail(userEmail).subscribe(userId => {
+                localStorage.setItem("userId",userId.toString())
+              })
             })
           }
 

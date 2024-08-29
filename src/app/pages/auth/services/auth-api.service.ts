@@ -12,11 +12,13 @@ import {ICompanyRegister} from "../model/icompany-register";
   providedIn: 'root'
 })
 export class AuthApiService extends BaseService{
-  baseUrl = '';
+  authUrl = '';
+  usersUrl='';
 
   constructor(private _http: HttpClient) {
     super();
-    this.baseUrl = `${this.basePath}/auth/`;
+    this.authUrl = `${this.basePath}/auth/`;
+    this.usersUrl=`${this.basePath}/users/`
   }
 
   createEnterpriseUser(mail: string, password: string, enterpriseName: string) {
@@ -30,7 +32,7 @@ export class AuthApiService extends BaseService{
       companyName:enterpriseName
     }
     //return this._http.post(this.baseUrl + 'register-enterprise', user);
-    return this._http.post(this.baseUrl + 'register-company', user);
+    return this._http.post(this.authUrl + 'register-company', user);
   }
 
   createDeveloperUser(mail: string, password: string, developerName: string, developerLastName: string) {
@@ -40,16 +42,16 @@ export class AuthApiService extends BaseService{
       firstName: developerName,
       lastName: developerLastName
     }
-    return this._http.post(this.baseUrl + 'register-developer', user);
+    return this._http.post(this.authUrl + 'register-developer', user);
 
   }
 
   validateUser(email: string, password: string) {
     const signInResource = { email, password };
-    return this._http.post<IUserLoginV2>(this.baseUrl + 'sign-in', signInResource);
+    return this._http.post<IUserLoginV2>(this.authUrl + 'sign-in', signInResource);
   }
 
   getUserByEmail(email:string){
-    return this._http.get(this.baseUrl+'email/'+email);
+    return this._http.get(this.usersUrl+'email/'+email);
   }
 }

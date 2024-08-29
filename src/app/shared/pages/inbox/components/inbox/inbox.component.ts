@@ -14,7 +14,7 @@ export class InboxComponent implements OnInit{
   constructor(private messagesService:MessagesApiService,public dialog:MatDialog) {
   }
   ngOnInit(){
-    let recipientId = Number(localStorage.getItem('id'));
+    let recipientId = Number(localStorage.getItem('userId'));
     this.messagesService.getAllMessagesByRecipientId(recipientId).subscribe(response=>{
       this.messagesList=response;
       this.messagesList.reverse();
