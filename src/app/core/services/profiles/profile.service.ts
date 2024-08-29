@@ -46,4 +46,8 @@ export class ProfileService extends BaseService{
     return this._http.get(`${this.url}company/${email}`)
   }
 
+  /*getAccountType(){
+    return localStorage.getItem('accountType')
+  }*/
+
 }

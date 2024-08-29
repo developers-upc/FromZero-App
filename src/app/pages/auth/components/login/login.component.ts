@@ -31,35 +31,36 @@ export class LoginComponent {
       if (email !== null && password !== null) {
         this._authService.validateUser(email, password).subscribe(user => {
         if (user) {
-          /*localStorage.setItem('userId', user.id.toString());
-          console.log(user)*/
           localStorage.setItem('token',user.token.toString())
           let userEmail = user.email
 
           if (user.accountType==='E'){
             this._profileService.getCompanyProfileIdByEmail(userEmail).subscribe(id=>{
               localStorage.setItem('id',id.toString())
+              localStorage.setItem('accountType',user.accountType)
               this._authService.getUserByEmail(userEmail).subscribe(userId => {
                 localStorage.setItem("userId",userId.toString())
+                this.router.navigate(['/app/main/home']);
               })
             })
           }else if (user.accountType==='D'){
             this._profileService.getDeveloperProfileIdByEmail(userEmail).subscribe(id=>{
               localStorage.setItem('id',id.toString())
+              localStorage.setItem('accountType',user.accountType)
               this._authService.getUserByEmail(userEmail).subscribe(userId => {
                 localStorage.setItem("userId",userId.toString())
+                this.router.navigate(['/app-developer/main/home']);
               })
             })
           }
 
-          //Activar luego
-          if (user.accountType==="E"){
+          /*if (user.accountType==="E"){
             this.router.navigate(['/app/main/home']);
           }else if(user.accountType==="D"){
             this.router.navigate(['/app-developer/main/home']);
           }else if(user.accountType ==="S"){
             this.router.navigate(['/shared/support-home']);
-          }
+          }*/
 
         } else {
           // Mostrar un mensaje de error

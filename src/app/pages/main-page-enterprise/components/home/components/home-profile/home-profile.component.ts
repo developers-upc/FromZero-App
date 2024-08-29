@@ -17,7 +17,8 @@ export class HomeProfileComponent {
   openDialog(): void {
     const dialogRef = this.dialog.open(EditProfileDialogComponent, {
       width: '600px',
-      data: { ...this.perfilUsuario }
+      //data: { ...this.perfilUsuario }
+      data: this.perfilUsuario
     });
 
     dialogRef.afterClosed().subscribe(result => {

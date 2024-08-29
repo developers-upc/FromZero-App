@@ -27,6 +27,7 @@ export class SidenavDeveloperComponent {
   logout(): void {
     localStorage.removeItem('token')
     localStorage.removeItem('id')
+    localStorage.removeItem('accountType')
     localStorage.removeItem('userId')
   }
   toggleExpand(){
