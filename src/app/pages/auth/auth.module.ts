@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {RecoverPasswordComponent} from "./components/recover-password/recover-password.component";
@@ -12,7 +11,6 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
 import {AuthRoutingModule} from "./auth-routing.module";
 import {HttpClientModule, provideHttpClient, withInterceptors} from "@angular/common/http";
-//import {authInterceptor} from "../../core/interceptors/authInterceptor/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -31,10 +29,5 @@ import {HttpClientModule, provideHttpClient, withInterceptors} from "@angular/co
     MatSelectModule,
     HttpClientModule
   ],
-  /*providers: [
-    provideHttpClient(
-      withInterceptors([authInterceptor])
-    )
-  ]*/
 })
 export class AuthModule { }

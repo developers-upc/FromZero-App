@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {IUserLogin} from "../model/iuser-login";
-import {IEnterpriseRegister} from "../model/ienterprise-register";
 import {IDeveloperRegister} from "../model/ideveloper-register";
 import {BaseService} from "../../../core/services/shared/base.service";
 import {IUserLoginV2} from "../model/iuser-login-v2";
@@ -22,16 +19,13 @@ export class AuthApiService extends BaseService{
   }
 
   createEnterpriseUser(mail: string, password: string, enterpriseName: string) {
-    /*const user: IEnterpriseRegister = {
-      mail: mail,
-      password: password,
-    }*/
+
     const user: ICompanyRegister={
       mail:mail,
       password:password,
       companyName:enterpriseName
     }
-    //return this._http.post(this.baseUrl + 'register-enterprise', user);
+
     return this._http.post(this.authUrl + 'register-company', user);
   }
 

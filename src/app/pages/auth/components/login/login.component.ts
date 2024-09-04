@@ -54,16 +54,9 @@ export class LoginComponent {
             })
           }
 
-          /*if (user.accountType==="E"){
-            this.router.navigate(['/app/main/home']);
-          }else if(user.accountType==="D"){
-            this.router.navigate(['/app-developer/main/home']);
-          }else if(user.accountType ==="S"){
-            this.router.navigate(['/shared/support-home']);
-          }*/
+          // Para support: this.router.navigate(['/shared/support-home']);
 
         } else {
-          // Mostrar un mensaje de error
           console.error('Invalid username or password');
         }
       });

@@ -1,11 +1,10 @@
 import {Component, Input} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
+import {IDeveloperProfileTemp} from "../../../../../../core/models/ideveloper-profile";
 import {Router} from "@angular/router";
 import {
   EditProfileDeveloperDialogComponent
 } from "../edit-profile-developer-dialog/edit-profile-developer-dialog.component";
-import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 
 @Component({
   selector: 'app-home-profile-developer',
@@ -17,8 +16,7 @@ export class HomeProfileDeveloperComponent {
 
   constructor(
     private router:Router,
-    public dialogRef: MatDialog,
-    private _authService: AuthApiService) {}
+    public dialogRef: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialogRef.open(EditProfileDeveloperDialogComponent, {
@@ -34,11 +32,6 @@ export class HomeProfileDeveloperComponent {
   }
 
   goToInbox(){
-    /*console.log(this.perfilUsuario.email)
-    this._authService.getUserByEmail(this.perfilUsuario.email).subscribe(response=>{
-      console.log("Mi id de usuario es "+response)
-      localStorage.setItem("userId",response.toString())
-    })*/
     this.router.navigate(["/app-developer/main/shared/inbox"])
   }
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
+import {IDeveloperProfileTemp} from "../../../../../../core/models/ideveloper-profile";
 import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {ProjectsApiService} from "../../../../../main-page-enterprise/components/home/services/projects-api.service";

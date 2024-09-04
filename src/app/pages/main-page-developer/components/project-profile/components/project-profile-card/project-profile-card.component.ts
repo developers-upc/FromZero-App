@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {IEnterpriseProfileTemp} from "../../../../../main-page-enterprise/components/home/models/ienterprise-profile";
+import {IEnterpriseProfileTemp} from "../../../../../../core/models/ienterprise-profile";
 
 @Component({
   selector: 'app-project-profile-card',

@@ -1,8 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {IProject} from "../../models/iproject";
 import {ProjectsApiService} from "../../services/projects-api.service";
-import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
+import {IEnterpriseProfileTemp} from "../../../../../../core/models/ienterprise-profile";
 import {ProfileService} from "../../../../../../core/services/profiles/profile.service";
 
 @Component({
@@ -14,7 +13,6 @@ export class HomePageComponent  implements OnInit {
   perfilUsuario!: IEnterpriseProfileTemp;
   userProjects!: IProject[];
   constructor(
-    private _authService: AuthApiService,
     private _projectsService:ProjectsApiService,
     private _profilesService:ProfileService
     ) {

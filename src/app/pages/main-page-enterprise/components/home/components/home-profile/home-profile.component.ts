@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import { EditProfileDialogComponent } from '../edit-profile-dialog/edit-profile-dialog.component';
-import {IEnterpriseProfileTemp} from "../../models/ienterprise-profile";
+import {IEnterpriseProfileTemp} from "../../../../../../core/models/ienterprise-profile";
 import {Router} from "@angular/router";
 
 @Component({
@@ -12,12 +12,11 @@ import {Router} from "@angular/router";
 export class HomeProfileComponent {
   @Input() perfilUsuario!:IEnterpriseProfileTemp
 
-  constructor(private router:Router,public dialog: MatDialog/*, private profileService: EntepriseProfileService*/) {}
+  constructor(private router:Router,public dialog: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EditProfileDialogComponent, {
       width: '600px',
-      //data: { ...this.perfilUsuario }
       data: this.perfilUsuario
     });
 

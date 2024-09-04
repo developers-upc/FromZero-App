@@ -18,8 +18,6 @@ export class SidenavDeveloperComponent {
   ngOnInit(){
     this.screenWidth=window.innerWidth;
     const userId = Number(localStorage.getItem('id'));
-    /*const userIdNumber=userId?+userId:null;
-    const newUserIdNumber:number=userIdNumber??0;*/
     this._profileService.getDeveloperProfileById(userId).subscribe(profile => {
       this.user=profile;
     })
