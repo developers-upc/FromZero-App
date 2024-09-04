@@ -1,14 +1,12 @@
 import {CanActivateFn, Router} from '@angular/router';
 import {inject} from "@angular/core";
 
-export const authCompanyGuard: CanActivateFn = (route, state) => {
+export const authSharedGuard: CanActivateFn = (route, state) => {
   const router = inject(Router)
   const accountType = localStorage.getItem('accountType')
-  if (accountType === 'E') {
+  if (accountType === 'E' || accountType === 'D') {
     return true
-  } else if (accountType === 'D') {
-    router.navigate(['/app-developer/main/home']);
-  } else router.navigate(['/']);
+  }else router.navigate(['/']);
   console.log("Route not authorized")
   return false
 };

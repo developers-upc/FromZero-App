@@ -8,7 +8,7 @@ export const authDeveloperGuard: CanActivateFn = (route, state) => {
     return true;
   }else if (accountType === 'E') {
     router.navigate(['/app/main/home']);
-  }
+  }else router.navigate(['/']);
   console.log("Route not authorized")
   return false;
 };

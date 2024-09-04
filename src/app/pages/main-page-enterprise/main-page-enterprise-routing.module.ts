@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomePageComponent } from "./components/home/components/home-page/home-page.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {HomePageComponent} from "./components/home/components/home-page/home-page.component";
 import {MainPageComponent} from "./pages/main-page/main-page.component";
 import {
   FormCreateProjectComponent
@@ -13,15 +13,18 @@ import {
   DeveloperProfilePageComponent
 } from "./components/developer-profile/components/developer-profile-page/developer-profile-page.component";
 import {DeliverableComponent} from "./components/review-deliverable/components/deliverable/deliverable.component";
+import {authSharedGuard} from "../../core/guards/auth-shared.guard";
+import {authCompanyGuard} from "../../core/guards/auth-company.guard";
 
 const routes: Routes = [
   {
-    path:'main',
+    path: 'main',
     component: MainPageComponent,
-    children:[
+    canActivate: [authCompanyGuard],
+    children: [
       {
-        path:'home',
-        component:HomePageComponent,
+        path: 'home',
+        component: HomePageComponent,
       },
       {
         path: 'create-project',
@@ -32,21 +35,22 @@ const routes: Routes = [
         component: LookingfordevelopComponent
       },
       {
-        path:':projectId/deliverables',
-        component:DeliverablesComponent
+        path: ':projectId/deliverables',
+        component: DeliverablesComponent
       },
       {
-        path:':projectId/deliverables/:deliverableId',
-        component:DeliverableComponent
+        path: ':projectId/deliverables/:deliverableId',
+        component: DeliverableComponent
       },
       {
         path: 'developer-profile/:developerId',
         component: DeveloperProfilePageComponent
       },
       {
-        path:'shared',
-        loadChildren:()=>import("../../shared/shared.module")
-          .then(m=>m.SharedModule)
+        path: 'shared',
+        loadChildren: () => import("../../shared/shared.module")
+          .then(m => m.SharedModule),
+        canActivate: [authSharedGuard]
       }
     ]
   },
@@ -56,4 +60,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppContentRoutingModule { }
+export class AppContentRoutingModule {
+}
