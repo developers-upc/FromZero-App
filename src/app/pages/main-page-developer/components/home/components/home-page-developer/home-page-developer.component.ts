@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
+import {IDeveloperProfileTemp} from "../../../../../../core/models/ideveloper-profile";
 import {IProject} from "../../../../../main-page-enterprise/components/home/models/iproject";
 import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {ProjectsApiService} from "../../../../../main-page-enterprise/components/home/services/projects-api.service";
@@ -22,11 +22,10 @@ export class HomePageDeveloperComponent {
   }
 
   ngOnInit(): void {
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('id');
     if (userId) {
       this._profileService.getDeveloperProfileById(+userId).subscribe(profile => {
         this.perfilUsuario = profile;
-        localStorage.setItem('developerId', profile.id.toString());
       });
       this._projectsService.getProjectsByDeveloperUserId(+userId).subscribe(projects=>{
         this.userProjects=projects

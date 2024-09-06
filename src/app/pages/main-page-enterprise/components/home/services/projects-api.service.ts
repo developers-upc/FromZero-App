@@ -13,7 +13,7 @@ export class ProjectsApiService extends BaseService{
     this.url =`${this.basePath}/projects`;
   }
   getAllProjectsByEnterpriseUserId(id:number){
-    return this.http.get<IProject[]>(`${this.url}/enterprise/${id}`)
+    return this.http.get<IProject[]>(`${this.url}/company/${id}`)
   }
   getProjectsByDeveloperUserId(id:number){
     return this.http.get<IProject[]>(`${this.url}/developer/${id}`);

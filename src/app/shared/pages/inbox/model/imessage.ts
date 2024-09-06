@@ -2,11 +2,13 @@ export interface IMessage {
   id:number,
   subject:string,
   emailBody:string,
-  recipient:{
+  /*recipient:{
     email:string
-  },
-  sender:{
+  },*/
+  recipientEmail:string,
+  /*sender:{
     email:string,
-  },
+  },*/
+  senderEmail:string,
   sentTime:Date
 }

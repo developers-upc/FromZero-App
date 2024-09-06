@@ -1,9 +1,8 @@
 import {Component, Inject} from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { IEnterpriseProfile } from "../../models/enterprise-profile.model";
-import {AuthApiService} from "../../../../../auth/services/auth-api.service";
 import {IEnterpriseProfileUpdate} from "../../models/enterprise-profile-update.model";
 import {ProfileService} from "../../../../../../core/services/profiles/profile.service";
+import {IEnterpriseProfileTemp} from "../../../../../../core/models/ienterprise-profile";
 
 @Component({
   selector: 'app-edit-profile-dialog',
@@ -13,8 +12,7 @@ import {ProfileService} from "../../../../../../core/services/profiles/profile.s
 export class EditProfileDialogComponent {
   constructor(
     public dialogRef: MatDialogRef<EditProfileDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: IEnterpriseProfile,
-    private _authService: AuthApiService,
+    @Inject(MAT_DIALOG_DATA) public data: IEnterpriseProfileTemp,
     private _profileService:ProfileService) {}
 
   onNoClick(): void {
@@ -22,14 +20,13 @@ export class EditProfileDialogComponent {
   }
 
   updateProfile(): void {
-    let idEnterprise: number = Number(localStorage.getItem('enterpriseId'));
+    let idEnterprise: number = Number(localStorage.getItem('id'))
     let originalData = {...this.data};
     this.data.id = idEnterprise;
 
-    // Crear un objeto con la estructura esperada por el endpoint
     let updateData: IEnterpriseProfileUpdate = {
       id: this.data.id,
-      description: this.data.description, // Asegúrate de que estos nombres de propiedades coinciden con los de tu objeto `data`
+      description: this.data.description,
       country: this.data.country,
       ruc: this.data.ruc,
       phone: this.data.phone,
@@ -38,12 +35,13 @@ export class EditProfileDialogComponent {
       sector: this.data.sector
     };
 
-    console.log(updateData);
-    this._profileService.updateEnterpriseProfile(idEnterprise, updateData).subscribe(response => {
-      console.log(response);
-      this.dialogRef.close();
-    }, error => {
-      this.data = originalData;
-    });
+    this._profileService.updateEnterpriseProfile(idEnterprise, updateData).subscribe({
+      next:(response)=>{
+        console.log(response);
+        this.dialogRef.close();
+      },error:()=>{
+        this.data = originalData;
+      }
+    })
   }
 }

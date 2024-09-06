@@ -13,7 +13,6 @@ export class HomeProjectsComponent {
   @Input() perfilUsuarioProjects!: IProject[];
 
   constructor(public dialog: MatDialog) {
-    console.log(this.perfilUsuarioProjects)
   }
 
   openDialog(project: IProject) {

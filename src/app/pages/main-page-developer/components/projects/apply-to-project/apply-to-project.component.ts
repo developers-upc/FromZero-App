@@ -23,7 +23,7 @@ export class ApplyToProjectComponent implements OnInit{
               private delvsService:DeliverablesApiService) {}
 
   openDialog(){
-    let userId= Number(localStorage.getItem("userId"))
+    let userId= Number(localStorage.getItem("id"))
     this.dialog.open(ApplyConfirmationComponent, {
       data:{
         developerUserId: userId,

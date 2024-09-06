@@ -1,7 +1,7 @@
 <div class="container w-2/3 h-full">
   <mat-card>
     <mat-card-header>
-        <mat-card-title>{{perfilUsuario?.enterpriseName}}</mat-card-title>
+        <mat-card-title>{{perfilUsuario?.companyName}}</mat-card-title>
         <img mat-card-image :src="{{perfilUsuario?.profileImgUrl}}" alt="Perfil de usuario" class="w-12 h-12">
         <mat-icon (click)="openDialog()" class="text-purple-500 cursor-pointer hover:bg-gray-200">edit</mat-icon>
         <mat-icon (click)="goToInbox()" class="text-purple-500 cursor-pointer hover:bg-gray-200">inbox</mat-icon>
@@ -57,7 +57,7 @@
       <div class="flex gap-2 justify-between w-full">
         <div class="flex justify-between gap-10 w-11/12 mt-3">
           <p class="text-gray-500 font-bold">Correo</p>
-          <p>{{perfilUsuario?.user?.email}}</p>
+          <p>{{perfilUsuario?.email}}</p>
         </div>
       </div>
     </mat-card-content>

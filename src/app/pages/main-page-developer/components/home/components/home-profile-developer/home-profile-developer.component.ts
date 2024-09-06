@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {IDeveloperProfileTemp} from "../../models/ideveloper-profile";
+import {IDeveloperProfileTemp} from "../../../../../../core/models/ideveloper-profile";
 import {Router} from "@angular/router";
 import {
   EditProfileDeveloperDialogComponent
@@ -14,7 +14,9 @@ import {
 export class HomeProfileDeveloperComponent {
   @Input() perfilUsuario!: IDeveloperProfileTemp;
 
-  constructor(private router:Router,public dialogRef: MatDialog) {}
+  constructor(
+    private router:Router,
+    public dialogRef: MatDialog) {}
 
   openDialog(): void {
     const dialogRef = this.dialogRef.open(EditProfileDeveloperDialogComponent, {

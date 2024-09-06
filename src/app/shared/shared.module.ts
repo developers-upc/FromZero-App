@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SharedRoutingModule } from './shared-routing.module';
 import {FooterComponent} from "./components/footer/footer.component";
 import {SupportComponent} from "./components/support/support.component";
@@ -29,7 +28,6 @@ import {
 import {MatPaginator} from "@angular/material/paginator";
 import { MessageComponent } from './components/message/message.component';
 import { InboxComponent } from './pages/inbox/components/inbox/inbox.component';
-import { ShowMessageComponent } from './components/show-message/show-message.component';
 import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
@@ -41,8 +39,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     SupportDashboardComponent,
     SidenavSupportComponent,
     MessageComponent,
-    InboxComponent,
-    ShowMessageComponent
+    InboxComponent
   ],
   imports: [
     CommonModule,

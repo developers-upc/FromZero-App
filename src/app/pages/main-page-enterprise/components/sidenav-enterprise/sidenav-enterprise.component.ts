@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {AuthApiService} from "../../../auth/services/auth-api.service";
 import {ProfileService} from "../../../../core/services/profiles/profile.service";
 
 interface SidenavToggle{
@@ -18,16 +17,12 @@ export class SidenavEnterpriseComponent {
   user:any;
   expand=false;
   screenWidth=0;
-  constructor(
-    private authService:AuthApiService,
-    private _profileService:ProfileService) {
+  constructor(private _profileService:ProfileService) {
   }
   ngOnInit(){
     this.screenWidth=window.innerWidth;
-    const userId = localStorage.getItem('userId');
-    const userIdNumber=userId?+userId:null;
-    const newUserIdNumber:number=userIdNumber??0;
-    this._profileService.getEnterpriseProfileById(newUserIdNumber).subscribe(profile => {
+    const userId = Number(localStorage.getItem('id'));
+    this._profileService.getEnterpriseProfileById(userId).subscribe(profile => {
       this.user=profile;
     })
   }
@@ -39,4 +34,12 @@ export class SidenavEnterpriseComponent {
       expanded:this.expand
     })
   }
+
+  logout(): void {
+    localStorage.removeItem('token')
+    localStorage.removeItem('id')
+    localStorage.removeItem('accountType')
+    localStorage.removeItem('userId');
+  }
+
 }

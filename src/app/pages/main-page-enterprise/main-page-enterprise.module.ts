@@ -9,7 +9,6 @@ import {
 import {
   EditProfileDialogComponent
 } from "./components/home/components/edit-profile-dialog/edit-profile-dialog.component";
-import {SidenavComponent} from "../../shared/components/sidenav/sidenav.component";
 import {AppContentRoutingModule} from "./main-page-enterprise-routing.module";
 import {MatCardModule} from "@angular/material/card";
 import {MatIconModule} from "@angular/material/icon";
@@ -57,7 +56,6 @@ import {SharedModule} from "../../shared/shared.module";
     MainPageComponent,
     EditProfileDialogComponent,
     CandidatesProjectDialogComponent,
-    SidenavComponent,
     FormCreateProjectComponent,
     ConfirmationDialogComponent,
     DeliverablesComponent,
@@ -65,7 +63,6 @@ import {SharedModule} from "../../shared/shared.module";
     HomePageComponent,
     DeliverableComponent,
     DialogAcceptDeliverableComponent,
-    //MessageComponent,
     LookingfordevelopComponent,
     SidenavEnterpriseComponent,
     DeveloperProfileCardComponent,

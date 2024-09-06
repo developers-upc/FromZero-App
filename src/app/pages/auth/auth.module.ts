@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import {LoginComponent} from "./components/login/login.component";
 import {RegisterComponent} from "./components/register/register.component";
 import {RecoverPasswordComponent} from "./components/recover-password/recover-password.component";
@@ -11,7 +10,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSelectModule} from "@angular/material/select";
 import {AuthRoutingModule} from "./auth-routing.module";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClientModule, provideHttpClient, withInterceptors} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -29,6 +28,6 @@ import {HttpClientModule} from "@angular/common/http";
     MatIconModule,
     MatSelectModule,
     HttpClientModule
-  ]
+  ],
 })
 export class AuthModule { }

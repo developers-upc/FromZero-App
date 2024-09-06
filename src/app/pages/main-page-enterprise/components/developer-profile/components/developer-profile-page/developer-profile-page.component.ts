@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {IDeveloperProject} from "../../model/ideveloper-project";
-import {DevelopersService} from "../../../../service/developer-service/developers.service";
-import {IDeveloperProfileTemp} from "../../../../../main-page-developer/components/home/models/ideveloper-profile";
+import {IDeveloperProfileTemp} from "../../../../../../core/models/ideveloper-profile";
+import {ProfileService} from "../../../../../../core/services/profiles/profile.service";
 
 @Component({
   selector: 'app-developer-profile-page',
@@ -13,14 +13,15 @@ export class DeveloperProfilePageComponent implements OnInit{
   developerProfile!:IDeveloperProfileTemp;
   developerRepository!: IDeveloperProject[];
 
-  constructor(private route: ActivatedRoute, private developersService:DevelopersService) {
+  constructor(private route: ActivatedRoute,
+              private _profilesService:ProfileService) {
   }
 
   ngOnInit(): void {
     let id :number
     this.route.params.subscribe(params=>{
       id = +params['developerId']
-      this.developersService.getDeveloperById(id).subscribe(developer=>{
+      this._profilesService.getDeveloperProfileById(id).subscribe(developer => {
         this.developerProfile=developer;
       })
     })

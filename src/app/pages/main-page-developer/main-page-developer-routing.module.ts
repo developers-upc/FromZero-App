@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {
   SearchProjectsComponent
 } from "./components/search-projects/components/search-projects/search-projects.component";
@@ -13,15 +13,18 @@ import {MainPageDeveloperComponent} from "./pages/main-page-developer/main-page-
 import {
   HomePageDeveloperComponent
 } from "./components/home/components/home-page-developer/home-page-developer.component";
+import {authSharedGuard} from "../../core/guards/auth-shared.guard";
+import {authDeveloperGuard} from "../../core/guards/auth-developer.guard";
 
 const routes: Routes = [
   {
-    path:"main",
+    path: "main",
     component: MainPageDeveloperComponent,
-    children:[
+    canActivate: [authDeveloperGuard],
+    children: [
       {
-        path:"home",
-        component:HomePageDeveloperComponent,
+        path: "home",
+        component: HomePageDeveloperComponent,
       },
       {
         path: 'search-projects',
@@ -32,20 +35,21 @@ const routes: Routes = [
         component: ApplyToProjectComponent
       },
       {
-        path:'shared',
-        loadChildren:()=>import("../../shared/shared.module").then(m=>m.SharedModule)
+        path: 'shared',
+        loadChildren: () => import("../../shared/shared.module").then(m => m.SharedModule),
+        canActivate: [authSharedGuard]
       },
       {
         path: 'enterprise-profile/:enterpriseId',
         component: ProjectProfilePageComponent
       },
       {
-        path:':projectId/deliverables',
-        component:DevDeliverablesComponent
+        path: ':projectId/deliverables',
+        component: DevDeliverablesComponent
       },
       {
-        path:':projectId/deliverables/:deliverableId',
-        component:SendDeliverableComponent
+        path: ':projectId/deliverables/:deliverableId',
+        component: SendDeliverableComponent
       }
     ]
   }
@@ -55,4 +59,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainPageDeveloperRoutingModule { }
+export class MainPageDeveloperRoutingModule {
+}

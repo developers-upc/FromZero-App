@@ -23,7 +23,7 @@ export class SupportComponent{
 
   onSubmit(): void {
     this.supportTicketSended = false;
-    let senderId = Number(localStorage.getItem('userId'));
+    let senderId = Number(localStorage.getItem('id'));
     let supportTicket = {
       title: this.supportForm.get('title')?.value,
       type: this.supportForm.get('problemType')?.value,

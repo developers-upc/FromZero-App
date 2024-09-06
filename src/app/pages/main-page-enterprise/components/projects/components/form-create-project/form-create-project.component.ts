@@ -52,7 +52,7 @@ export class FormCreateProjectComponent implements OnInit{
     }
   }
   constructor(private fb: FormBuilder, public dialog: MatDialog,private projectsService:ProjectsApiService) {
-    this.userId = Number(localStorage.getItem('userId'));
+    this.userId = Number(localStorage.getItem('id'));
     this.form = this.fb.group({
       title: ['', Validators.required],
       description: ['', Validators.required],
