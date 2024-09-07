@@ -1,4 +1,4 @@
-export interface IUserLoginV2 {
+export interface IUserLogin {
   email: string;
   accountType:string
   token: string

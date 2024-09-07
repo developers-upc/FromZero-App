@@ -54,8 +54,6 @@ export class LoginComponent {
             })
           }
 
-          // Para support: this.router.navigate(['/shared/support-home']);
-
         } else {
           console.error('Invalid username or password');
         }

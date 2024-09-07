@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {IDeveloperRegister} from "../model/ideveloper-register";
 import {BaseService} from "../../../core/services/shared/base.service";
-import {IUserLoginV2} from "../model/iuser-login-v2";
+import {IUserLogin} from "../model/iuser-login";
 import {ICompanyRegister} from "../model/icompany-register";
 
 @Injectable({
@@ -42,7 +42,7 @@ export class AuthApiService extends BaseService{
 
   validateUser(email: string, password: string) {
     const signInResource = { email, password };
-    return this._http.post<IUserLoginV2>(this.authUrl + 'sign-in', signInResource);
+    return this._http.post<IUserLogin>(this.authUrl + 'sign-in', signInResource);
   }
 
   getUserByEmail(email:string){
