@@ -32,16 +32,16 @@
                       <p>{{ delv.date }}</p>
                     </div>
                     <div>
-                      @if (delv.state === 'Completed') {
+                      @if (delv.state === 'COMPLETADO') {
                         <!--<img src="../../../../../../../assets/deliverables-images/state.png" alt="state">-->
                         <mat-icon class="text-green-600">check</mat-icon>
                         <p>Estado</p>
                         <p>{{ delv.state }}</p>
-                      } @else if (delv.state === 'Rejected') {
+                      } @else if (delv.state === 'RECHAZADO') {
                         <mat-icon class="text-red-600">cancel</mat-icon>
                         <p>Estado</p>
                         <p>{{ delv.state }}</p>
-                      } @else if (delv.state === 'Awaiting Review') {
+                      } @else if (delv.state === 'ESPERANDO_REVISION') {
                         <mat-icon class="text-purple-600">hourglass_empty</mat-icon>
                         <p>Estado</p>
                         <p>{{ delv.state }}</p>

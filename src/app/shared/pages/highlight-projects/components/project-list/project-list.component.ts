@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {
-  HighlightsProjectServiceService
-} from "../../services/highlights-project-service/highlights-project-service.service";
-import {IHighlightProject} from "../../model/ihighlight-project";
+  ProjectsApiService
+} from "../../../../../pages/main-page-enterprise/components/home/services/projects-api.service";
+import {IProject} from "../../../../../pages/main-page-enterprise/components/home/models/iproject";
 
 @Component({
   selector: 'app-project-list',
@@ -10,11 +10,13 @@ import {IHighlightProject} from "../../model/ihighlight-project";
   styleUrl: './project-list.component.css'
 })
 export class ProjectListComponent implements OnInit{
-  projects!: IHighlightProject[] ;
+  //projects!: IHighlightProject[] ;
+  projects!: IProject[];
+  //filteredProjects: IHighlightProject[] = [];
+  filteredProjects: IProject[]=[];
 
-  filteredProjects: IHighlightProject[] = [];
-
-  constructor(private _highlightProjectService: HighlightsProjectServiceService) {
+  constructor(
+    private _projectService: ProjectsApiService) {
   }
 
   filterProjects(type: string) {
@@ -26,9 +28,13 @@ export class ProjectListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this._highlightProjectService.getAll().subscribe((projects: IHighlightProject[]) => {
+    /*this._highlightProjectService.getAll().subscribe((projects: IHighlightProject[]) => {
       this.projects = projects;
       this.filteredProjects = this.projects;
-    });
+    });*/
+    this._projectService.getProjectsByState("COMPLETADO").subscribe(response => {
+      this.projects=response
+      this.filteredProjects=this.projects
+    })
   }
 }

@@ -39,11 +39,25 @@ export class ProfileService extends BaseService{
     return this._http.put(url, updateEnterprise,this.httpOptions);
   }
 
-  getDeveloperProfileIdByEmail(email:string){
+  /*getDeveloperProfileIdByEmail(email:string){
     return this._http.get(`${this.url}developer/${email}`)
   }
 
   getCompanyProfileIdByEmail(email:string){
+    return this._http.get(`${this.url}company/${email}`)
+  }*/
+//----------------
+  getCompanyIdByEmail(email:string){
+    return this._http.get(`${this.url}company-id/${email}`)
+  }
+  getDeveloperIdByEmail(email:string){
+    return this._http.get(`${this.url}developer-id/${email}`)
+  }
+
+  getDeveloperRecordIdByEmail(email:string){
+    return this._http.get(`${this.url}developer/${email}`)
+  }
+  getCompanyRecordIdByEmail(email:string){
     return this._http.get(`${this.url}company/${email}`)
   }
 }

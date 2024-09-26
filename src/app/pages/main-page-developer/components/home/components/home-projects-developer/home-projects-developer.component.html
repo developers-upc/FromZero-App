@@ -13,7 +13,7 @@
         <mat-card *ngIf="perfilUsuarioProjects?.length; else noProjects">
           <mat-card-content>
             <ng-container *ngFor="let project of perfilUsuarioProjects">
-              <mat-card *ngIf="project.state === 'En busqueda'; else inProgress">
+              <mat-card *ngIf="project.state === 'EN_BUSQUEDA'; else inProgress">
                 <mat-card-header>
                   <mat-card-title>
                     <a [routerLink]="goToDeliverables(project.id)">
@@ -24,12 +24,12 @@
                 <mat-card-content>
                   <div class="flex gap-5 justify-center cursor-pointer" (click)="openDialog(project)">
                     <p class="text-blue-600">A espera de desarrollador</p>
-                    <p class="bg-red-600 rounded-full w-6 h-6 flex items-center justify-center text-white text-sm">{{project.candidatesList.length}}</p>
+                    <p class="bg-red-600 rounded-full w-6 h-6 flex items-center justify-center text-white text-sm">{{project.candidates.length}}</p>
                   </div>
                 </mat-card-content>
               </mat-card>
               <ng-template #inProgress>
-                <mat-card *ngIf="project.state === 'En progreso'; else completed">
+                <mat-card *ngIf="project.state === 'EN_PROGRESO'; else completed">
                   <mat-card-header>
                     <mat-card-title>
                       <a [routerLink]="goToDeliverables(project.id)">
@@ -49,7 +49,18 @@
                 </mat-card>
                 <ng-template #completed>
                   <mat-card>
-                    <!-- Configuración de la tarjeta para proyectos completados -->
+                    <mat-card-header>
+                      <mat-card-title>
+                        <a>
+                          <p class="text-black text-xs font-bold hover:bg-gray-200">{{ project.name }}</p>
+                        </a>
+                      </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <div>
+                        <p class="text-green-500 text-center text-xxs font-bold">COMPLETADO!!</p>
+                      </div>
+                    </mat-card-content>
                   </mat-card>
                 </ng-template>
               </ng-template>

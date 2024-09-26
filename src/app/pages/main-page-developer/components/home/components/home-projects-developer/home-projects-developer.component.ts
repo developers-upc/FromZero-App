@@ -21,7 +21,7 @@ export class HomeProjectsDeveloperComponent {
   openDialog(project: IProject) {
     this.dialog.open(CandidatesProjectDialogDeveloperComponent, {
       data: {
-        candidates: project.candidatesList
+        candidates: project.candidates
       }
     });
   }

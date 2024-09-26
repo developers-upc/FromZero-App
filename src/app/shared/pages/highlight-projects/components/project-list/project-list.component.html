@@ -10,23 +10,23 @@
 
     <div class="buttons">
       <button mat-stroked-button class="b-web-app"
-              (click)="filterProjects('Aplicacion web')">
+              (click)="filterProjects('WEB_APPLICATION')">
         Aplicacion Web
       </button>
 
       <button mat-stroked-button class="b-mobile-app"
-              (click)="filterProjects('Landing Page')">
+              (click)="filterProjects('LANDING_PAGE')">
         Landing Page
       </button>
 
       <button mat-stroked-button class="b-design-system"
-              (click)="filterProjects('Aplicacion de Escritorio')">
+              (click)="filterProjects('DESKTOP_APPLICATION')">
         Aplicacion de Escritorio
       </button>
 
       <button mat-stroked-button class="b-data-analytics"
-              (click)="filterProjects('Analisis de Datos')">
-        Analisis de Datos
+              (click)="filterProjects('MOBILE_APPLICATION')">
+        Aplicación Móvil
       </button>
 
       <button mat-stroked-button class="b-borrar-filtros"
@@ -39,7 +39,7 @@
       <mat-card class="project-card" *ngFor="let project of filteredProjects">
         <mat-card-header class="card-title">
           <mat-card-title>
-            {{ project.type }}: {{ project.title }}
+            {{ project.type }}: {{ project.name }}
           </mat-card-title>
         </mat-card-header>
 
@@ -50,12 +50,12 @@
             </mat-card-subtitle>
             <p>{{ project.description }}</p>
 
-            <div class="stars">
+            <!--<div class="stars">
               <p>{{project.calification}}</p>
               <mat-icon>star</mat-icon>
-            </div>
+            </div>-->
           </div>
-          <img mat-card-image [src]="project.image_url"/>
+          <!--<img mat-card-image [src]="project."/>-->
         </mat-card-content>
       </mat-card>
     </ul>

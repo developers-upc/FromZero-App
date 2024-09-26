@@ -19,29 +19,47 @@ export class FormCreateProjectComponent implements OnInit{
   ]
   selectedProgrammingLanguages:number[]=[];
 
+
+
   frameworksList=[
-    {id:1,name:"Vue Js"},
+    {id:1,name:"Vue_Js"},
     {id:2,name:"Angular"},
     {id:3,name:"React"},
   ]
   selectedFrameworks:number[]=[];
 
+  // -----------
+
+  selectedFrameworksAux:string[]=[]
+
+  selectedProgrammingLanguagesAux:string[]=[]
+
+  // -----------
+
   form: FormGroup;
   hideTechnologies = new FormControl(false);
   hideMethodologies = new FormControl(true);
+
   selectedLanguages:string[] = [];
   selectedFrameworksTemp:string[] = [];
+
   selectedFiles: File[] = [];
   removeSelectedLanguage(index:number, list: string[]){
     list.splice(index, 1);
-    this.selectedProgrammingLanguages.splice(index,1);
-    console.log(this.selectedProgrammingLanguages)
+    //this.selectedProgrammingLanguages.splice(index,1);
+
+    this.selectedProgrammingLanguagesAux.splice(index,1);
+
+    //console.log(this.selectedProgrammingLanguages)
   }
 
   removeSelectedFramework(index:number, list: string[]){
     list.splice(index,1);
-    this.selectedFrameworks.splice(index,1);
-    console.log(this.selectedFrameworks)
+    //this.selectedFrameworks.splice(index,1);
+
+    this.selectedFrameworksAux.splice(index,1);
+
+    //console.log(this.selectedFrameworks)
   }
 
   onFilesSelected(event: Event) {
@@ -119,18 +137,20 @@ export class FormCreateProjectComponent implements OnInit{
     return this.form.get('frameworks') as FormArray;
   }
 
-  addingLanguages(languageId:number){
-    this.selectedProgrammingLanguages.push(languageId)
-    const numberControl = this.fb.control(languageId)
+  addingLanguages(languageId:number,languageName:string){
+    //this.selectedProgrammingLanguages.push(languageId)
+    this.selectedProgrammingLanguagesAux.push(languageName);
+    const numberControl = this.fb.control(languageName)
     this.languages.push(numberControl);
-    console.log(this.selectedProgrammingLanguages)
+    //console.log(this.selectedProgrammingLanguages)
   }
 
-  addingFrameworks(frameworkId:number){
-    this.selectedFrameworks.push(frameworkId);
-    const numberControl = this.fb.control(frameworkId)
+  addingFrameworks(frameworkId:number,frameworkName:string){
+    //this.selectedFrameworks.push(frameworkId);
+    this.selectedFrameworksAux.push(frameworkName);
+    const numberControl = this.fb.control(frameworkName)
     this.frameworks.push(numberControl);
-    console.log(this.selectedFrameworks)
+    //console.log(this.selectedFrameworks)
   }
 
 }

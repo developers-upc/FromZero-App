@@ -11,7 +11,7 @@
                 <mat-card-title>
                   {{ project.name }}
                 </mat-card-title>
-                <mat-card-subtitle (click)="redirectToProfile(project.ownerId)"
+                <mat-card-subtitle (click)="redirectToProfile(project.company.id)"
                                    class="cursor-pointer hover:bg-gray-200">
                   <h3 style="text-align: center">Ver empresa</h3>
                 </mat-card-subtitle>

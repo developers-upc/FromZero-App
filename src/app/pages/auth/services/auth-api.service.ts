@@ -4,6 +4,7 @@ import {IDeveloperRegister} from "../model/ideveloper-register";
 import {BaseService} from "../../../core/services/shared/base.service";
 import {IUserLogin} from "../model/iuser-login";
 import {ICompanyRegister} from "../model/icompany-register";
+import {IUser} from "../model/iuser";
 
 @Injectable({
   providedIn: 'root'
@@ -47,5 +48,9 @@ export class AuthApiService extends BaseService{
 
   getUserByEmail(email:string){
     return this._http.get(this.usersUrl+'email/'+email);
+  }
+
+  getUserById(id:number){
+    return this._http.get<IUser>(this.usersUrl+`${id}`)
   }
 }

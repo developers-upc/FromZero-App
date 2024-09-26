@@ -21,9 +21,12 @@
               <label for="tipoPagina">Tipo de Proyecto</label>
               <mat-form-field>
                 <mat-select id="tipoPagina" formControlName="projectType">
-                  <mat-option value="Landing Page">Landing Page</mat-option>
+                  <!--<mat-option value="Landing Page">Landing Page</mat-option>
                   <mat-option value="Aplicacion web">Aplicacion web</mat-option>
-                  <mat-option value="Aplicacion de Escritorio">Aplicacion de Escritorio</mat-option>
+                  <mat-option value="Aplicacion de Escritorio">Aplicacion de Escritorio</mat-option>-->
+                  <mat-option value="LANDING_PAGE">Landing Page</mat-option>
+                  <mat-option value="WEB_APPLICATION">Aplicacion web</mat-option>
+                  <mat-option value="DESKTOP_APPLICATION">Aplicacion de Escritorio</mat-option>
                 </mat-select>
               </mat-form-field>
             </div>
@@ -39,7 +42,7 @@
                                 [disabled]="techCheckbox.checked"
                                 (selectionChange)="selectedLanguages.push($event.value)">
                       @for(language of programmingLanguagesList;track language.id){
-                        <mat-option (click)="addingLanguages(language.id)"
+                        <mat-option (click)="addingLanguages(language.id,language.name)"
                                     [value]="language.name">
                           {{language.name}}
                         </mat-option>
@@ -58,7 +61,7 @@
                                 [disabled]="techCheckbox.checked"
                                 (selectionChange)="selectedFrameworksTemp.push($event.value)">
                       @for (framework of frameworksList;track framework.id){
-                        <mat-option (click)="addingFrameworks(framework.id)"
+                        <mat-option (click)="addingFrameworks(framework.id,framework.name)"
                                     [value]="framework.name">
                           {{framework.name}}
                         </mat-option>

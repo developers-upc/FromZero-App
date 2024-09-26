@@ -17,7 +17,7 @@ export class SearchProjectsComponent implements OnInit {
   projects!:IProject[];
 
   ngOnInit(): void {
-    this.projectsService.getProjectsByState("En busqueda").subscribe(projects=>{
+    this.projectsService.getProjectsByState("EN_BUSQUEDA").subscribe(projects=>{
       this.projects=projects
     })
   }
@@ -27,7 +27,7 @@ export class SearchProjectsComponent implements OnInit {
   }
 
   goToProject(id: number): void {
-    this.router.navigate(['/app-developer/main//apply-to-project', id]);
+    this.router.navigate(['/app-developer/main/apply-to-project', id]);
   }
 
 }

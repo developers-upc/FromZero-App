@@ -13,16 +13,16 @@
       <div>
         <h3>Lenguajes</h3>
         <ul>
-          @for(language of project?.languages; track language?.id) {
-            <li>{{ language?.name }}</li>
+          @for(language of project?.languages; track language) {
+            <li>{{ language }}</li>
           }
         </ul>
       </div>
       <div>
         <h3>Frameworks</h3>
         <ul>
-          @for (framework of project?.frameworks; track framework?.id) {
-            <li>{{ framework?.name }}</li>
+          @for (framework of project?.frameworks; track framework) {
+            <li>{{ framework }}</li>
           }
         </ul>
       </div>
