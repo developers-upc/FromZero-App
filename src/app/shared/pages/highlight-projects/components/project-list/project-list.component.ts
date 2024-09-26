@@ -10,9 +10,7 @@ import {IProject} from "../../../../../pages/main-page-enterprise/components/hom
   styleUrl: './project-list.component.css'
 })
 export class ProjectListComponent implements OnInit{
-  //projects!: IHighlightProject[] ;
   projects!: IProject[];
-  //filteredProjects: IHighlightProject[] = [];
   filteredProjects: IProject[]=[];
 
   constructor(
@@ -28,10 +26,6 @@ export class ProjectListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    /*this._highlightProjectService.getAll().subscribe((projects: IHighlightProject[]) => {
-      this.projects = projects;
-      this.filteredProjects = this.projects;
-    });*/
     this._projectService.getProjectsByState("COMPLETADO").subscribe(response => {
       this.projects=response
       this.filteredProjects=this.projects
